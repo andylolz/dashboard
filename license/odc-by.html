@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>IATI Dashboard - Licenses listed on the Registry</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../headlines.html">Headlines</a></li>
+      
+          <li class="active"><a href="../data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li><a href="../download.html">Download Errors</a></li>
+      
+          <li><a href="../xml.html">XML Errors</a></li>
+      
+          <li><a href="../validation.html">Validation</a></li>
+      
+          <li><a href="../versions.html">Versions</a></li>
+      
+          <li class="active"><a href="../licenses.html">Licenses</a></li>
+      
+          <li><a href="../organisation.html">Organisation XML</a></li>
+      
+          <li><a href="../identifiers.html">Duplicate Identifiers</a></li>
+      
+          <li><a href="../reporting_orgs.html">Reporting Orgs</a></li>
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<h1></h1>
+<p class="lead">License id: <code>odc-by</code></p>
+
+        </div>
+      
+
+      
+
+    <div class="panel panel-default">
+      <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Publisher</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="../publisher/ketou.html">ketou</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wwfdk.html">wwfdk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/concernuk.html">concernuk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ftm-291333.html">ftm-291333</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/decp.html">decp</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ageintl.html">ageintl</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/agresults.html">agresults</a></td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wep.html">wep</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/simlab.html">simlab</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/zoa_uk.html">zoa_uk</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dai.html">dai</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wf-asia.html">wf-asia</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unocha.html">unocha</a></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/allada.html">allada</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aaik.html">aaik</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/lalo.html">lalo</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/adja-ouere.html">adja-ouere</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/f-aids.html">f-aids</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mdm-fr.html">mdm-fr</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/amrefkenya.html">amrefkenya</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/klouekanme.html">klouekanme</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/akpro-misserete.html">akpro-misserete</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ze.html">ze</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/parakou.html">parakou</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/kpomasse.html">kpomasse</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ciuk.html">ciuk</a></td>
+                <td>48</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/tccec.html">tccec</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ebrd.html">ebrd</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/agriprofocus.html">agriprofocus</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/varkeyfoundation.html">varkeyfoundation</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/fairtrade_international.html">fairtrade_international</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dangbo.html">dangbo</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cww.html">cww</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/stromme_ug.html">stromme_ug</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dca.html">dca</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mamac.html">mamac</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/plb.html">plb</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ask.html">ask</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/asi.html">asi</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wtk.html">wtk</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/idrccrdi.html">idrccrdi</a></td>
+                <td>10</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ha-i.html">ha-i</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cerf.html">cerf</a></td>
+                <td>16</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/toffo.html">toffo</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ri_kenya.html">ri_kenya</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dri.html">dri</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aplahoue.html">aplahoue</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/villageenterprise.html">villageenterprise</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/swb_1.html">swb_1</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ipa.html">ipa</a></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/tmea.html">tmea</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/amrefha.html">amrefha</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/acatba.html">acatba</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/concern_worldwide.html">concern_worldwide</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/anaepmr_benin.html">anaepmr_benin</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/kpmgllp.html">kpmgllp</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/un-environment.html">un-environment</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/carenederland.html">carenederland</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/come.html">come</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ihaa.html">ihaa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/bmgf.html">bmgf</a></td>
+                <td>11</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ccdnigeria.html">ccdnigeria</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/icco-cooperation.html">icco-cooperation</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/toviklin.html">toviklin</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mstamp.html">mstamp</a></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/max-foundation.html">max-foundation</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/fhfuk.html">fhfuk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wusc.html">wusc</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wvi.html">wvi</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mgcubed.html">mgcubed</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/adjohoun.html">adjohoun</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/csom1.html">csom1</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/agriterra.html">agriterra</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/utd.html">utd</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/prefa_1.html">prefa_1</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aidenvironment.html">aidenvironment</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/thefreedomfund.html">thefreedomfund</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dfpa.html">dfpa</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aauk.html">aauk</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/utz.html">utz</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/pobe.html">pobe</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/af.html">af</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/peas.html">peas</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cbm.html">cbm</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/pumnl.html">pumnl</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wvsyria.html">wvsyria</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/united_work.html">united_work</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ifangni.html">ifangni</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/phase_worldwide.html">phase_worldwide</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cfyas.html">cfyas</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/pax.html">pax</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/avrankou.html">avrankou</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/alcrer-1.html">alcrer-1</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/silsab1-_.html">silsab1-_</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/umu.html">umu</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unocha-cbpf.html">unocha-cbpf</a></td>
+                <td>192</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/afelt.html">afelt</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/knmi.html">knmi</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aidspan.html">aidspan</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/interburns.html">interburns</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/clasp.html">clasp</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ine_benin.html">ine_benin</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/bopa.html">bopa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/adjarra.html">adjarra</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/rainfoundation.html">rainfoundation</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cordaid.html">cordaid</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/timidria.html">timidria</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dorcas.html">dorcas</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/universiteit_leiden.html">universiteit_leiden</a></td>
+                <td>2</td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+</body>
+</html>

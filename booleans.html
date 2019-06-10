@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>IATI Dashboard - Booleans</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="index.html">Dashboard Home</a></li>
+      
+          <li ><a href="headlines.html">Headlines</a></li>
+      
+          <li ><a href="data_quality.html">Data Quality</a></li>
+      
+          <li class="active"><a href="exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li><a href="elements.html">Elements</a></li>
+      
+          <li><a href="codelists.html">Codelists</a></li>
+      
+          <li class="active"><a href="booleans.html">Booleans</a></li>
+      
+          <li><a href="dates.html">Dates</a></li>
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+          <h1>Booleans</h1>
+          <p class="lead">How are booleans used in IATI data?</p>
+          <p>Checking usage of booleans across IATI data files. Booleans are values that are either true or false. In XML <code>true</code> or <code>1</code> can be used for true and <code>false</code> or <code>0</code> can be used for false.</p>
+          
+        </div>
+      
+
+      
+    <p>(<a href="http://dashboard.iatistandard.org/stats/current/inverted-publisher/reporting_orgs.json">This table as JSON</a>)</p>
+
+    <div class="panel panel-default">
+    <div class="panel-body">
+      <p>List of values used by publishers for attributes that should be valid XML booleans (ie. <code>true</code>, <code>false</code>, <code>0</code> or <code>1</code>).</p>
+      <p>Click the <img src="tablesorter-icons.gif" style="width: 21px; height: 9px"/> icons to sort the table by a column. Selecting further columns whilst holding the shift key will enable secondary (tertiary etc) sorting by the desired column/s.</p>
+    </div>
+    <table class="table table-striped">
+      <thead><tr><th>Element</th><th>Values</th><th>Publishers</th></tr></thead>
+      <tbody>
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/">@humanitarian</a></td>
+                    <td>0</td>
+                    <td>1-uz 111111_publisher _admin _path_ a-t aaik aak aanl aar aauk abaseen ablechildafrica abt acaa acf achest acodev acord across act4africa actec acted ada addinternational adrauk adsb aeras aet afemena africalia afrikids ageintl ahead ai_1064413 aidspan akfuk73 aktis amrefeth amrefha amrefhq amrefkenya amrefmw amrefnl amreftz amrefug apc apefe appro-eu apt ares art19 asf asi asil ask ava_admin avsi_uganda awepa awid b_a_t baag bac basicneeds bauk bbcmediaaction bd bdo beesfordevelopment beis bismsi bmgf bond bothends bracintl britishcouncil brulocalis bsr_admin bvs-nepal cabi cadtm cal camfed cardnoem carenederland ccc cdeb-kvhb_admin cec cepr cfyas childfund childhopeuk cibe cifal cjp clasp climate_centre clingendael cncd cocnl_publisher coffey congodorpen cowater cowi cr crane crb-ai_admin creausa-org crs csa ct-admin cu cww cyan dai dai-e damien-foundation dance4life dapp dba dcaf dciecpatnl ddp defra_transparency delivery_associates deltares dfpa dgf dgmh dhsc dipr djapo dkt dmru dotw_uk dpod drf dynamo_international ec ec-devco ec-fpi ec-near eclosio edt_kenya eel ef_ ehpea eif ejc esrf etmkdw excellent f-aids fa fact fairtrade_be fairtrade_international fci fiabel fian-belgium fms fo_germany foei foenl foncaba fos free_press_unlimited freeagirl ftm-291333 fucid fwf fyf g3w-m3m_admin geomoun gggi gif globalcanopy globaltfokus gnpplus goal hai handinhand hauk healthnet healthpartners-international heifernederland hha hhc hib hiil_mfa hiuk hpa hsi hwa-zm ia_nam ibis_denmark icf icipe idh idlo idp ids ieu ifdc-us ifsi_isvi ihedelft iiwe imc_uk imcw_admin inasp inbar integrity_action interburns iom ipa ipas ippf irc_inc irw itad iteco itm iwda kipkelion kiyo knvb kpmgea kpmgllp kwaafrica landell-mills lc lcd_admin lcdi_admin learningforlife lepra lftw-be lhcf liwa-admin loftf lpi lstm mag mainline mamac mapaction marysmeals mce mck mcn medecins memisa mifumi_uk mlf mm1 mmh mmha mml mondefemmes mondiaalfnv motivation mrc-sierra-leone mrf msi msv mvo_nederland namati_inc nathan ncea nef_usa network4africa ngo-federatie nlrc nmhiati nrgi nri odakorea odi odi_sales_ltd omdm oneacrefund onl open_university opennorth opportunity-international-uk options orbis_ethiopia orbis_international orbis_uk oww oxfamus oxford oxsol pacam palladium partos_nl pcst peas pgi_kenya pib pidg plb pontis practica progressio protos pumnl pumpaid pwc qedjt quinoa rainforest-alliance rc rc4d rcn rcog_resilience_in_obstetric_skills redeenkind restless ri_kenya rikolto rikolto_belgium rkiv rutgers saferworld sci sciaf scibelgium scnl sct scuk sdn sendacow sense_international sfcg sg shc sida signal simavi simprints siren solarnowsofa solidagro_admin solsoc sosfaim soundseekers spuk st_vluchteling stad street_child stromme_ug suhanajjar svdbskb_admin taf tb-a tbalert tearfund tfacmalawi tfb_admin1 ti_kenya tlmew tmea tni traidcraft transparency-international treea trianglen trias troc tropicalhealth twaweza twin-iati uaf-africa ub ucos udom uhai-eashri ukmod ulbcoop umn umu unaids unais undp unicef uq utd utwente utz uva_org uvcw vei_nl via-db viva vlir-uos vngi vsfbelgium vso vvob vvsg wageningen_ur wai warchildholland waste waterworks wcf wcuk welbodipartnership wellfound wemos wff wfm-igp wfp whpca win wnf wo-men womankindworld worldeconomicforum wowni wpp wri wsm wsup wusc wvi wvnld wvuk wwf-be wwf-uk wws wygi ycare yipl yoneco1997 zet zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/">@humanitarian</a></td>
+                    <td>1</td>
+                    <td>12921047 aadk aauk acf acfspain adra-dk aecom afelt afewinternational africanrevival agresults akf_afghanistan alliance_of_religions_and_conservation amnesty amrefnl amrefug amurt_kenya aphrc arcfge art19 ausgov avt-l bawacecy-tz bcm-cf bmgf brac_admin2 carebenintogo caritas_denmark caritasfin cbm cerf chai ciafg cisu civic_admin civicus ciz commonwealthsecretariat creausa-org csom1 danishrc dawuro_da dca dec-uk dhrc_nepal dhsc drc e4i ec-echo edt_rwanda eip engenderhealth_eth ethiopiaiduk fipag fo_germany gichd giro555 ha-i halo hrf ia_nam icrc ideo_org idydc ifrcrcs ilo imc_uk inpud_admin inso iom irc_inc itpc iwpr ksrelief291 maydayrescue mdm-fr medair msmgf nlrc nned npa nrc nswp odakorea onl oxfamus pax populationcouncil prefa_1 psi rains rtp sac_kenya sci scnl scuk sida silsab1-_ sjg spark spuk st_vluchteling stromme_ug the_mentor_initiative tns unaids undp unhcr unicef united_work unocha-cbpf unocha-sdc w_r_c warchildholland wcc wcuk wedo wfp woda_0486 worldbank worldveg worldwaternet wvi wvsyria wvz-gec ww-gvc </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/">@humanitarian</a></td>
+                    <td>false</td>
+                    <td>acatba acet acu acumen addinternational adsb afghanaid agdevco agencia_do_zambeze aias aiuk aktis alab appro-af atmf atnf atsf awdf b_a_t berytech bos_plus_tropen bucksfarm bwh c40cities caribank caritas_denmark carter-center cdi ceci chemonics colalife concordis cost_uk cpi crehpa cst danida danmission delivery_associates dggf_financing_local_smes dmru dps-nampula draf dttillp duf ecuk educate ejc energy_saving_trust equileap ethiopiaiduk f-aids fcam fh fhfuk fimi_iiwf_2019 foe_ewni friendsofpwyf fundacion-acceso gdi gi-jhu girlsnotbrides givedirectly gnpplus gogla gppac grc2018 guttmacher healthpartners-international hefoundation hfc hiuk horizons hsi ibfd idea ideo_org idinsight ifac ifoam iif imf ims instiglio interaction ipao ipe ipeglobal iraq_foundation irise_int jass jocc_uk kesho_kenya kit kmss knmi lbg lcdi_admin ldsps leedsuni lftw-be libymca lts m_u manniondaniels mastercard-foundation max-foundation mcg mmr_admin2 mofa-jpn mukisa_foundation nchrdk ndsicde npm nrc nrt-kenya opml orbis_africa orientame oxfamus paf_2018 partos_nl pin plama pmo-us posneg practica pstc_1102 pwcplindia qrfed raleigh_int rc2africa rcgp-international reach-iraq redbarnet ruaf sacethiopia sddirect seefar sehatkahanicih shn sosnl sr tbi tdh_nl the_power_of_nutrition theglobalfund ti-uk ti_kenya timidria troc uaf uafla ucl unaids unf uni_of_nottingham universiteit_leiden universityofbirmingham_gsdrc uom uwezo_youth_empowerment vfi villageenterprise vlir-uos wag-1983 weforum_geneva wep wf-asia wgnrr_iati whh wnf worldeconomicforum wwf-be wwfdk ywcabd zoa_uk </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/">@humanitarian</a></td>
+                    <td>true</td>
+                    <td>danida dfid interaction sccf tdh_nl </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/conditions/">conditions/@attached</a></td>
+                    <td>0</td>
+                    <td>111111_publisher a-t aauk acodev actec ada adja-ouere adjarra adjohoun africalia afrikagrupperna akpro-misserete akvo alcrer-1 allada amrefnl anaepmr_benin apefe aplahoue aqua4all ares asf ausgov avrankou bac bd bismsi bopa bos_plus_tropen brulocalis cadtm cdeb-kvhb_admin cec cibe cjp cncd come congodorpen cowi crb-ai_admin crehpa csa ct-admin damien-foundation dangbo dba dciecpatnl dfatd-maecd dhsc diakonia802017-3517 djapo dynamo_international ec eclosio ecorysnl ef_ etmkdw fairtrade_be fiabel fian-belgium finance_canada fo_germany foncaba fos fucid g3w-m3m_admin gac-amc gdi geomoun gpsp-org hai halo hib ibfd icraf_ idinsight idp idrccrdi ieu ifangni ifsi_isvi iiwe ine_benin instiglio intrahealth irc iteco itm iucn ketou kiyo klouekanme kpomasse lalo lc lftw-be mamta_himc max-foundation medecins mefbenin memisa millenniumchallenge minbuza_nl mmha mondefemmes msv nchrdk nef_usa ngo-federatie nlr omdm oww oxsol pca-gire pib planinternationalfinland pobe pontis protos psi quinoa rc4d rcn rikolto rikolto_belgium rkiv scibelgium scuk sdc_ch sg shc sida sjg snv solidagro_admin solsoc soneb-benin sosfaim svdbskb_admin swb_1 tfb_admin1 toffo toviklin trias ub ucos ulbcoop undp unesco unitedstates unops usaid utz uvcw via-db vlir-uos vngi vsfbelgium vvob vvsg waste weeffect wfp wi wsm wwf-be wwf-se ze </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/conditions/">conditions/@attached</a></td>
+                    <td>1</td>
+                    <td>agriprofocus aqua4all beis bmz cerf ciks dapp dfatd-maecd dhsc ec-echo eib emms fundacion-acceso gavi idinsight idrccrdi ifdc-us kesho_kenya millenniumchallenge npa parakou pidg psi sacbc sida snv tdh_nl transparency-international unitedstates worldbank </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/conditions/">conditions/@attached</a></td>
+                    <td>false</td>
+                    <td>aics asdb dfid edukans_foundation fomin globalgiving iadb ofid plannlno tear </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/conditions/">conditions/@attached</a></td>
+                    <td>true</td>
+                    <td>afdb dfid iadb unicef </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/crs-add/aidtype-flag/">crs-add/aidtype-flag/@significance</a></td>
+                    <td>0</td>
+                    <td>lithuania_mfa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/crs-add/aidtype-flag/">crs-add/aidtype-flag/@significance</a></td>
+                    <td>1</td>
+                    <td>lithuania_mfa </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/crs-add/other-flags/">crs-add/other-flags/@significance</a></td>
+                    <td>0</td>
+                    <td>ec-devco ec-fpi ec-near sida </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/crs-add/other-flags/">crs-add/other-flags/@significance</a></td>
+                    <td>1</td>
+                    <td>sida slovakaid </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/reporting-org/">reporting-org/@secondary-reporter</a></td>
+                    <td></td>
+                    <td>oxfamintermon </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/reporting-org/">reporting-org/@secondary-reporter</a></td>
+                    <td>0</td>
+                    <td>aaik acatba acodev addinternational adja-ouere adjarra adjohoun agriprofocus akpro-misserete akvo alcrer-1 allada amnesty anaepmr_benin aplahoue aqua4all asi avrankou awdf bd bismsi bmgf bmz bopa britishcouncil carebenintogo childhopeuk come cowi dangbo djapo ec-echo ecdpm ecorysnl eib fairtrade_be fiabel finland_mfa foncaba gdi gichd gpsp-org hfc hsi icraf_ ifangni ifdc-us ilo ine_benin intrahealth irc iucn ketou klouekanme kpmgea kpomasse ksrelief291 lalo lbg lpi lts mefbenin millenniumchallenge mml nef_usa nlr odakorea onl options oxfamintermon parakou partos_nl pax pca-gire planinternationalfinland pobe scibelgium sfd-yemen sg sida snv solarnowsofa soneb-benin swb_1 tdh_nl tib toffo toviklin transparency-international umu unfpa universiteit_leiden unocha-cbpf utz vfi via-db villageenterprise vngi vso waste wf-asia wi ze </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/reporting-org/">reporting-org/@secondary-reporter</a></td>
+                    <td>1</td>
+                    <td>afelt aqua4all bac ceci dca fci foe_ewni ia_nam manxtimes ocha_fts odakorea openmindedly plama snv vso wi </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/reporting-org/">reporting-org/@secondary-reporter</a></td>
+                    <td>false</td>
+                    <td>theglobalfund unicef </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/">result/@aggregation-status</a></td>
+                    <td>0</td>
+                    <td>111111_publisher a-t aauk achest acodev actec acted ada adjohoun afewinternational africalia akvo amnesty amrefeth amrefhq amrefkenya amrefmw amrefnl amreftz amrefug anaepmr_benin apefe aplahoue arcfge ares atmf avrankou avsi_uganda awepa bac bd bismsi bopa bos_plus_tropen brulocalis cadtm carenederland cdeb-kvhb_admin cdi cerf cfyas cibe climate_centre clingendael cncd cocnl_publisher come congodorpen cowi crb-ai_admin csa damien-foundation dba dcaf dciecpatnl deltares dipr djapo drc dynamo_international ec ec-devco ec-near ecdpm eclosio ef_ emms etmkdw f-aids fairtrade_be fiabel fian-belgium finance_canada foenl freeagirl fucid fwf g3w-m3m_admin geomoun gichd gpsp-org hai hib hiil_mfa hsi ia_nam ibis_denmark idp ifangni ifdc-us ifsi_isvi ihedelft iiwe intrahealth ippf iraq_foundation irc irc_inc iteco itm itpc iucn iwda kad ketou kit kiyo klouekanme knmi knvb kpomasse lalo lc ldsps lftw-be mag mce mcn medecins memisa millenniumchallenge mm1 mmha mondefemmes mondiaalfnv msv mvo_nederland ncea nchrdk ngo-federatie nlrc npa npm nrc nswp omdm oneacrefund orbis_ethiopia orbis_uk oww oxsol pax pib pidg pmo-us pobe protos psi quinoa rc4d rcn rikolto rikolto_belgium rkiv rtp rutgers saferworld sci scnl scuk sfcg sg shc sida simavi siren snv solidagro_admin solidaridad solidaridad-europe solidaridad-ssea solidaridad-waf solsoc sosfaim sosnl st_vluchteling suhanajjar svdbskb_admin tbi tfb_admin1 tns toffo toviklin trias troc ub ucos ulbcoop unhcr universiteit_leiden unocha-sdc utwente utz uvcw vei_nl via-db vlir-uos vngi vsfbelgium vvob vvsg w_r_c wageningen_ur wai warchildholland wcc wcuk wemos wfwiuk wi wnf worldbank worldeconomicforum worldwaternet wpp wsm wvnld wwf-be ze zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/">result/@aggregation-status</a></td>
+                    <td>1</td>
+                    <td>aanl achest acord acted adja-ouere adjarra adjohoun afemena afewinternational agencia_do_zambeze agriprofocus aias akpro-misserete akvo alcrer-1 allada amrefeth amrefkenya amrefmw amrefnl amrefug anaepmr_benin apc aplahoue aqua4all ares asf avrankou avsi_uganda awdf awepa awid bopa bothends brac_admin2 carebenintogo carenederland ccc cdi cec cfyas cocnl_publisher come cowi cr creausa-org ct-admin dai damien-foundation dance4life dangbo dca dciecpatnl deltares drc ec-devco ec-near ecorysnl ef_ emms equileap f-aids fcam fimi_iiwf_2019 fipag fms foei foenl free_press_unlimited freeagirl fundacion-acceso fwf gggi gppac ha-i halo healthnet hefoundation heifernederland hsi ibfd ibis_denmark icrc idh ieu ifangni ifcwbg ihedelft imc_uk ine_benin intrahealth ippf irc itpc iucn iwda jass ketou kit kiyo klouekanme kpomasse lalo libymca lpi mag mainline mamac mce mefbenin mondefemmes mvo_nederland ncea nlr nlrc npa onl parakou partos_nl pca-gire pidg pmo-us pobe pontis practica psi pstc_1102 quinoa rainfoundation rkiv rutgers saferworld sci scnl scuk sfcg sfd-yemen siren sjg snv solarnowsofa solidaridad solidaridad-europe solidaridad-ssea solidaridad-waf soneb-benin sosnl spark st_vluchteling suhanajjar swb_1 tdh_nl tni tns toffo toviklin trias uaf uaf-africa uafla uhai-eashri ulbcoop unaids undp unfpa unhabitat united_work unocha-sdc utwente utz uva_org vei_nl vngi wageningen_ur wai warchildholland waste wedo weforum_geneva wf-asia wff wfm-igp wi wo-men worldbank worldwaternet wri wvnld ze zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/">result/@aggregation-status</a></td>
+                    <td>false</td>
+                    <td>afsc asdb asf cini_jhk d4d danida decp dorp-org iadb icdi interpeace issafrica itc mm1 needs nl-kvk-41207989 nl-kvk-54436222-27541 partos_nl pidg rainfoundation redeenkind simavi skn thp_org unicef unicefnl vhai-org w-d wateraid wgnrr_iati zimmzimm zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/">result/@aggregation-status</a></td>
+                    <td>true</td>
+                    <td>ads-nyanza afsc asf bnps cavwoc cini_jhk csa-kenya dapp dorp-org edukans_foundation fairfood flepuganda hiuk icdi icnl_org ifdc-us interpeace issafrica iucn_nl kmet mdf mm1 needs nl-kvk-41207989 nl-kvk-54436222-27541 partos_nl pidg plannlno pontis redeenkind sacbc savsign-org simavi skn somo tear thp_org udpk umati unicefnl uva_org vhai-org w-d wgnrr_iati zoa </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/indicator/">result/indicator/@ascending</a></td>
+                    <td>0</td>
+                    <td>111111_publisher a-t aauk adja-ouere adjarra adjohoun afewinternational africalia alcrer-1 allada amrefeth amrefkenya anaepmr_benin apefe aplahoue asf avrankou awepa bd bopa bos_plus_tropen brulocalis carenederland cdi cibe clingendael cncd come crb-ai_admin csa damien-foundation dangbo dipr djapo ec-devco ec-near ef_ emms f-aids foenl fos fundacion-acceso fwf geomoun gpsp-org hai halo hib hiil_mfa hsi idp ifangni ifsi_isvi ihedelft iiwe iraq_foundation irc irc_inc iteco itm iucn ketou klouekanme kpomasse lalo lc ldsps libymca lpi mm1 nchrdk npa npm oneacrefund pib pobe psi rcn rkiv rutgers saferworld sci scnl scuk sfcg sg sida snv solsoc sosfaim sosnl st_vluchteling swb_1 toffo toviklin ub undp universiteit_leiden utz vei_nl via-db vngi vsfbelgium vvob wageningen_ur warchildholland wedo wfwiuk wi wnf worldwaternet ze zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/indicator/">result/indicator/@ascending</a></td>
+                    <td>1</td>
+                    <td>111111_publisher a-t aanl aauk achest acodev acord actec ada adja-ouere adjarra adjohoun afemena afewinternational agencia_do_zambeze agriprofocus aias akpro-misserete akvo alcrer-1 allada amnesty amrefeth amrefhq amrefkenya amrefmw amrefnl amreftz amrefug anaepmr_benin apc apefe aplahoue aqua4all arcfge ares asf avrankou avsi_uganda awdf awepa awid bac bd bismsi bopa bos_plus_tropen bothends brac_admin2 brulocalis cadtm carebenintogo carenederland ccc cdeb-kvhb_admin cdi cec cerf cfyas cibe civicus cjp climate_centre clingendael cncd cocnl_publisher come congodorpen cowi cr crb-ai_admin creausa-org csa ct-admin dai damien-foundation dangbo dba dca dcaf dciecpatnl deltares dipr djapo drc dynamo_international ec ec-devco ec-near eclosio ecorysnl ef_ emms equileap etmkdw f-aids fairtrade_be fcam fiabel fian-belgium fimi_iiwf_2019 fipag fms foei foenl foncaba fos freeagirl fucid fundacion-acceso fwf g3w-m3m_admin geomoun gggi girlsnotbrides globalcanopy gpsp-org ha-i hai halo healthnet hefoundation heifernederland hiil_mfa hsi ibfd ibis_denmark icraf_ idh idp ieu ifangni ifcwbg ifdc-us ifsi_isvi ihedelft iiwe imc_uk ine_benin intrahealth ippf irc irc_inc iteco itm itpc iucn iwda jass ketou kit kiyo klouekanme knmi knvb kpomasse lalo lc ldsps lftw-be libymca lpi mag mainline mamac max-foundation mce mcn medecins mefbenin memisa millenniumchallenge mm1 mmha mondefemmes mondiaalfnv msv mvo_nederland ncea ngo-federatie nlr nlrc npa nrc nswp omdm oneacrefund onl orbis_uk oww oxsol parakou pax pca-gire pib pidg pmo-us pobe pontis practica protos psi pstc_1102 pumnl quinoa rainfoundation rc4d rcn rikolto rikolto_belgium rkiv rtp rutgers saferworld sci scnl scuk sfcg sfd-yemen shc simavi siren sjg snv solidagro_admin solsoc soneb-benin sosfaim sosnl st_vluchteling suhanajjar svdbskb_admin swb_1 tbi tdh_nl tfb_admin1 tmea tni tns toffo toviklin trias troc uaf uaf-africa uafla ub ucos uhai-eashri ulbcoop unaids unfpa unhabitat united_work unocha-sdc utwente utz uva_org uvcw vei_nl via-db vlir-uos vngi vsfbelgium vvob vvsg wageningen_ur wai warchildholland waste wcc wcuk wedo weforum_geneva wemos wf-asia wff wfm-igp wfwiuk wi wo-men worldbank worldeconomicforum worldwaternet wpp wri wsm wvnld wwf-be ze zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/indicator/">result/indicator/@ascending</a></td>
+                    <td>false</td>
+                    <td>asf danida nl-kvk-41207989 partos_nl sacbc simavi unicef </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/result/indicator/">result/indicator/@ascending</a></td>
+                    <td>true</td>
+                    <td>ads-nyanza afsc asdb asf bnps cavwoc cini_jhk csa-kenya danida dapp dorp-org edukans_foundation fairfood flepuganda hiuk hsa interpeace itc iucn_nl kmet mm1 needs nl-kvk-41207989 partos_nl pidg plannlno pontis redeenkind sacbc savsign-org simavi somo tear umati vhai-org w-d wateraid zoa </td>
+                </tr>
+            
+        
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/">transaction/@humanitarian</a></td>
+                    <td>0</td>
+                    <td>111111_publisher 12921047 aadk aaik aanl aar aauk abaseen ablechildafrica acu ada addinternational adsb aecom aeras africalia afrikids ahead ai_1064413 akf_afghanistan aktis akvo amrefhq amrefkenya amrefnl amreftz amrefug appro-af apt arcfge ares asil atnf ava_admin awdf b_a_t baag basicneeds bcm-cf bdo beesfordevelopment bond bothends brac_admin2 britishcouncil brulocalis bvs-nepal cabi cadtm cal caritas_denmark cdi cfyas chemonics childhopeuk cibe civicus cjp clasp cncd colalife cowi cr creausa-org cww cyan dai-e dance4life dcaf dciecpatnl ddp deltares dfpa dgf dggf_financing_local_smes dgmh dhrc_nepal dhsc djapo dmru dpod ec ec-devco ec-fpi ec-near eclosio ecuk edt_kenya ef_ ehpea eif equileap esrf etmkdw fairtrade_be fairtrade_international fiabel fian-belgium fimi_iiwf_2019 fms fos freeagirl ftm-291333 fucid fyf g3w-m3m_admin gdi globalcanopy gppac ha-i hai handinhand healthpartners-international hefoundation hfc hhc hiuk horizons hpa hsi hwa-zm ibis_denmark idh idp ifsi_isvi iiwe ims instiglio ipao ipas ippf iraq_foundation itad iwda kiyo kmss knvb kpmgea kpmgllp lbg lc lcd_admin lcdi_admin lftw-be libymca liwa-admin lstm mag mainline mapaction max-foundation memisa mondefemmes mondiaalfnv motivation mvo_nederland nathan ncea nchrdk ndsicde ngo-federatie nlr nmhiati npm nrc omdm oneacrefund open_university opml opportunity-international-uk orbis_africa orbis_ethiopia orbis_international orbis_uk oww oxsol pacam palladium partos_nl pcst pib plb pontis psi pumpaid rainforest-alliance raleigh_int rcog_resilience_in_obstetric_skills redbarnet restless rikolto rikolto_belgium rkiv rutgers saferworld sciaf scibelgium scnl sct sddirect sdn sense_international signal simavi siren sjg solarnowsofa solidagro_admin solsoc sosfaim sosnl soundseekers street_child svdbskb_admin tb-a tfacmalawi tfb_admin1 the_power_of_nutrition tlmew tmea traidcraft transparency-international trianglen troc twin-iati ucos ulbcoop umu unais unicef united_work unitedstates universiteit_leiden uom uq utd uvcw via-db vlir-uos vngi vsfbelgium vso vvsg wai warchildholland waterworks wcf wemos wep wf-asia wfm-igp whpca win worldveg wowni wpp wsm wusc wvuk wwf-be wwf-uk wws wygi ycare zet zoa </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/">transaction/@humanitarian</a></td>
+                    <td>1</td>
+                    <td>1-uz _admin aadk aauk acaa acf across act4africa addinternational adra-dk adrauk aet afghanaid afrikids ageintl akf_afghanistan alliance_of_religions_and_conservation amrefeth aphrc art19 asil ask avt-l awepa bcm-cf brac_admin2 bracintl brulocalis cal carebenintogo caritas_denmark cerf chai chemonics childfund childhopeuk civic_admin cocnl_publisher crs cww dai dai-e damien-foundation dance4life danishrc dapp ddp dec-uk dotw_uk drc edt_kenya eel fact fh giro555 givedirectly halo healthnet hiuk hrf ibis_denmark idydc ieu ihedelft imc_uk imcw_admin interburns irc_inc irise_int irw jass jocc_uk kipkelion kwaafrica lcdi_admin learningforlife lhcf lpi mag mamac mapaction maydayrescue mce medair mifumi_uk mmh motivation nmhiati npa nrc opml opportunity-international-uk peas plama posneg prefa_1 pumpaid rains rc redbarnet redeenkind ri_kenya rtp rutgers saferworld scnl sosnl spuk st_vluchteling stromme_ug the_mentor_initiative tns unaids unais unicef unitedstates unocha-cbpf unocha-sdc usaid utd vso warchildholland wcc wcuk welbodipartnership wellfound wfm-igp womankindworld worldveg wsup wvnld wvsyria wvuk wvz-gec wwf-uk wygi ycare yoneco1997 zoa zoa_uk </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/">transaction/@humanitarian</a></td>
+                    <td>false</td>
+                    <td>tdh_nl </td>
+                </tr>
+            
+                <tr>
+                    <td><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/">transaction/@humanitarian</a></td>
+                    <td>true</td>
+                    <td>fo_germany tdh_nl </td>
+                </tr>
+            
+        
+      </tbody>
+    </table>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+</body>
+</html>

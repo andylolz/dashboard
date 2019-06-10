@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>IATI Dashboard - Organisation XML Files</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="index.html">Dashboard Home</a></li>
+      
+          <li ><a href="headlines.html">Headlines</a></li>
+      
+          <li class="active"><a href="data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li><a href="download.html">Download Errors</a></li>
+      
+          <li><a href="xml.html">XML Errors</a></li>
+      
+          <li><a href="validation.html">Validation</a></li>
+      
+          <li><a href="versions.html">Versions</a></li>
+      
+          <li><a href="licenses.html">Licenses</a></li>
+      
+          <li class="active"><a href="organisation.html">Organisation XML</a></li>
+      
+          <li><a href="identifiers.html">Duplicate Identifiers</a></li>
+      
+          <li><a href="reporting_orgs.html">Reporting Orgs</a></li>
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+          <h1>Organisation XML Files</h1>
+          <p class="lead">Who is publishing IATI Organisation files?</p>
+          <p>Checking the IATI Registry for files that have <code>iati-organisations</code> as the root element. IATI Organisation files contain general information about the organisations in the delivery chain. </p>
+          
+        </div>
+      
+
+      
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="publishers-without-an-organisation-file" class="title-number">351</span>
+              <span class="title-text">Publishers without an Organisation File</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-dated/publisher_has_org_file.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p>Count of publishers without an organisation file, over time.</p>
+            <img src="publisher_has_org_file.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-text">List of publishers without an Organisation File</span>
+            </h3>
+            <a href="http://dashboard.iatistandard.org/stats/current/inverted-publisher/publisher_has_org_file.json" style="float:right">(J)</a>
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p>The following publishers do not have an organisation file listed on the IATI Registry.</p>
+            <ul>
+            
+              <li><a href="publisher/12921047.html">CARE Danmark Fonden for Frivillig Ulandsbistand</a></li>
+            
+              <li><a href="publisher/3ie.html">International Initiative for Impact Evaluation</a></li>
+            
+              <li><a href="publisher/_admin.html">Acid Survivors Foundation</a></li>
+            
+              <li><a href="publisher/_path_.html">PATH</a></li>
+            
+              <li><a href="publisher/aai.html">ActionAid International</a></li>
+            
+              <li><a href="publisher/aak.html">Agulhas Applied Knowledge</a></li>
+            
+              <li><a href="publisher/aasaman.html">Aasaman Nepal</a></li>
+            
+              <li><a href="publisher/abt.html">Abt Associates Inc</a></li>
+            
+              <li><a href="publisher/acet.html">African Center for Economic Transformation (ACET)</a></li>
+            
+              <li><a href="publisher/acfspain.html">ACTION AGAINST HUNGER SPAIN</a></li>
+            
+              <li><a href="publisher/acu.html">Association of Commonwealth Universities</a></li>
+            
+              <li><a href="publisher/acumen.html">Acumen</a></li>
+            
+              <li><a href="publisher/adpp.html">Ajuda de Desenvolvimento de Povo para Povo (ADPP)</a></li>
+            
+              <li><a href="publisher/adra-dk.html">ADRA Denmark</a></li>
+            
+              <li><a href="publisher/adrasom.html">Adventist Development and Relief Agency (ADRA Somalia)</a></li>
+            
+              <li><a href="publisher/ads-nyanza.html">ADS-Nyanza</a></li>
+            
+              <li><a href="publisher/aecom.html">AECOM</a></li>
+            
+              <li><a href="publisher/af.html">Adaptation Fund</a></li>
+            
+              <li><a href="publisher/afemena.html">Arab foundation for freedoms and equality</a></li>
+            
+              <li><a href="publisher/afewinternational.html">AFEW International</a></li>
+            
+              <li><a href="publisher/afghanaid.html">Afghanaid</a></li>
+            
+              <li><a href="publisher/aflatoun.html">Stichting Aflatoun International</a></li>
+            
+              <li><a href="publisher/africanrevival.html">African Revival</a></li>
+            
+              <li><a href="publisher/afrikagrupperna.html">Afrikagrupperna Sweden</a></li>
+            
+              <li><a href="publisher/afsc.html">American Friends Service Committee</a></li>
+            
+              <li><a href="publisher/agdevco.html">AgDevCo</a></li>
+            
+              <li><a href="publisher/agriterra.html">Stichting Agriterra</a></li>
+            
+              <li><a href="publisher/ahead.html">Academy for Health Development (AHEAD)</a></li>
+            
+              <li><a href="publisher/aias.html">Administração de Infra-Estruturas de Águas e Saneamento</a></li>
+            
+              <li><a href="publisher/aiddata.html">AidData</a></li>
+            
+              <li><a href="publisher/aidenvironment.html">Stichting Aidenvironment</a></li>
+            
+              <li><a href="publisher/aiuk.html">Amnesty International UK Section Charitable Trust</a></li>
+            
+              <li><a href="publisher/akf_afghanistan.html">Aga Khan Foundation Afghanistan</a></li>
+            
+              <li><a href="publisher/alab.html">Accountability Lab</a></li>
+            
+              <li><a href="publisher/alcis.html">Alcis Holdings Limited</a></li>
+            
+              <li><a href="publisher/alfalit.html">Alfalit</a></li>
+            
+              <li><a href="publisher/amreftz.html">Amref Health Africa in Tanzania</a></li>
+            
+              <li><a href="publisher/anda.html">ANDA</a></li>
+            
+              <li><a href="publisher/apefe.html">Association pour la Promotion de l&#39;Education et de la Formation à l&#39;Etranger</a></li>
+            
+              <li><a href="publisher/aphrc.html">African Population and Health Research Center</a></li>
+            
+              <li><a href="publisher/aqua4all.html">Aqua for All</a></li>
+            
+              <li><a href="publisher/arcfge.html">ABAAD - Resource Center for Gender Equality</a></li>
+            
+              <li><a href="publisher/ark.html">ARK (Absolute Return for Kids)</a></li>
+            
+              <li><a href="publisher/atsf.html">Access to Seeds Foundation</a></li>
+            
+              <li><a href="publisher/avsi_uganda.html">AVSI FOUNDATION IN UGANDA</a></li>
+            
+              <li><a href="publisher/awdf.html">African Women&#39;s Development Fund</a></li>
+            
+              <li><a href="publisher/b_a_t.html">British Asian Trust</a></li>
+            
+              <li><a href="publisher/baag.html">British &amp; Irish Agencies Afghanistan Group</a></li>
+            
+              <li><a href="publisher/bawacecy-tz.html">Babawatoto Centre For Children and Youth</a></li>
+            
+              <li><a href="publisher/be-dgd.html">Belgian Development Cooperation</a></li>
+            
+              <li><a href="publisher/bioclimate.html">Bioclimate Research and Development</a></li>
+            
+              <li><a href="publisher/bismsi.html">Beweging voor Internationale Solidariteit - Mouvement pour la Solidarité Internationale</a></li>
+            
+              <li><a href="publisher/bmu_iki.html">International Climate Initiative / BMU - IKI Secretariat</a></li>
+            
+              <li><a href="publisher/bnps.html">Bangladesh Nari Progati Sangha</a></li>
+            
+              <li><a href="publisher/bos_plus_tropen.html">BOS+ tropen</a></li>
+            
+              <li><a href="publisher/bracintl.html">BRAC International</a></li>
+            
+              <li><a href="publisher/bucksfarm.html">Bucks Community NGO</a></li>
+            
+              <li><a href="publisher/c40cities.html">C40 Cities Climate Leadership Group</a></li>
+            
+              <li><a href="publisher/caid_ireland.html">Christian Aid Ireland</a></li>
+            
+              <li><a href="publisher/camfed.html">Camfed International</a></li>
+            
+              <li><a href="publisher/canoncollinstrust.html">Canon Collins Trust</a></li>
+            
+              <li><a href="publisher/cardnoem.html">Cardno Emerging Markets</a></li>
+            
+              <li><a href="publisher/carebenintogo.html">CARE BENIN/TOGO</a></li>
+            
+              <li><a href="publisher/caribank.html">Caribbean Development Bank (CDB)</a></li>
+            
+              <li><a href="publisher/caritas_serbia.html">Caritas Serbia</a></li>
+            
+              <li><a href="publisher/carter-center.html">The Carter Center</a></li>
+            
+              <li><a href="publisher/cavwoc.html">the center for victimized women and children</a></li>
+            
+              <li><a href="publisher/ccdnigeria.html">Centre For Citizens With Disabilities</a></li>
+            
+              <li><a href="publisher/cda.html">CDA Collaborative Learning Projects</a></li>
+            
+              <li><a href="publisher/cdeb-kvhb_admin.html">Chaîne de l&#39;Espoir Belgique / Keten van Hoop België / Chain of Hope Belgium</a></li>
+            
+              <li><a href="publisher/ceci.html">Center for International Studies and Cooperation</a></li>
+            
+              <li><a href="publisher/chai.html">Clinton Health Access Initiative</a></li>
+            
+              <li><a href="publisher/cif.html">Climate Investment Funds</a></li>
+            
+              <li><a href="publisher/cini_jhk.html">CINI</a></li>
+            
+              <li><a href="publisher/cisu.html">CISU</a></li>
+            
+              <li><a href="publisher/ciuk.html">CARE International UK</a></li>
+            
+              <li><a href="publisher/civicus.html">CIVICUS World Alliance for Citizen Participation</a></li>
+            
+              <li><a href="publisher/climate_centre.html">Red Cross Red Crescent Climate Centre</a></li>
+            
+              <li><a href="publisher/cocnl_publisher.html">COC Nederland</a></li>
+            
+              <li><a href="publisher/coda.html">CODA International</a></li>
+            
+              <li><a href="publisher/concordis.html">Concordis International</a></li>
+            
+              <li><a href="publisher/cordaid.html">Cordaid</a></li>
+            
+              <li><a href="publisher/cost_uk.html">Construction Sector Transparency Initiative (CoST)</a></li>
+            
+              <li><a href="publisher/cowater.html">Cowater International Inc</a></li>
+            
+              <li><a href="publisher/cpi.html">Climate Policy Initiative</a></li>
+            
+              <li><a href="publisher/cprojects.html">Charity Projects Ltd (Comic Relief)</a></li>
+            
+              <li><a href="publisher/crs_vyf.html"></a></li>
+            
+              <li><a href="publisher/csa-kenya.html">Centre for the Study of Adolescence</a></li>
+            
+              <li><a href="publisher/cst.html">CHEKA SANA TANZANIA</a></li>
+            
+              <li><a href="publisher/d4d.html">Data4Development</a></li>
+            
+              <li><a href="publisher/danishrc.html">Danish Red Cross</a></li>
+            
+              <li><a href="publisher/danmission.html">Danmission</a></li>
+            
+              <li><a href="publisher/dapp.html">Development Aid from People to People (DAPP) Malawi</a></li>
+            
+              <li><a href="publisher/dawuro_da.html">Dawuro Development Association</a></li>
+            
+              <li><a href="publisher/ddp.html">Disability and Development Partners</a></li>
+            
+              <li><a href="publisher/defra_transparency.html">UK - Department for Environment, Food and Rural Affairs</a></li>
+            
+              <li><a href="publisher/delivery_associates.html">Delivery Associates Ltd</a></li>
+            
+              <li><a href="publisher/deltares.html">Stichting Deltares</a></li>
+            
+              <li><a href="publisher/dfpa.html">Danish Family Planning Association</a></li>
+            
+              <li><a href="publisher/dggf_financing_local_smes.html">Stichting fondsbeheer DGGF lokaal MKB</a></li>
+            
+              <li><a href="publisher/dgmh.html">David Gordon Memorial Hospital</a></li>
+            
+              <li><a href="publisher/diakonia802017-3517.html">Diakonia Sweden</a></li>
+            
+              <li><a href="publisher/dla.html">Discovery Learning Alliance, Inc.</a></li>
+            
+              <li><a href="publisher/dmru.html">Dansk Missionråds Udviklingsafdeling</a></li>
+            
+              <li><a href="publisher/dochas.html">Dóchas - Irish Association of Non Governmental Development Organisations</a></li>
+            
+              <li><a href="publisher/doh.html"></a></li>
+            
+              <li><a href="publisher/dorp-org.html">Development Organisation of the Rural Poor</a></li>
+            
+              <li><a href="publisher/dpod.html">Disabled People&#39;s Organisations Denmark</a></li>
+            
+              <li><a href="publisher/dps-nampula.html">Direcção Provincial de Saúde de Nampula</a></li>
+            
+              <li><a href="publisher/duf.html">DUF - The Danish Youth Council</a></li>
+            
+              <li><a href="publisher/dwp.html">UK - Department for Work and Pensions</a></li>
+            
+              <li><a href="publisher/e4i.html">Energy 4 Impact</a></li>
+            
+              <li><a href="publisher/ecuk.html">Ecorys UK</a></li>
+            
+              <li><a href="publisher/edt_rwanda.html">EDUCATION DEVELOPMENT TRUST - RWANDA</a></li>
+            
+              <li><a href="publisher/educate.html">Educate!</a></li>
+            
+              <li><a href="publisher/edukans_foundation.html">Edukans Foundation</a></li>
+            
+              <li><a href="publisher/eip.html">European Institute of Peace</a></li>
+            
+              <li><a href="publisher/emms.html">EMMS International</a></li>
+            
+              <li><a href="publisher/energy_saving_trust.html">Energy Saving Trust</a></li>
+            
+              <li><a href="publisher/engenderhealth_eth.html">EngenderHealth Ethiopia</a></li>
+            
+              <li><a href="publisher/eti.html">Ethical Trading Initiative</a></li>
+            
+              <li><a href="publisher/fairfood.html">Fairfood International</a></li>
+            
+              <li><a href="publisher/fco.html">UK - Foreign &amp; Commonwealth Office</a></li>
+            
+              <li><a href="publisher/ff.html">Freedom Forum</a></li>
+            
+              <li><a href="publisher/ffi_publisher.html">Fauna &amp; Flora International</a></li>
+            
+              <li><a href="publisher/fge.html"></a></li>
+            
+              <li><a href="publisher/fida.html">Federation of Women Lawyers Kenya</a></li>
+            
+              <li><a href="publisher/fimi_iiwf_2019.html">International Indigenous Women Forum</a></li>
+            
+              <li><a href="publisher/fipag.html">Fundo de Investimento e Patrimonio do Abastecimento de Água (FIPAG)</a></li>
+            
+              <li><a href="publisher/flepuganda.html">Family Life Education Program</a></li>
+            
+              <li><a href="publisher/fmo.html">FMO</a></li>
+            
+              <li><a href="publisher/fo_germany.html">Germany - Federal Foreign Office</a></li>
+            
+              <li><a href="publisher/fomin.html">Multilateral Investment Fund</a></li>
+            
+              <li><a href="publisher/foundation_center.html">The Foundation Center</a></li>
+            
+              <li><a href="publisher/fundacion-acceso.html">Fundacion Acceso</a></li>
+            
+              <li><a href="publisher/gan.html">Global Action Nepal</a></li>
+            
+              <li><a href="publisher/gb-cc-220949.html"></a></li>
+            
+              <li><a href="publisher/gb-chc-220949.html">British Red Cross</a></li>
+            
+              <li><a href="publisher/gecfundmanagerpwc.html">Girls’ Education Challenge – Fund Manager PwC</a></li>
+            
+              <li><a href="publisher/gif.html">Global Innovation Fund</a></li>
+            
+              <li><a href="publisher/girlsnotbrides.html">Girls Not Brides: The Global Partnership to End Child Marriage</a></li>
+            
+              <li><a href="publisher/globalintegrity.html">Global Integrity</a></li>
+            
+              <li><a href="publisher/globaltfokus.html">Global Focus</a></li>
+            
+              <li><a href="publisher/gogla.html">GOGLA - Global Off-Grid Lighting Association</a></li>
+            
+              <li><a href="publisher/gpe.html">Global Partnership for Education</a></li>
+            
+              <li><a href="publisher/grm.html"></a></li>
+            
+              <li><a href="publisher/ha-i.html">Heartland Alliance International</a></li>
+            
+              <li><a href="publisher/heifer.html"></a></li>
+            
+              <li><a href="publisher/hfc.html">Hope for Children</a></li>
+            
+              <li><a href="publisher/hfhgb.html">Habitat for Humanity Great Britain</a></li>
+            
+              <li><a href="publisher/hooda.html"></a></li>
+            
+              <li><a href="publisher/ia_nam.html">InterAction&#39;s NGO Aid Map</a></li>
+            
+              <li><a href="publisher/ibfd.html">International Bureau of Fiscal Documentation (IBFD)</a></li>
+            
+              <li><a href="publisher/icco-cooperation.html">ICCO Cooperation</a></li>
+            
+              <li><a href="publisher/icdi.html">International Child Development Initiatives</a></li>
+            
+              <li><a href="publisher/icipe.html">International Centre of Insect Physiology and Ecology (icipe)</a></li>
+            
+              <li><a href="publisher/icn.html">InterClimate Network</a></li>
+            
+              <li><a href="publisher/icnl_org.html">International Center for Not-for-Profit Law</a></li>
+            
+              <li><a href="publisher/ics.html">ICS</a></li>
+            
+              <li><a href="publisher/idydc.html">Iringa Development of Youth, Disabled and Children Care</a></li>
+            
+              <li><a href="publisher/ifac.html">International Federation of Accountants</a></li>
+            
+              <li><a href="publisher/ifad.html">International Fund for Agricultural Development (IFAD)</a></li>
+            
+              <li><a href="publisher/ifdc-us.html">International Fertilizer Development Center</a></li>
+            
+              <li><a href="publisher/ilo.html">International Labour Organization (ILO)</a></li>
+            
+              <li><a href="publisher/imcw_admin.html">IMC WORLDWIDE</a></li>
+            
+              <li><a href="publisher/imf.html">International Monetary Fund</a></li>
+            
+              <li><a href="publisher/inbar.html">International Network for Bamboo and Rattan (INBAR)</a></li>
+            
+              <li><a href="publisher/international-alert.html">International Alert</a></li>
+            
+              <li><a href="publisher/ipao.html">Panos Institute West Africa (PIWA)</a></li>
+            
+              <li><a href="publisher/ipe.html">Irrawaddy Policy Exchange</a></li>
+            
+              <li><a href="publisher/ipeglobal.html">IPE Global Limited</a></li>
+            
+              <li><a href="publisher/irc.html">IRC</a></li>
+            
+              <li><a href="publisher/irc_uk.html">International Rescue Committee UK</a></li>
+            
+              <li><a href="publisher/irise_int.html">Irise International</a></li>
+            
+              <li><a href="publisher/issafrica.html">Institute for Security Studies</a></li>
+            
+              <li><a href="publisher/iteco.html">ITECO - Centre de formation pour le développement</a></li>
+            
+              <li><a href="publisher/iwpr.html">Institute for War &amp; Peace Reporting</a></li>
+            
+              <li><a href="publisher/iww_publish.html">Interact Worldwide</a></li>
+            
+              <li><a href="publisher/jass.html">Just Associates</a></li>
+            
+              <li><a href="publisher/jeevika_trust.html">Jeevika Trust</a></li>
+            
+              <li><a href="publisher/jica.html">Japan International Cooperation Agency (JICA)</a></li>
+            
+              <li><a href="publisher/kad.html">Kadaster International</a></li>
+            
+              <li><a href="publisher/karuna.html">Karuna Trust</a></li>
+            
+              <li><a href="publisher/kmet.html">Kisumu Medical and Education Trust</a></li>
+            
+              <li><a href="publisher/kmss.html">Karuna Mission Social Solidarity - KMSS</a></li>
+            
+              <li><a href="publisher/knmi.html">Koninklijk Nederlands Meteorologisch Instituut</a></li>
+            
+              <li><a href="publisher/ksrelief291.html">King Salman Humanitarian Aid and Relief Centre</a></li>
+            
+              <li><a href="publisher/landell-mills.html">Landell Mills</a></li>
+            
+              <li><a href="publisher/lcds.html">Link Community Development Scotland</a></li>
+            
+              <li><a href="publisher/ldsps.html">Local Development and Small Projects Support</a></li>
+            
+              <li><a href="publisher/lead_international.html">LEAD International</a></li>
+            
+              <li><a href="publisher/lftwnl.html">LIGHT FOR THE WORLD The Netherlands</a></li>
+            
+              <li><a href="publisher/libymca.html">YMCA of Liberia</a></li>
+            
+              <li><a href="publisher/lithuania_mfa.html">Lithuania, Ministry of Foreign Affairs</a></li>
+            
+              <li><a href="publisher/livingearth12.html">Living Earth Foundation</a></li>
+            
+              <li><a href="publisher/liwa-admin.html">LIWA programme trust</a></li>
+            
+              <li><a href="publisher/lpi.html">living peace institute</a></li>
+            
+              <li><a href="publisher/lstm.html">Liverpool School of Tropical Medicine</a></li>
+            
+              <li><a href="publisher/lts.html">LTS International Limited</a></li>
+            
+              <li><a href="publisher/m_u.html">Mzumbe University</a></li>
+            
+              <li><a href="publisher/magariro.html">Magariro</a></li>
+            
+              <li><a href="publisher/manxtimes.html">Manx Times</a></li>
+            
+              <li><a href="publisher/mapaction.html">MapAction</a></li>
+            
+              <li><a href="publisher/mcg.html">Mercy Corps Global</a></li>
+            
+              <li><a href="publisher/mck.html">McKinsey &amp; Company</a></li>
+            
+              <li><a href="publisher/mdf.html">MDF Global</a></li>
+            
+              <li><a href="publisher/memisa.html">Memisa</a></li>
+            
+              <li><a href="publisher/mfat.html">New Zealand - Ministry of Foreign Affairs and Trade - New Zealand Aid Programme</a></li>
+            
+              <li><a href="publisher/mie-1134415.html">MADE in Europe</a></li>
+            
+              <li><a href="publisher/missioneast.html">Mission Øst</a></li>
+            
+              <li><a href="publisher/mmr_admin2.html">Musalaha Ministry of Reconciliation</a></li>
+            
+              <li><a href="publisher/mofa-jpn.html">Ministry of Foreign Affairs of  Japan</a></li>
+            
+              <li><a href="publisher/mrc.html">UK - Medical Research Council</a></li>
+            
+              <li><a href="publisher/mrc-sierra-leone.html">Medical Research Centre (MRC), Sierra Leone</a></li>
+            
+              <li><a href="publisher/mrdf.html"></a></li>
+            
+              <li><a href="publisher/msmgf.html">The Global Forum on MSM &amp; HIV (MSMGF)</a></li>
+            
+              <li><a href="publisher/mukisa_foundation.html">Mukisa Foundation</a></li>
+            
+              <li><a href="publisher/nathan.html">Nathan Associates London Ltd.</a></li>
+            
+              <li><a href="publisher/nchrdk.html">National Coalition of Human Rights Defenders - Kenya</a></li>
+            
+              <li><a href="publisher/ndsicde.html">Niger Delta Stakeholders Initiative for Community Development and Empowerment</a></li>
+            
+              <li><a href="publisher/needs.html">Network For Enterprise Enhancement and Development Support</a></li>
+            
+              <li><a href="publisher/nfn.html">NGO Federation of Nepal</a></li>
+            
+              <li><a href="publisher/nlr.html">Netherlands Leprosy Relief</a></li>
+            
+              <li><a href="publisher/nlrc.html">Netherlands Red Cross</a></li>
+            
+              <li><a href="publisher/nmhiati.html">NKHOMA MISSION HOSPITAL</a></li>
+            
+              <li><a href="publisher/nned.html">Northern Network for Education Development</a></li>
+            
+              <li><a href="publisher/nrt-kenya.html">Northern Rangelands Trust</a></li>
+            
+              <li><a href="publisher/nuffic20171017.html">Nuffic</a></li>
+            
+              <li><a href="publisher/ocha_fts.html">United Nations OCHA Financial Tracking Service (UN OCHA FTS)</a></li>
+            
+              <li><a href="publisher/odi.html">Overseas Development Institute</a></li>
+            
+              <li><a href="publisher/odi_sales_ltd.html">ODI Sales Limited</a></li>
+            
+              <li><a href="publisher/ofid.html">The OPEC Fund for International Development (OFID)</a></li>
+            
+              <li><a href="publisher/oxford.html">The University of Oxford</a></li>
+            
+              <li><a href="publisher/pa.html">Practical Action</a></li>
+            
+              <li><a href="publisher/paf_2018.html">The Princess Alia Foundation</a></li>
+            
+              <li><a href="publisher/pdorg.html"></a></li>
+            
+              <li><a href="publisher/peas.html">PEAS (Promoting Equality in African Schools)</a></li>
+            
+              <li><a href="publisher/peopleinaid.html">People In Aid</a></li>
+            
+              <li><a href="publisher/pgi_kenya.html">Pastoralist Girls Initiative</a></li>
+            
+              <li><a href="publisher/pin.html">People in Need</a></li>
+            
+              <li><a href="publisher/plama.html">Plataforma Moçambicana da Água (PLAMA)</a></li>
+            
+              <li><a href="publisher/plan_usa.html">Plan International USA</a></li>
+            
+              <li><a href="publisher/planinternationalfinland.html">Plan International Finland</a></li>
+            
+              <li><a href="publisher/plb.html">PlanBørnefonden</a></li>
+            
+              <li><a href="publisher/pont.html">PONT</a></li>
+            
+              <li><a href="publisher/pri.html">Penal Reform International</a></li>
+            
+              <li><a href="publisher/pstc_1102.html">Population Services and Training Centre (PSTC)</a></li>
+            
+              <li><a href="publisher/pwc.html">PwC</a></li>
+            
+              <li><a href="publisher/rainforest-alliance.html">Rainforest Alliance</a></li>
+            
+              <li><a href="publisher/rainfoundation.html">RAIN Foundation (former)</a></li>
+            
+              <li><a href="publisher/rains.html">Regional Advisory Information and Network Systems</a></li>
+            
+              <li><a href="publisher/rc2africa.html">Railway Children Africa</a></li>
+            
+              <li><a href="publisher/rcgp-international.html">Royal College of General Practitioners (RCGP)</a></li>
+            
+              <li><a href="publisher/rcog_resilience_in_obstetric_skills.html">Royal College of Obstetricians &amp; Gynaecologists</a></li>
+            
+              <li><a href="publisher/reach-iraq.html">Rehabilitation, Education and Community Health (REACH)</a></li>
+            
+              <li><a href="publisher/redbarnet.html">Save the Children DK</a></li>
+            
+              <li><a href="publisher/rem.html">Resource Extraction Monitoring</a></li>
+            
+              <li><a href="publisher/ri_kenya.html">Relief International - Somalia</a></li>
+            
+              <li><a href="publisher/rspb_.html">Royal Society for the Protection of Birds</a></li>
+            
+              <li><a href="publisher/rvo.html">Netherlands Enterprise Agency</a></li>
+            
+              <li><a href="publisher/sac_kenya.html">Send a Cow Kenya</a></li>
+            
+              <li><a href="publisher/sacbc.html">Southern African Catholic Bishops&#39; Conference Aids Office</a></li>
+            
+              <li><a href="publisher/said-uk.html">The Salvation Army International Development UK</a></li>
+            
+              <li><a href="publisher/savsign-org.html">Savana Signatures</a></li>
+            
+              <li><a href="publisher/scottish_government.html">UK - Scottish Government</a></li>
+            
+              <li><a href="publisher/sddirect.html">Social Development Direct Limited</a></li>
+            
+              <li><a href="publisher/sdn.html">Stakeholder Democracy Network</a></li>
+            
+              <li><a href="publisher/seefar.html">Seefar</a></li>
+            
+              <li><a href="publisher/sehatkahanicih.html">Sehat Kahani (Community Innovation Hub)</a></li>
+            
+              <li><a href="publisher/sfd-yemen.html">Social Fund for Development, Yemen</a></li>
+            
+              <li><a href="publisher/shn.html">Special Hope Network</a></li>
+            
+              <li><a href="publisher/shtrii_shakti.html">Shtrii Shakti</a></li>
+            
+              <li><a href="publisher/sida.html">Sweden, through Swedish International Development Cooperation Agency (Sida)</a></li>
+            
+              <li><a href="publisher/silsab1-_.html">Silsab Foundation</a></li>
+            
+              <li><a href="publisher/snv.html">SNV Netherlands Development Organisation</a></li>
+            
+              <li><a href="publisher/soscvkenya.html">SOS Children&#39;s Villages Kenya</a></li>
+            
+              <li><a href="publisher/sosnl.html">SOS Children&#39;s Villages The Netherlands</a></li>
+            
+              <li><a href="publisher/sossaheluk.html">SOS Sahel International UK</a></li>
+            
+              <li><a href="publisher/spark.html">SPARK</a></li>
+            
+              <li><a href="publisher/sr.html">Syria Relief</a></li>
+            
+              <li><a href="publisher/ss-org.html">Sightsavers</a></li>
+            
+              <li><a href="publisher/stad.html">Support Trust for Africa Development (STAD)</a></li>
+            
+              <li><a href="publisher/stichting_hivos.html">Hivos</a></li>
+            
+              <li><a href="publisher/suhanajjar.html">IREX (International Research and Exchange Board)</a></li>
+            
+              <li><a href="publisher/surf.html">Survivors Fund (SURF)</a></li>
+            
+              <li><a href="publisher/tao-03473165.html">Trust for Africa&#39;s Orphans</a></li>
+            
+              <li><a href="publisher/tb-a.html">Global Alliance for TB Drug Development</a></li>
+            
+              <li><a href="publisher/tccec.html">The Coca-Cola Export Corporation</a></li>
+            
+              <li><a href="publisher/tdh_nl.html">Terre des Hommes Netherlands</a></li>
+            
+              <li><a href="publisher/tear.html">TEAR fund Nederland</a></li>
+            
+              <li><a href="publisher/the_mentor_initiative.html">The MENTOR Initiative</a></li>
+            
+              <li><a href="publisher/the_power_of_nutrition.html">The Power of Nutrition</a></li>
+            
+              <li><a href="publisher/thp_org.html">The Hunger Project Netherlands</a></li>
+            
+              <li><a href="publisher/ti-uk.html">Transparency International UK</a></li>
+            
+              <li><a href="publisher/timidria.html">Timidria</a></li>
+            
+              <li><a href="publisher/tripleline_crownagents.html">Triple Line</a></li>
+            
+              <li><a href="publisher/trocaire.html">Trocaire</a></li>
+            
+              <li><a href="publisher/uasd.html">Romania Ministry of Foreign Affairs</a></li>
+            
+              <li><a href="publisher/ucl.html">University College London</a></li>
+            
+              <li><a href="publisher/udpk.html">United Disabled Persons of Kenya</a></li>
+            
+              <li><a href="publisher/uhai-eashri.html">UHAI EASHRI</a></li>
+            
+              <li><a href="publisher/umati.html">Chama cha Uzazi na Malezi Bora Tanzania (UMATI)</a></li>
+            
+              <li><a href="publisher/un-environment.html">United Nations Environment Programme (UNEP)</a></li>
+            
+              <li><a href="publisher/uncdf.html">United Nations Capital Development Fund</a></li>
+            
+              <li><a href="publisher/unesco.html">United Nations Educational, Scientific and Cultural Organization (UNESCO)</a></li>
+            
+              <li><a href="publisher/unfpa.html">United Nations Population Fund</a></li>
+            
+              <li><a href="publisher/unhabitat.html">UN-Habitat</a></li>
+            
+              <li><a href="publisher/uni_of_nottingham.html">University of Nottingham</a></li>
+            
+              <li><a href="publisher/unicefnl.html">UNICEF Netherlands National Committee</a></li>
+            
+              <li><a href="publisher/universityofbirmingham_gsdrc.html">University of Birmingham (Governance and Social Development Resource Centre)</a></li>
+            
+              <li><a href="publisher/unocha.html">United Nations Office for the Coordination of Humanitarian Affairs (OCHA)</a></li>
+            
+              <li><a href="publisher/unocha-cbpf.html">OCHA Country Based Pooled Funds</a></li>
+            
+              <li><a href="publisher/unops.html">United Nations Office for Project Services (UNOPS)</a></li>
+            
+              <li><a href="publisher/unoy_peacebuilders.html"></a></li>
+            
+              <li><a href="publisher/unpf.html">UN Pooled Funds</a></li>
+            
+              <li><a href="publisher/unw.html">UN Women</a></li>
+            
+              <li><a href="publisher/uom.html">The University of Manchester</a></li>
+            
+              <li><a href="publisher/usaid.html">United States Agency for International Development (USAID)</a></li>
+            
+              <li><a href="publisher/uva_org.html">University of Amsterdam</a></li>
+            
+              <li><a href="publisher/uwezo_youth_empowerment.html">UWEZO Youth Empowerment</a></li>
+            
+              <li><a href="publisher/vei_nl.html">VEI (Vitens-Evides International)</a></li>
+            
+              <li><a href="publisher/vfi.html">VisionFund International</a></li>
+            
+              <li><a href="publisher/vhai-org.html">Voluntary Health Association of India</a></li>
+            
+              <li><a href="publisher/wacc-uk.html">World Association for Christian Communication (UK)</a></li>
+            
+              <li><a href="publisher/wag-1983.html">Women&#39;s Action Group</a></li>
+            
+              <li><a href="publisher/water-witness-international.html">Water Witness International</a></li>
+            
+              <li><a href="publisher/wcc.html">War Child Canada</a></li>
+            
+              <li><a href="publisher/wcuk.html">War Child UK</a></li>
+            
+              <li><a href="publisher/weeffect.html">We Effect</a></li>
+            
+              <li><a href="publisher/weforum_geneva.html">World Economic Forum Geneva</a></li>
+            
+              <li><a href="publisher/wf-asia.html">Women&#39;s Fund Asia</a></li>
+            
+              <li><a href="publisher/wff.html">Water Finance Facility</a></li>
+            
+              <li><a href="publisher/wfm-igp.html">World Federalist Movement - Institute for Global Policy</a></li>
+            
+              <li><a href="publisher/wfwiuk.html">Women for Women International (UK)</a></li>
+            
+              <li><a href="publisher/wgnrr_iati.html">Women&#39;s Global Network on Reproductive Rights</a></li>
+            
+              <li><a href="publisher/whh.html">Welthungerhilfe</a></li>
+            
+              <li><a href="publisher/whpca.html">Worldwide Hospice Palliative Care Alliance</a></li>
+            
+              <li><a href="publisher/wnf.html">WNF Wereld Natuur Fonds</a></li>
+            
+              <li><a href="publisher/wo-men.html">WO=MEN, Dutch Gender Platform</a></li>
+            
+              <li><a href="publisher/worldwaternet.html">World Waternet</a></li>
+            
+              <li><a href="publisher/wpp.html">Women Peacemakers Program</a></li>
+            
+              <li><a href="publisher/wtk.html">Windle Trust Kenya</a></li>
+            
+              <li><a href="publisher/wvsyria.html">World Vision Syria</a></li>
+            
+              <li><a href="publisher/wvuk.html">World Vision UK</a></li>
+            
+              <li><a href="publisher/wvz-gec.html">World Vision Zimbabwe</a></li>
+            
+              <li><a href="publisher/ww-gvc.html">We World - GVC Onlus</a></li>
+            
+              <li><a href="publisher/wwf-se.html">WWF Sweden</a></li>
+            
+              <li><a href="publisher/ybi.html">Youth Business International</a></li>
+            
+              <li><a href="publisher/ywcabd.html">YWCA of Bangladesh</a></li>
+            
+              <li><a href="publisher/zing.html">Zing</a></li>
+            
+              <li><a href="publisher/zoa_uk.html">Zambia Orphans Aid UK</a></li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+</body>
+</html>

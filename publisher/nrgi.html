@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>
+IATI Dashboard -  Publisher: Natural Resource Governance Institute (NRGI)
+</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../headlines.html">Headlines</a></li>
+      
+          <li ><a href="../data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/nrgi/" style="float:right">(Publisher Stats JSON)</a>
+<h1>Publisher: Natural Resource Governance Institute (NRGI)</h1>
+<p class="lead"></p>
+
+        </div>
+      
+
+      
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title" id="list_fail_validation">Table of Contents</h3></div>
+        <div class="panel-body">
+            <ul>
+                <li><a href="#h_headlines">Headlines</a>
+                <li><a href="#h_dataquality">Data Quality</a>
+                    <ul>
+                        
+                        <li><a href="#p_validation">Files Failing Validation</a>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li><a href="#h_financial">Financial</a></li>
+                <li><a href="#h_exploringdata">Exploring Data</a>
+                    <ul>
+                        <li><a href="#p_files">Files</a>
+                        <li><a href="#p_codelists">Codelist values</a>
+                        <li><a href="#p_elements">Elements and Attributes published</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <h2 id="h_headlines">Headlines</h2>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>On the Registry</td>
+                <td><a href="http://iatiregistry.org/publisher/nrgi">nrgi</a></td>
+            </tr>
+            <tr>
+                <td>Reporting Org on Registry</td>
+                <td>
+                    <code>US-EIN-20-4451390</code>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Reporting Org(s) in Data</td>
+                <td>
+                
+                <code>US-EIN-20-4451390</code>
+                
+                </td>
+            </tr><tr>
+                <td>Activity Files</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Organisation Files</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Total File Size</td>
+                <td>96.7 kB</td>
+            </tr><tr>
+                <td>Activities</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Unique Activities</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Organisations</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Versions</td>
+                <td>
+                
+                <code>2.02</code>
+                
+                <code>2.03</code>
+                
+                </td>
+            </tr><tr>
+                <td>Hierarchies</td>
+                <td>
+                
+                <code>null</code>
+                
+                </td>
+            </tr><tr>
+                <td>Licenses</td>
+                <td>
+                
+                <code><a href="../license/notspecified.html">notspecified</a></code>
+                
+                </td>
+            </tr><tr>
+                <td>Files failing validation</td>
+                <td>
+                
+                    1
+                
+                </td>
+            </tr>
+        </body>
+    </table>
+    </div>
+    </div>
+    
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activities" class="title-number">1</span>
+              <span class="title-text">Activities</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/activities.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_activities.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activity-files" class="title-number">1</span>
+              <span class="title-text">Activity Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/activity_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_activity_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="organisation-files" class="title-number">1</span>
+              <span class="title-text">Organisation Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/organisation_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_organisation_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-per-version" class="title-number"></span>
+              <span class="title-text">Files per version</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/versions.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_versions.png" width="100%" />
+            
+            <img src="../publisher_imgs/nrgi_versions_legend.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="total-file-size" class="title-number">96.7 kB</span>
+              <span class="title-text">Total File Size</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/file_size.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_file_size.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-failing-validation" class="title-number">1</span>
+              <span class="title-text">Files failing validation</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/validation.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_validation.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-where-xml-is-not-well-formed" class="title-number">0</span>
+              <span class="title-text">Files where XML is not well-formed</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/nrgi/invalidxml.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/nrgi_invalidxml.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 id="h_dataquality">Data Quality</h2>
+
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default" id="p_validation">
+              <!-- Default panel contents -->
+              <div class="panel-heading"><h3 class="panel-title" id="list_fail_validation">Files Failing Validation</h3></div>
+              <!--<div class="panel-body">
+                <p>...</p>
+              </div>-->
+
+              <!-- List group -->
+              <ul class="list-group">
+                
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-md-4 break">
+                      <a href="http://iatiregistry.org/dataset/nrgi-org">nrgi-org</a>
+                    </div>
+                    <div class="col-md-6 break">
+                      
+                      <a href="https://resourcegovernance.org/files/xml/NRGI-organisation.xml">NRGI-organisation.xml</a>
+                      
+                    </div>
+                    <div class="col-md-2 break">
+                       
+                       <a href="http://validator.iatistandard.org/?url=https%3A//resourcegovernance.org/files/xml/NRGI-organisation.xml">validator</a>
+                       
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    </div><!-- .row -->
+
+    <h2 id="h_financial">Financial</h2>
+
+    
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Budgets</h3>
+    </div>
+    <div class="panel-body">
+        <p>The below figures are calculated based on the data contained within the <code>&lt;budget&gt;</code> element for each reported activity. Original and revised elements are based on the value declared in the <code><a href="http://iatistandard.org/201/activity-standard/iati-activities/iati-activity/budget/#iati-activities-iati-activity-budget-type">budget/@type</a></code> attribute. Where budgets fall across two calendar years, the month of the <code>&lt;period-end&gt;</code> date is used to determine annual groupings, with budgets for periods ending January-June added to the previous calendar year.</p>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Count (all)</th>
+                <th>Sum (all)</th>
+                <th>Count (Original)</th>
+                <th>Sum (Original)</th>
+                <th>Count (Revised)</th>
+                <th>Sum (Revised)</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td>Total</td>
+                <td>5</td>
+                <td>
+    
+    
+    
+    14020000.0 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>5</td>
+                <td>
+    
+    
+    
+    14020000.0 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2014</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    814000 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    814000 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2015</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    2891679.73 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    2891679.73 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2016</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    4396000 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    4396000 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2017</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    2760000.0 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    2760000.0 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2018</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    3158320.27 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    3158320.27 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+
+    <h2 id="h_exploringdata">Exploring Data</h2>
+
+    <div class="panel panel-default" id="p_files">
+    <div class="panel-heading">
+        <h3 class="panel-title">Files</h3>
+    </div>
+    <table class="table table-striped exploring-data">
+        <thead>
+            <tr>
+                <th>Package</th>
+                <th>Activities <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/nrgi/activities.json">(J)</a></th>
+                <th>Organisations <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/nrgi/organisations.json">(J)</a></th>
+                <th>File Size <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/nrgi/file_size.json">(J)</a></th>
+                <th>Version <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/nrgi/versions.json">(J)</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/nrgi-org">nrgi-org</a></td>
+                <td>0</td>
+                <td>1</td>
+                <td data-bytes="3277">3.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/nrgi-rtpeed">nrgi-rtpeed</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="93456">93.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+    
+    
+    <div class="panel panel-default" id="p_codelists">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/nrgi/codelist_values.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Codelist Values (version 2.xx)</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Codelist</th>
+                <th>Values on Codelist</th>
+                <th>Values not on Codelist</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/@default-currency.html">.//@default-currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//@default-currency" data-content="<code>GBP</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-date_@type.html">.//activity-date/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityDateType">ActivityDateType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-date/@type" data-content="<code>2</code> <code>3</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-scope_@code.html">.//activity-scope/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityScope">ActivityScope</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-scope/@code" data-content="<code>3</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-status_@code.html">.//activity-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityStatus">ActivityStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-status/@code" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_@status.html">.//budget/@status</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetStatus">BudgetStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/@status" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_@type.html">.//budget/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetType">BudgetType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/@type" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_value_@currency.html">.//budget/value/@currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/value/@currency" data-content="<code>GBP</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/collaboration-type_@code.html">.//collaboration-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/CollaborationType">CollaborationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//collaboration-type/@code" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/contact-info_@type.html">.//contact-info/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ContactType">ContactType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//contact-info/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-aid-type_@code.html">.//default-aid-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/AidType">AidType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-aid-type/@code" data-content="<code>C01</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-finance-type_@code.html">.//default-finance-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FinanceType">FinanceType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-finance-type/@code" data-content="<code>110</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-flow-type_@code.html">.//default-flow-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FlowType">FlowType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-flow-type/@code" data-content="<code>10</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-tied-status_@code.html">.//default-tied-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TiedStatus">TiedStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-tied-status/@code" data-content="<code>5</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/description_@type.html">.//description/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/DescriptionType">DescriptionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//description/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/document-link_@format.html">.//document-link/@format</a></td>
+                <td><a href="http://iatistandard.org/codelists/FileFormat">FileFormat</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//document-link/@format" data-content="<code>application/pdf</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/document-link_category_@code.html">.//document-link/category/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/DocumentCategory">DocumentCategory</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//document-link/category/@code" data-content="<code>A11</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/document-link_language_@code.html">.//document-link/language/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Language">Language</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//document-link/language/@code" data-content="<code>en</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@role.html">.//participating-org/@role</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationRole">OrganisationRole</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@role" data-content="<code>1</code> <code>2</code> <code>4</code> ">3</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@type.html">.//participating-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@type" data-content="<code>10</code> <code>21</code> <code>22</code> <code>71</code> <code>80</code> ">5</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/policy-marker_@code.html">.//policy-marker/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/PolicyMarker">PolicyMarker</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//policy-marker/@code" data-content="<code>3</code> <code>4</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/policy-marker_@significance.html">.//policy-marker/@significance</a></td>
+                <td><a href="http://iatistandard.org/codelists/PolicySignificance">PolicySignificance</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//policy-marker/@significance" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-country_@code.html">.//recipient-country/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Country">Country</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-country/@code" data-content="<code>CD</code> <code>CO</code> <code>GH</code> <code>GN</code> <code>KG</code> <code>MM</code> <code>MX</code> <code>NG</code> <code>TZ</code> <code>UG</code> <code>ZM</code> ">11</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-region_@code.html">.//recipient-region/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Region">Region</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-region/@code" data-content="<code>298</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//recipient-region/@code" data-content="<code>GLOBAL</code> ">
+                            1
+                        </a>
+                        
+                            <div class="alert alert-warning">Note: this attribute can be on multiple codelists (specified by the @vocabulary attribute) but the Dashboard only currently checks against the default codelist - see <a href="https://github.com/IATI/IATI-Dashboard/issues/174">issue #174</a>. Therefore some publishers may incorrectly show up as "Not On Codelist".</div>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/reporting-org_@type.html">.//reporting-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//reporting-org/@type" data-content="<code>40</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@code.html">.//sector/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorCategory">SectorCategory</a></td>
+                
+                <td>0
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//sector/@code" data-content="<code>15111</code> <code>32210</code> ">
+                            2
+                        </a>
+                        
+                            <div class="alert alert-warning">Note: this attribute can be on multiple codelists (specified by the @vocabulary attribute) but the Dashboard only currently checks against the default codelist - see <a href="https://github.com/IATI/IATI-Dashboard/issues/174">issue #174</a>. Therefore some publishers may incorrectly show up as "Not On Codelist".</div>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@vocabulary.html">.//sector/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorVocabulary">SectorVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//sector/@vocabulary" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_transaction-type_@code.html">.//transaction/transaction-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TransactionType">TransactionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/transaction-type/@code" data-content="<code>1</code> <code>11</code> <code>2</code> <code>3</code> <code>4</code> ">5</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_value_@currency.html">.//transaction/value/@currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/value/@currency" data-content="<code>GBP</code> <code>USD</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+    
+    
+    
+    
+
+    <div class="panel panel-default" id="p_elements">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/nrgi/elements.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Elements and Attributes Published</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Activities/Organisations</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity.html">iati-activity</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@default-currency.html">iati-activity/@default-currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_@default-currency.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@humanitarian.html">iati-activity/@humanitarian</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_@humanitarian.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@last-updated-datetime.html">iati-activity/@last-updated-datetime</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_@last-updated-datetime.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date.html">iati-activity/activity-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html">iati-activity/activity-date/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@type.html">iati-activity/activity-date/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-date_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-scope.html">iati-activity/activity-scope</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-scope.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-scope_@code.html">iati-activity/activity-scope/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-scope_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status.html">iati-activity/activity-status</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-status.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status_@code.html">iati-activity/activity-status/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_activity-status_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget.html">iati-activity/budget</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_@status.html">iati-activity/budget/@status</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_@status.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_@type.html">iati-activity/budget/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end.html">iati-activity/budget/period-end</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_period-end.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html">iati-activity/budget/period-end/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start.html">iati-activity/budget/period-start</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_period-start.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html">iati-activity/budget/period-start/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value.html">iati-activity/budget/value</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_value.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@currency.html">iati-activity/budget/value/@currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_value_@currency.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@value-date.html">iati-activity/budget/value/@value-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_budget_value_@value-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_capital-spend.html">iati-activity/capital-spend</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_capital-spend.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_capital-spend_@percentage.html">iati-activity/capital-spend/@percentage</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_capital-spend_@percentage.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_collaboration-type.html">iati-activity/collaboration-type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_collaboration-type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_collaboration-type_@code.html">iati-activity/collaboration-type/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_collaboration-type_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info.html">iati-activity/contact-info</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_contact-info.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_@type.html">iati-activity/contact-info/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_contact-info_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_email.html">iati-activity/contact-info/email</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_contact-info_email.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation.html">iati-activity/contact-info/organisation</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_contact-info_organisation.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html">iati-activity/contact-info/organisation/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_website.html">iati-activity/contact-info/website</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_contact-info_website.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-aid-type.html">iati-activity/default-aid-type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-aid-type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-aid-type_@code.html">iati-activity/default-aid-type/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-aid-type_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-finance-type.html">iati-activity/default-finance-type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-finance-type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-finance-type_@code.html">iati-activity/default-finance-type/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-finance-type_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-flow-type.html">iati-activity/default-flow-type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-flow-type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-flow-type_@code.html">iati-activity/default-flow-type/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-flow-type_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-tied-status.html">iati-activity/default-tied-status</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-tied-status.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-tied-status_@code.html">iati-activity/default-tied-status/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_default-tied-status_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description.html">iati-activity/description</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_description.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_@type.html">iati-activity/description/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_description_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_narrative.html">iati-activity/description/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_description_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link.html">iati-activity/document-link</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_@format.html">iati-activity/document-link/@format</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_@format.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_@url.html">iati-activity/document-link/@url</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_@url.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_category.html">iati-activity/document-link/category</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_category.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_category_@code.html">iati-activity/document-link/category/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_category_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_document-date.html">iati-activity/document-link/document-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_document-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_document-date_@iso-date.html">iati-activity/document-link/document-date/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_document-date_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_language.html">iati-activity/document-link/language</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_language.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_language_@code.html">iati-activity/document-link/language/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_language_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_title.html">iati-activity/document-link/title</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_title.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_title_narrative.html">iati-activity/document-link/title/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_document-link_title_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_iati-identifier.html">iati-activity/iati-identifier</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_iati-identifier.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org.html">iati-activity/participating-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_participating-org.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@activity-id.html">iati-activity/participating-org/@activity-id</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_participating-org_@activity-id.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@ref.html">iati-activity/participating-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_participating-org_@ref.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@role.html">iati-activity/participating-org/@role</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_participating-org_@role.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@type.html">iati-activity/participating-org/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_participating-org_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_narrative.html">iati-activity/participating-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_participating-org_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_policy-marker.html">iati-activity/policy-marker</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_policy-marker.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_policy-marker_@code.html">iati-activity/policy-marker/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_policy-marker_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_policy-marker_@significance.html">iati-activity/policy-marker/@significance</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_policy-marker_@significance.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_policy-marker_narrative.html">iati-activity/policy-marker/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_policy-marker_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country.html">iati-activity/recipient-country</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-country.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_@code.html">iati-activity/recipient-country/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-country_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_@percentage.html">iati-activity/recipient-country/@percentage</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-country_@percentage.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_narrative.html">iati-activity/recipient-country/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-country_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region.html">iati-activity/recipient-region</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-region.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region_@code.html">iati-activity/recipient-region/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-region_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region_@percentage.html">iati-activity/recipient-region/@percentage</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-region_@percentage.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region_narrative.html">iati-activity/recipient-region/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_recipient-region_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org.html">iati-activity/reporting-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_reporting-org.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@ref.html">iati-activity/reporting-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_reporting-org_@ref.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@type.html">iati-activity/reporting-org/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_reporting-org_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_narrative.html">iati-activity/reporting-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_reporting-org_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector.html">iati-activity/sector</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_sector.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@code.html">iati-activity/sector/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_sector_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@percentage.html">iati-activity/sector/@percentage</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_sector_@percentage.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@vocabulary.html">iati-activity/sector/@vocabulary</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_sector_@vocabulary.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_narrative.html">iati-activity/sector/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_sector_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title.html">iati-activity/title</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_title.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title_narrative.html">iati-activity/title/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_title_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction.html">iati-activity/transaction</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_description.html">iati-activity/transaction/description</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_description.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_description_narrative.html">iati-activity/transaction/description/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_description_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org.html">iati-activity/transaction/provider-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_provider-org.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_@provider-activity-id.html">iati-activity/transaction/provider-org/@provider-activity-id</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_@provider-activity-id.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_@ref.html">iati-activity/transaction/provider-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_@ref.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_narrative.html">iati-activity/transaction/provider-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org.html">iati-activity/transaction/receiver-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_@receiver-activity-id.html">iati-activity/transaction/receiver-org/@receiver-activity-id</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_@receiver-activity-id.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_@ref.html">iati-activity/transaction/receiver-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_@ref.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html">iati-activity/transaction/receiver-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date.html">iati-activity/transaction/transaction-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html">iati-activity/transaction/transaction-date/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type.html">iati-activity/transaction/transaction-type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html">iati-activity/transaction/transaction-type/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value.html">iati-activity/transaction/value</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_value.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@currency.html">iati-activity/transaction/value/@currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_value_@currency.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html">iati-activity/transaction/value/@value-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation.html">iati-organisation</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@default-currency.html">iati-organisation/@default-currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@default-currency.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html">iati-organisation/@last-updated-datetime</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@xml:lang.html">iati-organisation/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@xml:lang.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link.html">iati-organisation/document-link</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_@format.html">iati-organisation/document-link/@format</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_@format.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_@url.html">iati-organisation/document-link/@url</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_@url.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_category.html">iati-organisation/document-link/category</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_category.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_category_@code.html">iati-organisation/document-link/category/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_category_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_document-date.html">iati-organisation/document-link/document-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_document-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_document-date_@iso-date.html">iati-organisation/document-link/document-date/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_document-date_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_language.html">iati-organisation/document-link/language</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_language.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_language_@code.html">iati-organisation/document-link/language/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_language_@code.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_title.html">iati-organisation/document-link/title</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_title.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_title_narrative.html">iati-organisation/document-link/title/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_title_narrative.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_iati-identifier.html">iati-organisation/iati-identifier</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_iati-identifier.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name.html">iati-organisation/name</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org.html">iati-organisation/reporting-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html">iati-organisation/reporting-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@type.html">iati-organisation/reporting-org/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@type.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@xml:lang.html">iati-organisation/reporting-org/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@xml:lang.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure.html">iati-organisation/total-expenditure</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_period-end.html">iati-organisation/total-expenditure/period-end</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_period-end.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_period-end_@iso-date.html">iati-organisation/total-expenditure/period-end/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_period-end_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_period-start.html">iati-organisation/total-expenditure/period-start</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_period-start.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_period-start_@iso-date.html">iati-organisation/total-expenditure/period-start/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_period-start_@iso-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_value.html">iati-organisation/total-expenditure/value</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_value.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_value_@currency.html">iati-organisation/total-expenditure/value/@currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_value_@currency.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-expenditure_value_@value-date.html">iati-organisation/total-expenditure/value/@value-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-expenditure_value_@value-date.html#files_nrgi">1</a></td>
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+
+<script>$(function() { $("table.table:not(.exploring-data)").tablesorter(); });</script>
+<script>$(function() { $("table.exploring-data").tablesorter({textExtraction:{3: function(node,table,cellIndex) { return $(node).attr('data-bytes'); }}}); });</script>
+
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+$('.popover-html').popover({
+  html: true
+})
+    </script>
+
+</body>
+</html>

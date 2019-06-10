@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>
+IATI Dashboard - Codelists - Codelists
+</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../../headlines.html">Headlines</a></li>
+      
+          <li ><a href="../../data_quality.html">Data Quality</a></li>
+      
+          <li class="active"><a href="../../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li><a href="../../elements.html">Elements</a></li>
+      
+          <li class="active"><a href="../../codelists.html">Codelists</a></li>
+      
+          <li><a href="../../booleans.html">Booleans</a></li>
+      
+          <li><a href="../../dates.html">Dates</a></li>
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<h1>Codelist values used for <code>.//transaction/tied-status/@code</code></h1>
+<p class="lead">Who uses <code>TiedStatus</code> in <code><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/tied-status/">.//transaction/tied-status/@code</a></code>?</p>
+<p class="lead">(for files published to version 2.xx of the standard)</p>
+
+<p style="float:right">(<a href="http://dashboard.iatistandard.org/stats/current/inverted-publisher/codelist_values.json">This page in JSON format</a>)</p>
+<p>Values should be on the <code><a href="http://iatistandard.org/codelists/TiedStatus/">TiedStatus</a></code> codelist.</p>
+
+        </div>
+      
+
+      
+
+    <p>
+    
+    
+    </p>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">On Codelist</h3>
+    </div>
+    <div class="panel-body">
+        <p>Codes that are on the <code>TiedStatus</code> codelist.</p>
+    </div>
+    <table class="table table-striped">
+      <thead><tr><th>Value</th><th>Publishers</th></tr></thead>
+      <tbody>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <tr><td>3</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>3</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/bothends.html#p_codelists'>bothends</a><br/> <a href='../../publisher/ccc.html#p_codelists'>ccc</a><br/> <a href='../../publisher/cifal.html#p_codelists'>cifal</a><br/> <a href='../../publisher/cr.html#p_codelists'>cr</a><br/> <a href='../../publisher/danishrc.html#p_codelists'>danishrc</a><br/> <a href='../../publisher/dapp.html#p_codelists'>dapp</a><br/> <a href='../../publisher/dawuro_da.html#p_codelists'>dawuro_da</a><br/> <a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-fpi.html#p_codelists'>ec-fpi</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> <a href='../../publisher/esrf.html#p_codelists'>esrf</a><br/> <a href='../../publisher/hiuk.html#p_codelists'>hiuk</a><br/> <a href='../../publisher/ibis_denmark.html#p_codelists'>ibis_denmark</a><br/> <a href='../../publisher/m2m_sa.html#p_codelists'>m2m_sa</a><br/> <a href='../../publisher/malariaconsortium.html#p_codelists'>malariaconsortium</a><br/> <a href='../../publisher/npa.html#p_codelists'>npa</a><br/> <a href='../../publisher/nrc.html#p_codelists'>nrc</a><br/> <a href='../../publisher/opportunity-international-uk.html#p_codelists'>opportunity-international-uk</a><br/> <a href='../../publisher/progressio.html#p_codelists'>progressio</a><br/> <a href='../../publisher/restless.html#p_codelists'>restless</a><br/> <a href='../../publisher/rfuk.html#p_codelists'>rfuk</a><br/> <a href='../../publisher/sac_kenya.html#p_codelists'>sac_kenya</a><br/> <a href='../../publisher/sacethiopia.html#p_codelists'>sacethiopia</a><br/> <a href='../../publisher/sendacow.html#p_codelists'>sendacow</a><br/> <a href='../../publisher/transparency-international.html#p_codelists'>transparency-international</a><br/> <a href='../../publisher/unaids.html#p_codelists'>unaids</a><br/> <a href='../../publisher/vso.html#p_codelists'>vso</a><br/> <a href='../../publisher/woda_0486.html#p_codelists'>woda_0486</a><br/> ">28</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>5</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>5</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/12921047.html#p_codelists'>12921047</a><br/> <a href='../../publisher/aaik.html#p_codelists'>aaik</a><br/> <a href='../../publisher/aar.html#p_codelists'>aar</a><br/> <a href='../../publisher/aauk.html#p_codelists'>aauk</a><br/> <a href='../../publisher/abt.html#p_codelists'>abt</a><br/> <a href='../../publisher/acaa.html#p_codelists'>acaa</a><br/> <a href='../../publisher/acord.html#p_codelists'>acord</a><br/> <a href='../../publisher/addinternational.html#p_codelists'>addinternational</a><br/> <a href='../../publisher/adrauk.html#p_codelists'>adrauk</a><br/> <a href='../../publisher/aet.html#p_codelists'>aet</a><br/> <a href='../../publisher/ai_1064413.html#p_codelists'>ai_1064413</a><br/> <a href='../../publisher/akfuk73.html#p_codelists'>akfuk73</a><br/> <a href='../../publisher/amrefeth.html#p_codelists'>amrefeth</a><br/> <a href='../../publisher/amrefha.html#p_codelists'>amrefha</a><br/> <a href='../../publisher/amrefkenya.html#p_codelists'>amrefkenya</a><br/> <a href='../../publisher/amrefmw.html#p_codelists'>amrefmw</a><br/> <a href='../../publisher/amrefnl.html#p_codelists'>amrefnl</a><br/> <a href='../../publisher/apt.html#p_codelists'>apt</a><br/> <a href='../../publisher/ark.html#p_codelists'>ark</a><br/> <a href='../../publisher/art19.html#p_codelists'>art19</a><br/> <a href='../../publisher/asi.html#p_codelists'>asi</a><br/> <a href='../../publisher/ava_admin.html#p_codelists'>ava_admin</a><br/> <a href='../../publisher/awdf.html#p_codelists'>awdf</a><br/> <a href='../../publisher/bdo.html#p_codelists'>bdo</a><br/> <a href='../../publisher/beesfordevelopment.html#p_codelists'>beesfordevelopment</a><br/> <a href='../../publisher/bioclimate.html#p_codelists'>bioclimate</a><br/> <a href='../../publisher/bond.html#p_codelists'>bond</a><br/> <a href='../../publisher/brulocalis.html#p_codelists'>brulocalis</a><br/> <a href='../../publisher/bvs-nepal.html#p_codelists'>bvs-nepal</a><br/> <a href='../../publisher/cal.html#p_codelists'>cal</a><br/> <a href='../../publisher/caritas_denmark.html#p_codelists'>caritas_denmark</a><br/> <a href='../../publisher/cecily.html#p_codelists'>cecily</a><br/> <a href='../../publisher/cepr.html#p_codelists'>cepr</a><br/> <a href='../../publisher/cfyas.html#p_codelists'>cfyas</a><br/> <a href='../../publisher/chemonics.html#p_codelists'>chemonics</a><br/> <a href='../../publisher/clasp.html#p_codelists'>clasp</a><br/> <a href='../../publisher/climate_centre.html#p_codelists'>climate_centre</a><br/> <a href='../../publisher/cord.html#p_codelists'>cord</a><br/> <a href='../../publisher/cr.html#p_codelists'>cr</a><br/> <a href='../../publisher/crs.html#p_codelists'>crs</a><br/> <a href='../../publisher/cuammtrustees.html#p_codelists'>cuammtrustees</a><br/> <a href='../../publisher/damien-foundation.html#p_codelists'>damien-foundation</a><br/> <a href='../../publisher/dance4life.html#p_codelists'>dance4life</a><br/> <a href='../../publisher/danida.html#p_codelists'>danida</a><br/> <a href='../../publisher/danmission.html#p_codelists'>danmission</a><br/> <a href='../../publisher/dawuro_da.html#p_codelists'>dawuro_da</a><br/> <a href='../../publisher/dc.html#p_codelists'>dc</a><br/> <a href='../../publisher/dcaf.html#p_codelists'>dcaf</a><br/> <a href='../../publisher/defra_transparency.html#p_codelists'>defra_transparency</a><br/> <a href='../../publisher/dfatd-maecd.html#p_codelists'>dfatd-maecd</a><br/> <a href='../../publisher/dhsc.html#p_codelists'>dhsc</a><br/> <a href='../../publisher/diltuk.html#p_codelists'>diltuk</a><br/> <a href='../../publisher/draf.html#p_codelists'>draf</a><br/> <a href='../../publisher/drf.html#p_codelists'>drf</a><br/> <a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-fpi.html#p_codelists'>ec-fpi</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> <a href='../../publisher/eel.html#p_codelists'>eel</a><br/> <a href='../../publisher/ehpea.html#p_codelists'>ehpea</a><br/> <a href='../../publisher/ejc.html#p_codelists'>ejc</a><br/> <a href='../../publisher/equileap.html#p_codelists'>equileap</a><br/> <a href='../../publisher/excellent.html#p_codelists'>excellent</a><br/> <a href='../../publisher/f-aids.html#p_codelists'>f-aids</a><br/> <a href='../../publisher/fairtrade_be.html#p_codelists'>fairtrade_be</a><br/> <a href='../../publisher/fairtrade_international.html#p_codelists'>fairtrade_international</a><br/> <a href='../../publisher/fh.html#p_codelists'>fh</a><br/> <a href='../../publisher/fimi_iiwf_2019.html#p_codelists'>fimi_iiwf_2019</a><br/> <a href='../../publisher/foe-ghana.html#p_codelists'>foe-ghana</a><br/> <a href='../../publisher/foe_ewni.html#p_codelists'>foe_ewni</a><br/> <a href='../../publisher/freeagirl.html#p_codelists'>freeagirl</a><br/> <a href='../../publisher/friendsofpwyf.html#p_codelists'>friendsofpwyf</a><br/> <a href='../../publisher/fundacion-acceso.html#p_codelists'>fundacion-acceso</a><br/> <a href='../../publisher/fyf.html#p_codelists'>fyf</a><br/> <a href='../../publisher/gac-amc.html#p_codelists'>gac-amc</a><br/> <a href='../../publisher/givedirectly.html#p_codelists'>givedirectly</a><br/> <a href='../../publisher/grc2018.html#p_codelists'>grc2018</a><br/> <a href='../../publisher/hai.html#p_codelists'>hai</a><br/> <a href='../../publisher/healthpartners-international.html#p_codelists'>healthpartners-international</a><br/> <a href='../../publisher/hhc.html#p_codelists'>hhc</a><br/> <a href='../../publisher/hi.html#p_codelists'>hi</a><br/> <a href='../../publisher/hiuk.html#p_codelists'>hiuk</a><br/> <a href='../../publisher/hpa.html#p_codelists'>hpa</a><br/> <a href='../../publisher/idh.html#p_codelists'>idh</a><br/> <a href='../../publisher/idlo.html#p_codelists'>idlo</a><br/> <a href='../../publisher/imc_uk.html#p_codelists'>imc_uk</a><br/> <a href='../../publisher/integrity_action.html#p_codelists'>integrity_action</a><br/> <a href='../../publisher/ippf.html#p_codelists'>ippf</a><br/> <a href='../../publisher/irishaid.html#p_codelists'>irishaid</a><br/> <a href='../../publisher/itpc.html#p_codelists'>itpc</a><br/> <a href='../../publisher/iwda.html#p_codelists'>iwda</a><br/> <a href='../../publisher/kipkelion.html#p_codelists'>kipkelion</a><br/> <a href='../../publisher/kpmgea.html#p_codelists'>kpmgea</a><br/> <a href='../../publisher/kwaafrica.html#p_codelists'>kwaafrica</a><br/> <a href='../../publisher/lepra.html#p_codelists'>lepra</a><br/> <a href='../../publisher/loftf.html#p_codelists'>loftf</a><br/> <a href='../../publisher/lstm.html#p_codelists'>lstm</a><br/> <a href='../../publisher/m2m_sa.html#p_codelists'>m2m_sa</a><br/> <a href='../../publisher/malariaconsortium.html#p_codelists'>malariaconsortium</a><br/> <a href='../../publisher/manxtimes.html#p_codelists'>manxtimes</a><br/> <a href='../../publisher/mapaction.html#p_codelists'>mapaction</a><br/> <a href='../../publisher/mce.html#p_codelists'>mce</a><br/> <a href='../../publisher/mifumi_uk.html#p_codelists'>mifumi_uk</a><br/> <a href='../../publisher/mondefemmes.html#p_codelists'>mondefemmes</a><br/> <a href='../../publisher/mondiaalfnv.html#p_codelists'>mondiaalfnv</a><br/> <a href='../../publisher/nlr.html#p_codelists'>nlr</a><br/> <a href='../../publisher/nswp.html#p_codelists'>nswp</a><br/> <a href='../../publisher/onetoonecf.html#p_codelists'>onetoonecf</a><br/> <a href='../../publisher/openmindedly.html#p_codelists'>openmindedly</a><br/> <a href='../../publisher/opportunity-international-uk.html#p_codelists'>opportunity-international-uk</a><br/> <a href='../../publisher/pacam.html#p_codelists'>pacam</a><br/> <a href='../../publisher/peas.html#p_codelists'>peas</a><br/> <a href='../../publisher/phase_worldwide.html#p_codelists'>phase_worldwide</a><br/> <a href='../../publisher/phe.html#p_codelists'>phe</a><br/> <a href='../../publisher/pib.html#p_codelists'>pib</a><br/> <a href='../../publisher/pidg.html#p_codelists'>pidg</a><br/> <a href='../../publisher/pontis.html#p_codelists'>pontis</a><br/> <a href='../../publisher/pri.html#p_codelists'>pri</a><br/> <a href='../../publisher/psi.html#p_codelists'>psi</a><br/> <a href='../../publisher/rcog_resilience_in_obstetric_skills.html#p_codelists'>rcog_resilience_in_obstetric_skills</a><br/> <a href='../../publisher/restless.html#p_codelists'>restless</a><br/> <a href='../../publisher/sac_kenya.html#p_codelists'>sac_kenya</a><br/> <a href='../../publisher/sacethiopia.html#p_codelists'>sacethiopia</a><br/> <a href='../../publisher/sacu.html#p_codelists'>sacu</a><br/> <a href='../../publisher/scnl.html#p_codelists'>scnl</a><br/> <a href='../../publisher/sendacow.html#p_codelists'>sendacow</a><br/> <a href='../../publisher/simavi.html#p_codelists'>simavi</a><br/> <a href='../../publisher/simlab.html#p_codelists'>simlab</a><br/> <a href='../../publisher/sosnl.html#p_codelists'>sosnl</a><br/> <a href='../../publisher/soundseekers.html#p_codelists'>soundseekers</a><br/> <a href='../../publisher/spuk.html#p_codelists'>spuk</a><br/> <a href='../../publisher/surf.html#p_codelists'>surf</a><br/> <a href='../../publisher/taf.html#p_codelists'>taf</a><br/> <a href='../../publisher/tdh_nl.html#p_codelists'>tdh_nl</a><br/> <a href='../../publisher/tfac.html#p_codelists'>tfac</a><br/> <a href='../../publisher/tfacmalawi.html#p_codelists'>tfacmalawi</a><br/> <a href='../../publisher/the_mentor_initiative.html#p_codelists'>the_mentor_initiative</a><br/> <a href='../../publisher/theglobalfund.html#p_codelists'>theglobalfund</a><br/> <a href='../../publisher/tlmew.html#p_codelists'>tlmew</a><br/> <a href='../../publisher/tni.html#p_codelists'>tni</a><br/> <a href='../../publisher/traidcraft.html#p_codelists'>traidcraft</a><br/> <a href='../../publisher/transparency-international.html#p_codelists'>transparency-international</a><br/> <a href='../../publisher/troc.html#p_codelists'>troc</a><br/> <a href='../../publisher/twin-iati.html#p_codelists'>twin-iati</a><br/> <a href='../../publisher/unfpa.html#p_codelists'>unfpa</a><br/> <a href='../../publisher/utd.html#p_codelists'>utd</a><br/> <a href='../../publisher/utz.html#p_codelists'>utz</a><br/> <a href='../../publisher/uvcw.html#p_codelists'>uvcw</a><br/> <a href='../../publisher/vso.html#p_codelists'>vso</a><br/> <a href='../../publisher/warchildholland.html#p_codelists'>warchildholland</a><br/> <a href='../../publisher/wcf.html#p_codelists'>wcf</a><br/> <a href='../../publisher/wemos.html#p_codelists'>wemos</a><br/> <a href='../../publisher/wfwiuk.html#p_codelists'>wfwiuk</a><br/> <a href='../../publisher/who.html#p_codelists'>who</a><br/> <a href='../../publisher/whpca.html#p_codelists'>whpca</a><br/> <a href='../../publisher/win.html#p_codelists'>win</a><br/> <a href='../../publisher/woda_0486.html#p_codelists'>woda_0486</a><br/> <a href='../../publisher/womankindworld.html#p_codelists'>womankindworld</a><br/> <a href='../../publisher/worldeconomicforum.html#p_codelists'>worldeconomicforum</a><br/> <a href='../../publisher/wri.html#p_codelists'>wri</a><br/> <a href='../../publisher/wsup.html#p_codelists'>wsup</a><br/> <a href='../../publisher/wwf-be.html#p_codelists'>wwf-be</a><br/> <a href='../../publisher/zet.html#p_codelists'>zet</a><br/> ">162</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>4</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>4</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/acaa.html#p_codelists'>acaa</a><br/> <a href='../../publisher/across.html#p_codelists'>across</a><br/> <a href='../../publisher/addinternational.html#p_codelists'>addinternational</a><br/> <a href='../../publisher/adsb.html#p_codelists'>adsb</a><br/> <a href='../../publisher/aecom.html#p_codelists'>aecom</a><br/> <a href='../../publisher/ai_1064413.html#p_codelists'>ai_1064413</a><br/> <a href='../../publisher/ask.html#p_codelists'>ask</a><br/> <a href='../../publisher/basicneeds.html#p_codelists'>basicneeds</a><br/> <a href='../../publisher/bcm-cf.html#p_codelists'>bcm-cf</a><br/> <a href='../../publisher/childhopeuk.html#p_codelists'>childhopeuk</a><br/> <a href='../../publisher/civic_admin.html#p_codelists'>civic_admin</a><br/> <a href='../../publisher/cyan.html#p_codelists'>cyan</a><br/> <a href='../../publisher/dapp.html#p_codelists'>dapp</a><br/> <a href='../../publisher/dc.html#p_codelists'>dc</a><br/> <a href='../../publisher/dcaf.html#p_codelists'>dcaf</a><br/> <a href='../../publisher/dfatd-maecd.html#p_codelists'>dfatd-maecd</a><br/> <a href='../../publisher/dotw_uk.html#p_codelists'>dotw_uk</a><br/> <a href='../../publisher/dthfxx12.html#p_codelists'>dthfxx12</a><br/> <a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-fpi.html#p_codelists'>ec-fpi</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> <a href='../../publisher/gac-amc.html#p_codelists'>gac-amc</a><br/> <a href='../../publisher/hagar_uk.html#p_codelists'>hagar_uk</a><br/> <a href='../../publisher/handinhand.html#p_codelists'>handinhand</a><br/> <a href='../../publisher/hiuk.html#p_codelists'>hiuk</a><br/> <a href='../../publisher/hpa.html#p_codelists'>hpa</a><br/> <a href='../../publisher/ibis_denmark.html#p_codelists'>ibis_denmark</a><br/> <a href='../../publisher/idlo.html#p_codelists'>idlo</a><br/> <a href='../../publisher/ippf.html#p_codelists'>ippf</a><br/> <a href='../../publisher/jocc_uk.html#p_codelists'>jocc_uk</a><br/> <a href='../../publisher/kipkelion.html#p_codelists'>kipkelion</a><br/> <a href='../../publisher/lcds.html#p_codelists'>lcds</a><br/> <a href='../../publisher/lhcf.html#p_codelists'>lhcf</a><br/> <a href='../../publisher/livingearth12.html#p_codelists'>livingearth12</a><br/> <a href='../../publisher/mapaction.html#p_codelists'>mapaction</a><br/> <a href='../../publisher/maydayrescue.html#p_codelists'>maydayrescue</a><br/> <a href='../../publisher/mifumi_uk.html#p_codelists'>mifumi_uk</a><br/> <a href='../../publisher/mondefemmes.html#p_codelists'>mondefemmes</a><br/> <a href='../../publisher/motivation.html#p_codelists'>motivation</a><br/> <a href='../../publisher/network4africa.html#p_codelists'>network4africa</a><br/> <a href='../../publisher/npa.html#p_codelists'>npa</a><br/> <a href='../../publisher/nrc.html#p_codelists'>nrc</a><br/> <a href='../../publisher/opportunity-international-uk.html#p_codelists'>opportunity-international-uk</a><br/> <a href='../../publisher/orbis_africa.html#p_codelists'>orbis_africa</a><br/> <a href='../../publisher/orbis_uk.html#p_codelists'>orbis_uk</a><br/> <a href='../../publisher/plb.html#p_codelists'>plb</a><br/> <a href='../../publisher/pragya.html#p_codelists'>pragya</a><br/> <a href='../../publisher/rc.html#p_codelists'>rc</a><br/> <a href='../../publisher/redeenkind.html#p_codelists'>redeenkind</a><br/> <a href='../../publisher/restless.html#p_codelists'>restless</a><br/> <a href='../../publisher/sacethiopia.html#p_codelists'>sacethiopia</a><br/> <a href='../../publisher/sacu.html#p_codelists'>sacu</a><br/> <a href='../../publisher/sciaf.html#p_codelists'>sciaf</a><br/> <a href='../../publisher/scnl.html#p_codelists'>scnl</a><br/> <a href='../../publisher/sense_international.html#p_codelists'>sense_international</a><br/> <a href='../../publisher/simlab.html#p_codelists'>simlab</a><br/> <a href='../../publisher/sosnl.html#p_codelists'>sosnl</a><br/> <a href='../../publisher/tfac.html#p_codelists'>tfac</a><br/> <a href='../../publisher/the_power_of_nutrition.html#p_codelists'>the_power_of_nutrition</a><br/> <a href='../../publisher/theict.html#p_codelists'>theict</a><br/> <a href='../../publisher/united_work.html#p_codelists'>united_work</a><br/> <a href='../../publisher/vao.html#p_codelists'>vao</a><br/> <a href='../../publisher/varkeyfoundation.html#p_codelists'>varkeyfoundation</a><br/> <a href='../../publisher/vso.html#p_codelists'>vso</a><br/> <a href='../../publisher/warchildholland.html#p_codelists'>warchildholland</a><br/> <a href='../../publisher/water-witness-international.html#p_codelists'>water-witness-international</a><br/> <a href='../../publisher/wcuk.html#p_codelists'>wcuk</a><br/> <a href='../../publisher/wfwiuk.html#p_codelists'>wfwiuk</a><br/> <a href='../../publisher/womankindworld.html#p_codelists'>womankindworld</a><br/> <a href='../../publisher/wvuk.html#p_codelists'>wvuk</a><br/> <a href='../../publisher/ybi.html#p_codelists'>ybi</a><br/> <a href='../../publisher/ycare.html#p_codelists'>ycare</a><br/> ">72</a>
+            </td></tr>
+            
+        
+            
+        
+            
+        
+            
+        
+      </tbody>
+    </table>
+    </div>
+    </div>
+
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Not On Codelist</h3>
+    </div>
+    <div class="panel-body">
+        <p>Codes that are not on the <code>TiedStatus</code> codelist.</p>
+    </div>
+    <table class="table table-striped">
+      <thead><tr><th>Value</th><th>Publishers</th></tr></thead>
+      <tbody>
+        
+            
+            <tr><td></td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code></code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/unicef.html#p_codelists'>unicef</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>untied</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>untied</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> ">2</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>N/A</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>N/A</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> ">2</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>Tied</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>Tied</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> ">2</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>Untied</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>Untied</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> ">2</a>
+            </td></tr>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <tr><td>tied</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>tied</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>U</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>U</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> ">2</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>T</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>T</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> ">1</a>
+            </td></tr>
+            
+        
+      </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+$('.popover-html').popover({
+  html: true
+})
+    </script>
+
+</body>
+</html>

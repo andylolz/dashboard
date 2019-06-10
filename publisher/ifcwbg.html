@@ -1,0 +1,4890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>
+IATI Dashboard -  Publisher: International Finance Corporation
+</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../headlines.html">Headlines</a></li>
+      
+          <li ><a href="../data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/ifcwbg/" style="float:right">(Publisher Stats JSON)</a>
+<h1>Publisher: International Finance Corporation</h1>
+<p class="lead"></p>
+
+        </div>
+      
+
+      
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title" id="list_fail_validation">Table of Contents</h3></div>
+        <div class="panel-body">
+            <ul>
+                <li><a href="#h_headlines">Headlines</a>
+                <li><a href="#h_dataquality">Data Quality</a>
+                    <ul>
+                        
+                        <li><a href="#p_validation">Files Failing Validation</a>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li><a href="#h_financial">Financial</a></li>
+                <li><a href="#h_exploringdata">Exploring Data</a>
+                    <ul>
+                        <li><a href="#p_files">Files</a>
+                        <li><a href="#p_codelists">Codelist values</a>
+                        <li><a href="#p_elements">Elements and Attributes published</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <h2 id="h_headlines">Headlines</h2>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>On the Registry</td>
+                <td><a href="http://iatiregistry.org/publisher/ifcwbg">ifcwbg</a></td>
+            </tr>
+            <tr>
+                <td>Reporting Org on Registry</td>
+                <td>
+                    <code>XM-DAC-903</code>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Reporting Org(s) in Data</td>
+                <td>
+                
+                <code>XM-DAC-903</code>
+                
+                </td>
+            </tr><tr>
+                <td>Activity Files</td>
+                <td>160</td>
+            </tr><tr>
+                <td>Organisation Files</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Total File Size</td>
+                <td>34.7 MB</td>
+            </tr><tr>
+                <td>Activities</td>
+                <td>5167</td>
+            </tr><tr>
+                <td>Unique Activities</td>
+                <td>5167</td>
+            </tr><tr>
+                <td>Organisations</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Versions</td>
+                <td>
+                
+                <code>2.02</code>
+                
+                </td>
+            </tr><tr>
+                <td>Hierarchies</td>
+                <td>
+                
+                <code>null</code>
+                
+                </td>
+            </tr><tr>
+                <td>Licenses</td>
+                <td>
+                
+                <code><a href="../license/other-at.html">other-at</a></code>
+                
+                </td>
+            </tr><tr>
+                <td>Files failing validation</td>
+                <td>
+                
+                    1
+                
+                </td>
+            </tr>
+        </body>
+    </table>
+    </div>
+    </div>
+    
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activities" class="title-number">5167</span>
+              <span class="title-text">Activities</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/activities.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_activities.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activity-files" class="title-number">160</span>
+              <span class="title-text">Activity Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/activity_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_activity_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="organisation-files" class="title-number">1</span>
+              <span class="title-text">Organisation Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/organisation_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_organisation_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-per-version" class="title-number"></span>
+              <span class="title-text">Files per version</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/versions.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_versions.png" width="100%" />
+            
+            <img src="../publisher_imgs/ifcwbg_versions_legend.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="total-file-size" class="title-number">34.7 MB</span>
+              <span class="title-text">Total File Size</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/file_size.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_file_size.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-failing-validation" class="title-number">1</span>
+              <span class="title-text">Files failing validation</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/validation.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_validation.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-where-xml-is-not-well-formed" class="title-number">0</span>
+              <span class="title-text">Files where XML is not well-formed</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/ifcwbg/invalidxml.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/ifcwbg_invalidxml.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 id="h_dataquality">Data Quality</h2>
+
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default" id="p_validation">
+              <!-- Default panel contents -->
+              <div class="panel-heading"><h3 class="panel-title" id="list_fail_validation">Files Failing Validation</h3></div>
+              <!--<div class="panel-body">
+                <p>...</p>
+              </div>-->
+
+              <!-- List group -->
+              <ul class="list-group">
+                
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-md-4 break">
+                      <a href="http://iatiregistry.org/dataset/ifcwbg-128">ifcwbg-128</a>
+                    </div>
+                    <div class="col-md-6 break">
+                      
+                      <a href="https://disclosures.ifc.org/IATI/IFC-128.xml">IFC-128.xml</a>
+                      
+                    </div>
+                    <div class="col-md-2 break">
+                       
+                       <a href="http://validator.iatistandard.org/?url=https%3A//disclosures.ifc.org/IATI/IFC-128.xml">validator</a>
+                       
+                    </div>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    </div><!-- .row -->
+
+    <h2 id="h_financial">Financial</h2>
+
+    
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Budgets</h3>
+    </div>
+    <div class="panel-body">
+        <p>The below figures are calculated based on the data contained within the <code>&lt;budget&gt;</code> element for each reported activity. Original and revised elements are based on the value declared in the <code><a href="http://iatistandard.org/201/activity-standard/iati-activities/iati-activity/budget/#iati-activities-iati-activity-budget-type">budget/@type</a></code> attribute. Where budgets fall across two calendar years, the month of the <code>&lt;period-end&gt;</code> date is used to determine annual groupings, with budgets for periods ending January-June added to the previous calendar year.</p>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Count (all)</th>
+                <th>Sum (all)</th>
+                <th>Count (Original)</th>
+                <th>Sum (Original)</th>
+                <th>Count (Revised)</th>
+                <th>Sum (Revised)</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td>Total</td>
+                <td>5613</td>
+                <td>
+    
+    
+    
+    1.6028544e+11 USD</br>
+    
+    
+    
+    </td>
+                <td>5613</td>
+                <td>
+    
+    
+    
+    1.6028544e+11 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1992</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    35000000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    35000000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1993</td>
+                <td>6</td>
+                <td>
+    
+    
+    
+    46380000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>6</td>
+                <td>
+    
+    
+    
+    46380000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1994</td>
+                <td>15</td>
+                <td>
+    
+    
+    
+    169140000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>15</td>
+                <td>
+    
+    
+    
+    169140000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1995</td>
+                <td>90</td>
+                <td>
+    
+    
+    
+    1009360000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>90</td>
+                <td>
+    
+    
+    
+    1009360000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1996</td>
+                <td>187</td>
+                <td>
+    
+    
+    
+    1955960000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>187</td>
+                <td>
+    
+    
+    
+    1955960000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1997</td>
+                <td>242</td>
+                <td>
+    
+    
+    
+    2571030000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>242</td>
+                <td>
+    
+    
+    
+    2571030000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1998</td>
+                <td>234</td>
+                <td>
+    
+    
+    
+    2363190000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>234</td>
+                <td>
+    
+    
+    
+    2363190000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>1999</td>
+                <td>210</td>
+                <td>
+    
+    
+    
+    2338120000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>210</td>
+                <td>
+    
+    
+    
+    2338120000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2000</td>
+                <td>185</td>
+                <td>
+    
+    
+    
+    2047860000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>185</td>
+                <td>
+    
+    
+    
+    2047860000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2001</td>
+                <td>204</td>
+                <td>
+    
+    
+    
+    2875100000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>204</td>
+                <td>
+    
+    
+    
+    2875100000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2002</td>
+                <td>177</td>
+                <td>
+    
+    
+    
+    3619400000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>177</td>
+                <td>
+    
+    
+    
+    3619400000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2003</td>
+                <td>198</td>
+                <td>
+    
+    
+    
+    4068720000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>198</td>
+                <td>
+    
+    
+    
+    4068720000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2004</td>
+                <td>195</td>
+                <td>
+    
+    
+    
+    4232590000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>195</td>
+                <td>
+    
+    
+    
+    4232590000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2005</td>
+                <td>222</td>
+                <td>
+    
+    
+    
+    5738740000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>222</td>
+                <td>
+    
+    
+    
+    5738740000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2006</td>
+                <td>253</td>
+                <td>
+    
+    
+    
+    6781740000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>253</td>
+                <td>
+    
+    
+    
+    6781740000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2007</td>
+                <td>309</td>
+                <td>
+    
+    
+    
+    9622760000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>309</td>
+                <td>
+    
+    
+    
+    9622760000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2008</td>
+                <td>271</td>
+                <td>
+    
+    
+    
+    10496480000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>271</td>
+                <td>
+    
+    
+    
+    10496480000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2009</td>
+                <td>295</td>
+                <td>
+    
+    
+    
+    8621150000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>295</td>
+                <td>
+    
+    
+    
+    8621150000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2010</td>
+                <td>256</td>
+                <td>
+    
+    
+    
+    7942380000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>256</td>
+                <td>
+    
+    
+    
+    7942380000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2011</td>
+                <td>269</td>
+                <td>
+    
+    
+    
+    9012480000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>269</td>
+                <td>
+    
+    
+    
+    9012480000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2012</td>
+                <td>275</td>
+                <td>
+    
+    
+    
+    10512210000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>275</td>
+                <td>
+    
+    
+    
+    10512210000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2013</td>
+                <td>277</td>
+                <td>
+    
+    
+    
+    9194380000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>277</td>
+                <td>
+    
+    
+    
+    9194380000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2014</td>
+                <td>294</td>
+                <td>
+    
+    
+    
+    10702100000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>294</td>
+                <td>
+    
+    
+    
+    10702100000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2015</td>
+                <td>263</td>
+                <td>
+    
+    
+    
+    11939310000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>263</td>
+                <td>
+    
+    
+    
+    11939310000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2016</td>
+                <td>275</td>
+                <td>
+    
+    
+    
+    13681100000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>275</td>
+                <td>
+    
+    
+    
+    13681100000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2017</td>
+                <td>273</td>
+                <td>
+    
+    
+    
+    11785680000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>273</td>
+                <td>
+    
+    
+    
+    11785680000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2018</td>
+                <td>137</td>
+                <td>
+    
+    
+    
+    6923080000.0 USD</br>
+    
+    
+    
+    </td>
+                <td>137</td>
+                <td>
+    
+    
+    
+    6923080000.0 USD</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+            </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+
+    <h2 id="h_exploringdata">Exploring Data</h2>
+
+    <div class="panel panel-default" id="p_files">
+    <div class="panel-heading">
+        <h3 class="panel-title">Files</h3>
+    </div>
+    <table class="table table-striped exploring-data">
+        <thead>
+            <tr>
+                <th>Package</th>
+                <th>Activities <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/ifcwbg/activities.json">(J)</a></th>
+                <th>Organisations <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/ifcwbg/organisations.json">(J)</a></th>
+                <th>File Size <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/ifcwbg/file_size.json">(J)</a></th>
+                <th>Version <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/ifcwbg/versions.json">(J)</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-10">ifcwbg-10</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="42338">42.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-128">ifcwbg-128</a></td>
+                <td>71</td>
+                <td>0</td>
+                <td data-bytes="470445">470.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-189">ifcwbg-189</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="24147">24.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-21">ifcwbg-21</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="16419">16.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-245">ifcwbg-245</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="94262">94.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-246">ifcwbg-246</a></td>
+                <td>220</td>
+                <td>0</td>
+                <td data-bytes="1425584">1.4 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-249">ifcwbg-249</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="88641">88.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-251">ifcwbg-251</a></td>
+                <td>22</td>
+                <td>0</td>
+                <td data-bytes="145455">145.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-274">ifcwbg-274</a></td>
+                <td>24</td>
+                <td>0</td>
+                <td data-bytes="142630">142.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-51">ifcwbg-51</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="27466">27.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-55">ifcwbg-55</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="26743">26.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-57">ifcwbg-57</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td data-bytes="54483">54.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-67">ifcwbg-67</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="65462">65.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-7">ifcwbg-7</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="18493">18.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-79">ifcwbg-79</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="72072">72.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-80">ifcwbg-80</a></td>
+                <td>43</td>
+                <td>0</td>
+                <td data-bytes="259755">259.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-82">ifcwbg-82</a></td>
+                <td>30</td>
+                <td>0</td>
+                <td data-bytes="180084">180.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-84">ifcwbg-84</a></td>
+                <td>58</td>
+                <td>0</td>
+                <td data-bytes="363840">363.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-9">ifcwbg-9</a></td>
+                <td>107</td>
+                <td>0</td>
+                <td data-bytes="697572">697.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-90">ifcwbg-90</a></td>
+                <td>25</td>
+                <td>0</td>
+                <td data-bytes="160215">160.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ae">ifcwbg-ae</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="35323">35.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-af">ifcwbg-af</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td data-bytes="59734">59.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ag">ifcwbg-ag</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="6700">6.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-al">ifcwbg-al</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="103417">103.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-am">ifcwbg-am</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td data-bytes="184351">184.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ao">ifcwbg-ao</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td data-bytes="55022">55.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ar">ifcwbg-ar</a></td>
+                <td>120</td>
+                <td>0</td>
+                <td data-bytes="925296">925.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-az">ifcwbg-az</a></td>
+                <td>30</td>
+                <td>0</td>
+                <td data-bytes="208729">208.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ba">ifcwbg-ba</a></td>
+                <td>35</td>
+                <td>0</td>
+                <td data-bytes="220461">220.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bb">ifcwbg-bb</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5842">5.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bd">ifcwbg-bd</a></td>
+                <td>66</td>
+                <td>0</td>
+                <td data-bytes="446568">446.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bf">ifcwbg-bf</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td data-bytes="89011">89.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bg">ifcwbg-bg</a></td>
+                <td>30</td>
+                <td>0</td>
+                <td data-bytes="194735">194.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bh">ifcwbg-bh</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5202">5.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bi">ifcwbg-bi</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="32233">32.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bj">ifcwbg-bj</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="21877">21.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bo">ifcwbg-bo</a></td>
+                <td>20</td>
+                <td>0</td>
+                <td data-bytes="131939">131.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-br">ifcwbg-br</a></td>
+                <td>244</td>
+                <td>0</td>
+                <td data-bytes="1660134">1.7 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bt">ifcwbg-bt</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="38052">38.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bw">ifcwbg-bw</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td data-bytes="61717">61.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-by">ifcwbg-by</a></td>
+                <td>20</td>
+                <td>0</td>
+                <td data-bytes="162050">162.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-bz">ifcwbg-bz</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="9035">9.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cd">ifcwbg-cd</a></td>
+                <td>15</td>
+                <td>0</td>
+                <td data-bytes="132736">132.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cf">ifcwbg-cf</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="13161">13.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cg">ifcwbg-cg</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5939">5.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ci">ifcwbg-ci</a></td>
+                <td>40</td>
+                <td>0</td>
+                <td data-bytes="265787">265.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cl">ifcwbg-cl</a></td>
+                <td>41</td>
+                <td>0</td>
+                <td data-bytes="287277">287.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cm">ifcwbg-cm</a></td>
+                <td>27</td>
+                <td>0</td>
+                <td data-bytes="177902">177.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cn">ifcwbg-cn</a></td>
+                <td>268</td>
+                <td>0</td>
+                <td data-bytes="1778081">1.8 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-co">ifcwbg-co</a></td>
+                <td>103</td>
+                <td>0</td>
+                <td data-bytes="711633">711.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cr">ifcwbg-cr</a></td>
+                <td>19</td>
+                <td>0</td>
+                <td data-bytes="117582">117.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cv">ifcwbg-cv</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="17148">17.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-cz">ifcwbg-cz</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td data-bytes="54830">54.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-do">ifcwbg-do</a></td>
+                <td>32</td>
+                <td>0</td>
+                <td data-bytes="202842">202.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-dz">ifcwbg-dz</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td data-bytes="76186">76.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ec">ifcwbg-ec</a></td>
+                <td>28</td>
+                <td>0</td>
+                <td data-bytes="202747">202.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ee">ifcwbg-ee</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td data-bytes="76406">76.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-eg">ifcwbg-eg</a></td>
+                <td>103</td>
+                <td>0</td>
+                <td data-bytes="789813">789.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-er">ifcwbg-er</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="7911">7.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-et">ifcwbg-et</a></td>
+                <td>20</td>
+                <td>0</td>
+                <td data-bytes="120433">120.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-fj">ifcwbg-fj</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="19304">19.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ga">ifcwbg-ga</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="29624">29.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gd">ifcwbg-gd</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5563">5.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ge">ifcwbg-ge</a></td>
+                <td>46</td>
+                <td>0</td>
+                <td data-bytes="305320">305.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gh">ifcwbg-gh</a></td>
+                <td>57</td>
+                <td>0</td>
+                <td data-bytes="409797">409.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gm">ifcwbg-gm</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="19837">19.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gn">ifcwbg-gn</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td data-bytes="84665">84.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gr">ifcwbg-gr</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td data-bytes="89962">90.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gt">ifcwbg-gt</a></td>
+                <td>22</td>
+                <td>0</td>
+                <td data-bytes="138044">138.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gw">ifcwbg-gw</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10297">10.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-gy">ifcwbg-gy</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="43150">43.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-hk">ifcwbg-hk</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10984">11.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-hn">ifcwbg-hn</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="110584">110.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-hr">ifcwbg-hr</a></td>
+                <td>23</td>
+                <td>0</td>
+                <td data-bytes="159689">159.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ht">ifcwbg-ht</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="109174">109.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-hu">ifcwbg-hu</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="34603">34.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-id">ifcwbg-id</a></td>
+                <td>105</td>
+                <td>0</td>
+                <td data-bytes="681099">681.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-il">ifcwbg-il</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5750">5.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-in">ifcwbg-in</a></td>
+                <td>399</td>
+                <td>0</td>
+                <td data-bytes="2583522">2.6 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-iq">ifcwbg-iq</a></td>
+                <td>14</td>
+                <td>0</td>
+                <td data-bytes="103609">103.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ir">ifcwbg-ir</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="4167">4.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-jo">ifcwbg-jo</a></td>
+                <td>53</td>
+                <td>0</td>
+                <td data-bytes="436526">436.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ke">ifcwbg-ke</a></td>
+                <td>91</td>
+                <td>0</td>
+                <td data-bytes="586408">586.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-kh">ifcwbg-kh</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td data-bytes="238991">239.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-kr">ifcwbg-kr</a></td>
+                <td>14</td>
+                <td>0</td>
+                <td data-bytes="107808">107.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-kw">ifcwbg-kw</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="7823">7.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-kz">ifcwbg-kz</a></td>
+                <td>40</td>
+                <td>0</td>
+                <td data-bytes="260855">260.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-la">ifcwbg-la</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="127847">127.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-lb">ifcwbg-lb</a></td>
+                <td>35</td>
+                <td>0</td>
+                <td data-bytes="221995">222.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-lc">ifcwbg-lc</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="12559">12.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-lk">ifcwbg-lk</a></td>
+                <td>51</td>
+                <td>0</td>
+                <td data-bytes="337721">337.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-lr">ifcwbg-lr</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="50174">50.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-lt">ifcwbg-lt</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="43499">43.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-lv">ifcwbg-lv</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="19988">20.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ma">ifcwbg-ma</a></td>
+                <td>27</td>
+                <td>0</td>
+                <td data-bytes="159389">159.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-md">ifcwbg-md</a></td>
+                <td>19</td>
+                <td>0</td>
+                <td data-bytes="115266">115.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-me">ifcwbg-me</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="38893">38.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mg">ifcwbg-mg</a></td>
+                <td>15</td>
+                <td>0</td>
+                <td data-bytes="93166">93.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mh">ifcwbg-mh</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5087">5.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mk">ifcwbg-mk</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="110955">111.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ml">ifcwbg-ml</a></td>
+                <td>21</td>
+                <td>0</td>
+                <td data-bytes="141404">141.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mm">ifcwbg-mm</a></td>
+                <td>24</td>
+                <td>0</td>
+                <td data-bytes="159742">159.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mn">ifcwbg-mn</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td data-bytes="178235">178.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mr">ifcwbg-mr</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="76899">76.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mu">ifcwbg-mu</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="27229">27.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mv">ifcwbg-mv</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td data-bytes="57624">57.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mw">ifcwbg-mw</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td data-bytes="66439">66.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mx">ifcwbg-mx</a></td>
+                <td>154</td>
+                <td>0</td>
+                <td data-bytes="1053098">1.1 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-mz">ifcwbg-mz</a></td>
+                <td>33</td>
+                <td>0</td>
+                <td data-bytes="215337">215.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-na">ifcwbg-na</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td data-bytes="50691">50.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ng">ifcwbg-ng</a></td>
+                <td>99</td>
+                <td>0</td>
+                <td data-bytes="669392">669.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ni">ifcwbg-ni</a></td>
+                <td>21</td>
+                <td>0</td>
+                <td data-bytes="145512">145.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-nl">ifcwbg-nl</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="7578">7.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-np">ifcwbg-np</a></td>
+                <td>19</td>
+                <td>0</td>
+                <td data-bytes="111049">111.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-om">ifcwbg-om</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td data-bytes="42807">42.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-org">ifcwbg-org</a></td>
+                <td>0</td>
+                <td>1</td>
+                <td data-bytes="55642">55.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-pa">ifcwbg-pa</a></td>
+                <td>27</td>
+                <td>0</td>
+                <td data-bytes="178629">178.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-pe">ifcwbg-pe</a></td>
+                <td>71</td>
+                <td>0</td>
+                <td data-bytes="483814">483.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-pg">ifcwbg-pg</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td data-bytes="79102">79.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ph">ifcwbg-ph</a></td>
+                <td>66</td>
+                <td>0</td>
+                <td data-bytes="461750">461.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-pk">ifcwbg-pk</a></td>
+                <td>71</td>
+                <td>0</td>
+                <td data-bytes="538414">538.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-pl">ifcwbg-pl</a></td>
+                <td>14</td>
+                <td>0</td>
+                <td data-bytes="109917">109.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-py">ifcwbg-py</a></td>
+                <td>23</td>
+                <td>0</td>
+                <td data-bytes="168169">168.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ro">ifcwbg-ro</a></td>
+                <td>75</td>
+                <td>0</td>
+                <td data-bytes="496206">496.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-rs">ifcwbg-rs</a></td>
+                <td>30</td>
+                <td>0</td>
+                <td data-bytes="197667">197.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ru">ifcwbg-ru</a></td>
+                <td>200</td>
+                <td>0</td>
+                <td data-bytes="1214980">1.2 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-rw">ifcwbg-rw</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="106242">106.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sa">ifcwbg-sa</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td data-bytes="57734">57.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sb">ifcwbg-sb</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="20012">20.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sc">ifcwbg-sc</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="20836">20.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sd">ifcwbg-sd</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5434">5.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sg">ifcwbg-sg</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="16915">16.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-si">ifcwbg-si</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5674">5.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sl">ifcwbg-sl</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="15691">15.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sn">ifcwbg-sn</a></td>
+                <td>32</td>
+                <td>0</td>
+                <td data-bytes="208711">208.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ss">ifcwbg-ss</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="5459">5.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-st">ifcwbg-st</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="8304">8.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sv">ifcwbg-sv</a></td>
+                <td>23</td>
+                <td>0</td>
+                <td data-bytes="165399">165.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sy">ifcwbg-sy</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="33261">33.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-sz">ifcwbg-sz</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="15375">15.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tg">ifcwbg-tg</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="33073">33.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-th">ifcwbg-th</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td data-bytes="183575">183.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tj">ifcwbg-tj</a></td>
+                <td>26</td>
+                <td>0</td>
+                <td data-bytes="167267">167.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tl">ifcwbg-tl</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="16346">16.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tn">ifcwbg-tn</a></td>
+                <td>19</td>
+                <td>0</td>
+                <td data-bytes="117185">117.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tr">ifcwbg-tr</a></td>
+                <td>208</td>
+                <td>0</td>
+                <td data-bytes="1430225">1.4 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tt">ifcwbg-tt</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="74541">74.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-tz">ifcwbg-tz</a></td>
+                <td>48</td>
+                <td>0</td>
+                <td data-bytes="326957">327.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ua">ifcwbg-ua</a></td>
+                <td>75</td>
+                <td>0</td>
+                <td data-bytes="513639">513.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ug">ifcwbg-ug</a></td>
+                <td>31</td>
+                <td>0</td>
+                <td data-bytes="228708">228.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-uy">ifcwbg-uy</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="77505">77.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-uz">ifcwbg-uz</a></td>
+                <td>21</td>
+                <td>0</td>
+                <td data-bytes="126843">126.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ve">ifcwbg-ve</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="111090">111.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-vn">ifcwbg-vn</a></td>
+                <td>68</td>
+                <td>0</td>
+                <td data-bytes="478790">478.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-vu">ifcwbg-vu</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="20174">20.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ws">ifcwbg-ws</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="29888">29.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-xk">ifcwbg-xk</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td data-bytes="63227">63.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-ye">ifcwbg-ye</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="41644">41.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-za">ifcwbg-za</a></td>
+                <td>94</td>
+                <td>0</td>
+                <td data-bytes="632235">632.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-zm">ifcwbg-zm</a></td>
+                <td>32</td>
+                <td>0</td>
+                <td data-bytes="211294">211.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/ifcwbg-zw">ifcwbg-zw</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="125146">125.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+    
+    
+    <div class="panel panel-default" id="p_codelists">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/ifcwbg/codelist_values.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Codelist Values (version 2.xx)</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Codelist</th>
+                <th>Values on Codelist</th>
+                <th>Values not on Codelist</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-date_@type.html">.//activity-date/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityDateType">ActivityDateType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-date/@type" data-content="<code>1</code> <code>2</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-status_@code.html">.//activity-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityStatus">ActivityStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-status/@code" data-content="<code>1</code> <code>2</code> <code>3</code> <code>6</code> ">4</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_@type.html">.//budget/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetType">BudgetType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_value_@currency.html">.//budget/value/@currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/value/@currency" data-content="<code>USD</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/collaboration-type_@code.html">.//collaboration-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/CollaborationType">CollaborationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//collaboration-type/@code" data-content="<code>6</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/contact-info_@type.html">.//contact-info/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ContactType">ContactType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//contact-info/@type" data-content="<code>1</code> <code>2</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/country-budget-items_@vocabulary.html">.//country-budget-items/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetIdentifierVocabulary">BudgetIdentifierVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//country-budget-items/@vocabulary" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/country-budget-items_budget-item_@code.html">.//country-budget-items/budget-item/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetIdentifier">BudgetIdentifier</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//country-budget-items/budget-item/@code" data-content="<code>7.2.1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-aid-type_@code.html">.//default-aid-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/AidType">AidType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-aid-type/@code" data-content="<code>C01</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-finance-type_@code.html">.//default-finance-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FinanceType">FinanceType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-finance-type/@code" data-content="<code>411</code> <code>510</code> <code>912</code> ">3</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-flow-type_@code.html">.//default-flow-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FlowType">FlowType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-flow-type/@code" data-content="<code>35</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-tied-status_@code.html">.//default-tied-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TiedStatus">TiedStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-tied-status/@code" data-content="<code>5</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/description_@type.html">.//description/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/DescriptionType">DescriptionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//description/@type" data-content="<code>1</code> <code>2</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/document-link_@format.html">.//document-link/@format</a></td>
+                <td><a href="http://iatistandard.org/codelists/FileFormat">FileFormat</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//document-link/@format" data-content="<code>text/html</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/document-link_category_@code.html">.//document-link/category/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/DocumentCategory">DocumentCategory</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//document-link/category/@code" data-content="<code>A12</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/document-link_language_@code.html">.//document-link/language/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Language">Language</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//document-link/language/@code" data-content="<code>en</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/location_administrative_@vocabulary.html">.//location/administrative/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/GeographicVocabulary">GeographicVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//location/administrative/@vocabulary" data-content="<code>G1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/location_exactness_@code.html">.//location/exactness/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/GeographicExactness">GeographicExactness</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//location/exactness/@code" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/location_feature-designation_@code.html">.//location/feature-designation/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/LocationType">LocationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//location/feature-designation/@code" data-content="<code>ADMF</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/location_location-class_@code.html">.//location/location-class/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/GeographicLocationClass">GeographicLocationClass</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//location/location-class/@code" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/location_location-id_@vocabulary.html">.//location/location-id/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/GeographicVocabulary">GeographicVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//location/location-id/@vocabulary" data-content="<code>G1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/location_location-reach_@code.html">.//location/location-reach/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/GeographicLocationReach">GeographicLocationReach</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//location/location-reach/@code" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@role.html">.//participating-org/@role</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationRole">OrganisationRole</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@role" data-content="<code>1</code> <code>4</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@type.html">.//participating-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@type" data-content="<code>40</code> <code>70</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-country_@code.html">.//recipient-country/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Country">Country</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-country/@code" data-content="<code>AE</code> <code>AF</code> <code>AG</code> <code>AL</code> <code>AM</code> <code>AO</code> <code>AR</code> <code>AZ</code> <code>BA</code> <code>BB</code> <code>BD</code> <code>BF</code> <code>BG</code> <code>BH</code> <code>BI</code> <code>BJ</code> <code>BO</code> <code>BR</code> <code>BT</code> <code>BW</code> <code>BY</code> <code>BZ</code> <code>CD</code> <code>CF</code> <code>CG</code> <code>CI</code> <code>CL</code> <code>CM</code> <code>CN</code> <code>CO</code> <code>CR</code> <code>CV</code> <code>CZ</code> <code>DO</code> <code>DZ</code> <code>EC</code> <code>EE</code> <code>EG</code> <code>ER</code> <code>ET</code> <code>FJ</code> <code>GA</code> <code>GD</code> <code>GE</code> <code>GH</code> <code>GM</code> <code>GN</code> <code>GR</code> <code>GT</code> <code>GW</code> <code>GY</code> <code>HK</code> <code>HN</code> <code>HR</code> <code>HT</code> <code>HU</code> <code>ID</code> <code>IL</code> <code>IN</code> <code>IQ</code> <code>IR</code> <code>JO</code> <code>KE</code> <code>KH</code> <code>KR</code> <code>KW</code> <code>KZ</code> <code>LA</code> <code>LB</code> <code>LC</code> <code>LK</code> <code>LR</code> <code>LT</code> <code>LV</code> <code>MA</code> <code>MD</code> <code>ME</code> <code>MG</code> <code>MH</code> <code>MK</code> <code>ML</code> <code>MM</code> <code>MN</code> <code>MR</code> <code>MU</code> <code>MV</code> <code>MW</code> <code>MX</code> <code>MZ</code> <code>NA</code> <code>NG</code> <code>NI</code> <code>NL</code> <code>NP</code> <code>OM</code> <code>PA</code> <code>PE</code> <code>PG</code> <code>PH</code> <code>PK</code> <code>PL</code> <code>PY</code> <code>RO</code> <code>RS</code> <code>RU</code> <code>RW</code> <code>SA</code> <code>SB</code> <code>SC</code> <code>SD</code> <code>SG</code> <code>SI</code> <code>SL</code> <code>SN</code> <code>SS</code> <code>ST</code> <code>SV</code> <code>SY</code> <code>SZ</code> <code>TD</code> <code>TG</code> <code>TH</code> <code>TJ</code> <code>TL</code> <code>TN</code> <code>TR</code> <code>TT</code> <code>TZ</code> <code>UA</code> <code>UG</code> <code>UY</code> <code>UZ</code> <code>VE</code> <code>VN</code> <code>VU</code> <code>WS</code> <code>XK</code> <code>YE</code> <code>ZA</code> <code>ZM</code> <code>ZW</code> ">141</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//recipient-country/@code" data-content="<code>XX</code> ">
+                            1
+                        </a>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/reporting-org_@type.html">.//reporting-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//reporting-org/@type" data-content="<code>40</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/result_@type.html">.//result/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ResultType">ResultType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//result/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/result_indicator_@measure.html">.//result/indicator/@measure</a></td>
+                <td><a href="http://iatistandard.org/codelists/IndicatorMeasure">IndicatorMeasure</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//result/indicator/@measure" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/result_indicator_reference_@vocabulary.html">.//result/indicator/reference/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/IndicatorVocabulary">IndicatorVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//result/indicator/reference/@vocabulary" data-content="<code>8</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@code.html">.//sector/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorCategory">SectorCategory</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//sector/@code" data-content="<code>111</code> <code>112</code> <code>114</code> <code>236</code> <code>311</code> <code>321</code> <code>331</code> <code>332</code> ">8</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//sector/@code" data-content="<code></code> <code>1111</code> <code>1114</code> <code>1119</code> <code>1121</code> <code>1129</code> <code>1153</code> <code>211</code> <code>2122</code> <code>2123</code> <code>2131</code> <code>221</code> <code>2211</code> <code>2212</code> <code>3119</code> <code>3121</code> <code>3131</code> <code>3133</code> <code>3152</code> <code>3212</code> <code>3221</code> <code>3222</code> <code>324</code> <code>3241</code> <code>325</code> <code>3251</code> <code>3252</code> <code>3253</code> <code>3259</code> <code>326</code> <code>327</code> <code>3271</code> <code>3273</code> <code>3314</code> <code>3321</code> <code>333</code> <code>3336</code> <code>334</code> <code>3344</code> <code>335</code> <code>3363</code> <code>3369</code> <code>337</code> <code>424</code> <code>4451</code> <code>481</code> <code>482</code> <code>483</code> <code>484</code> <code>485</code> <code>486</code> <code>488</code> <code>4883</code> <code>4884</code> <code>493</code> <code>515</code> <code>5171</code> <code>5172</code> <code>5179</code> <code>5191</code> <code>522</code> <code>5221</code> <code>522110</code> <code>5222</code> <code>522291</code> <code>522292</code> <code>522293</code> <code>522298   All Other Nondepository Credit Intermediation</code> <code>522310</code> <code>522320</code> <code>523110</code> <code>523120</code> <code>523210</code> <code>523920</code> <code>523930</code> <code>523991</code> <code>52411   Direct Life, Health, and Medical Insurance Carriers</code> <code>524113</code> <code>52412  Direct Insurance (except Life, Health, and Medical) Carriers</code> <code>52413  Reinsurance Carriers</code> <code>525</code> <code>5259</code> <code>525990</code> <code>532111</code> <code>5413</code> <code>5415</code> <code>5419</code> <code>5615</code> <code>5622</code> <code>611</code> <code>6111</code> <code>6113</code> <code>621</code> <code>6215</code> <code>7211</code> <code>9261</code> ">
+                            96
+                        </a>
+                        
+                            <div class="alert alert-warning">Note: this attribute can be on multiple codelists (specified by the @vocabulary attribute) but the Dashboard only currently checks against the default codelist - see <a href="https://github.com/IATI/IATI-Dashboard/issues/174">issue #174</a>. Therefore some publishers may incorrectly show up as "Not On Codelist".</div>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@vocabulary.html">.//sector/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorVocabulary">SectorVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//sector/@vocabulary" data-content="<code>99</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_finance-type_@code.html">.//transaction/finance-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FinanceType">FinanceType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/finance-type/@code" data-content="<code>411</code> <code>510</code> <code>912</code> ">3</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_flow-type_@code.html">.//transaction/flow-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FlowType">FlowType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/flow-type/@code" data-content="<code>35</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_transaction-type_@code.html">.//transaction/transaction-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TransactionType">TransactionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/transaction-type/@code" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_value_@currency.html">.//transaction/value/@currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/value/@currency" data-content="<code>USD</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+    
+    
+    
+    
+
+    <div class="panel panel-default" id="p_elements">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/ifcwbg/elements.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Elements and Attributes Published</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Activities/Organisations</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity.html">iati-activity</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@last-updated-datetime.html">iati-activity/@last-updated-datetime</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_@last-updated-datetime.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date.html">iati-activity/activity-date</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_activity-date.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html">iati-activity/activity-date/@iso-date</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@type.html">iati-activity/activity-date/@type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_activity-date_@type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status.html">iati-activity/activity-status</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_activity-status.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status_@code.html">iati-activity/activity-status/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_activity-status_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget.html">iati-activity/budget</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_@type.html">iati-activity/budget/@type</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_@type.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end.html">iati-activity/budget/period-end</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_period-end.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html">iati-activity/budget/period-end/@iso-date</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start.html">iati-activity/budget/period-start</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_period-start.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html">iati-activity/budget/period-start/@iso-date</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value.html">iati-activity/budget/value</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_value.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@currency.html">iati-activity/budget/value/@currency</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_value_@currency.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@value-date.html">iati-activity/budget/value/@value-date</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_budget_value_@value-date.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_collaboration-type.html">iati-activity/collaboration-type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_collaboration-type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_collaboration-type_@code.html">iati-activity/collaboration-type/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_collaboration-type_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info.html">iati-activity/contact-info</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_@type.html">iati-activity/contact-info/@type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_@type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_email.html">iati-activity/contact-info/email</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_email.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_mailing-address.html">iati-activity/contact-info/mailing-address</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_mailing-address.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_mailing-address_narrative.html">iati-activity/contact-info/mailing-address/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_mailing-address_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation.html">iati-activity/contact-info/organisation</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_organisation.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html">iati-activity/contact-info/organisation/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_telephone.html">iati-activity/contact-info/telephone</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_telephone.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_website.html">iati-activity/contact-info/website</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_contact-info_website.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_country-budget-items.html">iati-activity/country-budget-items</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_country-budget-items.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_country-budget-items_@vocabulary.html">iati-activity/country-budget-items/@vocabulary</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_country-budget-items_@vocabulary.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_country-budget-items_budget-item.html">iati-activity/country-budget-items/budget-item</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_country-budget-items_budget-item.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_country-budget-items_budget-item_@code.html">iati-activity/country-budget-items/budget-item/@code</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_country-budget-items_budget-item_@code.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_country-budget-items_budget-item_description.html">iati-activity/country-budget-items/budget-item/description</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_country-budget-items_budget-item_description.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_country-budget-items_budget-item_description_narrative.html">iati-activity/country-budget-items/budget-item/description/narrative</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_country-budget-items_budget-item_description_narrative.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-aid-type.html">iati-activity/default-aid-type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_default-aid-type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-aid-type_@code.html">iati-activity/default-aid-type/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_default-aid-type_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-finance-type.html">iati-activity/default-finance-type</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_default-finance-type.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-finance-type_@code.html">iati-activity/default-finance-type/@code</a></td>
+                <td>4775</td>
+                <td><a href="../element/iati-activity_default-finance-type_@code.html#files_ifcwbg">156</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-flow-type.html">iati-activity/default-flow-type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_default-flow-type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-flow-type_@code.html">iati-activity/default-flow-type/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_default-flow-type_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-tied-status.html">iati-activity/default-tied-status</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_default-tied-status.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-tied-status_@code.html">iati-activity/default-tied-status/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_default-tied-status_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description.html">iati-activity/description</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_description.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_@type.html">iati-activity/description/@type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_description_@type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_narrative.html">iati-activity/description/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_description_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link.html">iati-activity/document-link</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_@format.html">iati-activity/document-link/@format</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_@format.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_@url.html">iati-activity/document-link/@url</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_@url.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_category.html">iati-activity/document-link/category</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_category.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_category_@code.html">iati-activity/document-link/category/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_category_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_language.html">iati-activity/document-link/language</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_language.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_language_@code.html">iati-activity/document-link/language/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_language_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_title.html">iati-activity/document-link/title</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_title.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_document-link_title_narrative.html">iati-activity/document-link/title/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_document-link_title_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_iati-identifier.html">iati-activity/iati-identifier</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_iati-identifier.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location.html">iati-activity/location</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_@ref.html">iati-activity/location/@ref</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_@ref.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_activity-description.html">iati-activity/location/activity-description</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_activity-description.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_activity-description_narrative.html">iati-activity/location/activity-description/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_activity-description_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_administrative.html">iati-activity/location/administrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_administrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_administrative_@code.html">iati-activity/location/administrative/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_administrative_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_administrative_@level.html">iati-activity/location/administrative/@level</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_administrative_@level.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_administrative_@vocabulary.html">iati-activity/location/administrative/@vocabulary</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_administrative_@vocabulary.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_description.html">iati-activity/location/description</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_description.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_description_narrative.html">iati-activity/location/description/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_description_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_exactness.html">iati-activity/location/exactness</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_exactness.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_exactness_@code.html">iati-activity/location/exactness/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_exactness_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_feature-designation.html">iati-activity/location/feature-designation</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_feature-designation.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_feature-designation_@code.html">iati-activity/location/feature-designation/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_feature-designation_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-class.html">iati-activity/location/location-class</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-class.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-class_@code.html">iati-activity/location/location-class/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-class_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-id.html">iati-activity/location/location-id</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-id.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-id_@code.html">iati-activity/location/location-id/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-id_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-id_@vocabulary.html">iati-activity/location/location-id/@vocabulary</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-id_@vocabulary.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-reach.html">iati-activity/location/location-reach</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-reach.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_location-reach_@code.html">iati-activity/location/location-reach/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_location-reach_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_name.html">iati-activity/location/name</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_name.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_name_narrative.html">iati-activity/location/name/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_name_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_point.html">iati-activity/location/point</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_point.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_point_@srsName.html">iati-activity/location/point/@srsName</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_point_@srsName.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_location_point_pos.html">iati-activity/location/point/pos</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_location_point_pos.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org.html">iati-activity/participating-org</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_participating-org.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@activity-id.html">iati-activity/participating-org/@activity-id</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_participating-org_@activity-id.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@ref.html">iati-activity/participating-org/@ref</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_participating-org_@ref.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@role.html">iati-activity/participating-org/@role</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_participating-org_@role.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@type.html">iati-activity/participating-org/@type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_participating-org_@type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_narrative.html">iati-activity/participating-org/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_participating-org_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country.html">iati-activity/recipient-country</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_recipient-country.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_@code.html">iati-activity/recipient-country/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_recipient-country_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_narrative.html">iati-activity/recipient-country/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_recipient-country_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org.html">iati-activity/reporting-org</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_reporting-org.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@ref.html">iati-activity/reporting-org/@ref</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_reporting-org_@ref.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@type.html">iati-activity/reporting-org/@type</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_reporting-org_@type.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_narrative.html">iati-activity/reporting-org/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_reporting-org_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result.html">iati-activity/result</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_@aggregation-status.html">iati-activity/result/@aggregation-status</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result_@aggregation-status.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_@type.html">iati-activity/result/@type</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result_@type.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_description.html">iati-activity/result/description</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result_description.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_description_narrative.html">iati-activity/result/description/narrative</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result_description_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator.html">iati-activity/result/indicator</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_@ascending.html">iati-activity/result/indicator/@ascending</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_@ascending.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_@measure.html">iati-activity/result/indicator/@measure</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_@measure.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_baseline.html">iati-activity/result/indicator/baseline</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_baseline.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_baseline_@value.html">iati-activity/result/indicator/baseline/@value</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_baseline_@value.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_baseline_@year.html">iati-activity/result/indicator/baseline/@year</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_baseline_@year.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_baseline_comment.html">iati-activity/result/indicator/baseline/comment</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_baseline_comment.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_baseline_comment_narrative.html">iati-activity/result/indicator/baseline/comment/narrative</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_baseline_comment_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_description.html">iati-activity/result/indicator/description</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_description.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_description_narrative.html">iati-activity/result/indicator/description/narrative</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_description_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period.html">iati-activity/result/indicator/period</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_actual.html">iati-activity/result/indicator/period/actual</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_actual.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_actual_@value.html">iati-activity/result/indicator/period/actual/@value</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_actual_@value.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_actual_comment.html">iati-activity/result/indicator/period/actual/comment</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_actual_comment.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_actual_comment_narrative.html">iati-activity/result/indicator/period/actual/comment/narrative</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_actual_comment_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_actual_location.html">iati-activity/result/indicator/period/actual/location</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_actual_location.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_actual_location_@ref.html">iati-activity/result/indicator/period/actual/location/@ref</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_actual_location_@ref.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_period-end.html">iati-activity/result/indicator/period/period-end</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_period-end.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_period-end_@iso-date.html">iati-activity/result/indicator/period/period-end/@iso-date</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_period-end_@iso-date.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_period-start.html">iati-activity/result/indicator/period/period-start</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_period-start.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_period-start_@iso-date.html">iati-activity/result/indicator/period/period-start/@iso-date</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_period-start_@iso-date.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_target.html">iati-activity/result/indicator/period/target</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_target.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_target_@value.html">iati-activity/result/indicator/period/target/@value</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_target_@value.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_target_comment.html">iati-activity/result/indicator/period/target/comment</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_target_comment.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_target_comment_narrative.html">iati-activity/result/indicator/period/target/comment/narrative</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_target_comment_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_target_location.html">iati-activity/result/indicator/period/target/location</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_target_location.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_period_target_location_@ref.html">iati-activity/result/indicator/period/target/location/@ref</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_period_target_location_@ref.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_reference.html">iati-activity/result/indicator/reference</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_reference.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_reference_@code.html">iati-activity/result/indicator/reference/@code</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_reference_@code.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_reference_@vocabulary.html">iati-activity/result/indicator/reference/@vocabulary</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_reference_@vocabulary.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_title.html">iati-activity/result/indicator/title</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_title.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_indicator_title_narrative.html">iati-activity/result/indicator/title/narrative</a></td>
+                <td>323</td>
+                <td><a href="../element/iati-activity_result_indicator_title_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_title.html">iati-activity/result/title</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result_title.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_result_title_narrative.html">iati-activity/result/title/narrative</a></td>
+                <td>324</td>
+                <td><a href="../element/iati-activity_result_title_narrative.html#files_ifcwbg">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector.html">iati-activity/sector</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_sector.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@code.html">iati-activity/sector/@code</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_sector_@code.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@vocabulary.html">iati-activity/sector/@vocabulary</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_sector_@vocabulary.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@vocabulary-uri.html">iati-activity/sector/@vocabulary-uri</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_sector_@vocabulary-uri.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_narrative.html">iati-activity/sector/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_sector_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title.html">iati-activity/title</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_title.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title_narrative.html">iati-activity/title/narrative</a></td>
+                <td>5167</td>
+                <td><a href="../element/iati-activity_title_narrative.html#files_ifcwbg">160</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction.html">iati-activity/transaction</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_finance-type.html">iati-activity/transaction/finance-type</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_finance-type.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_finance-type_@code.html">iati-activity/transaction/finance-type/@code</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_finance-type_@code.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_flow-type.html">iati-activity/transaction/flow-type</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_flow-type.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_flow-type_@code.html">iati-activity/transaction/flow-type/@code</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_flow-type_@code.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org.html">iati-activity/transaction/receiver-org</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html">iati-activity/transaction/receiver-org/narrative</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date.html">iati-activity/transaction/transaction-date</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html">iati-activity/transaction/transaction-date/@iso-date</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type.html">iati-activity/transaction/transaction-type</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html">iati-activity/transaction/transaction-type/@code</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value.html">iati-activity/transaction/value</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_value.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@currency.html">iati-activity/transaction/value/@currency</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_value_@currency.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html">iati-activity/transaction/value/@value-date</a></td>
+                <td>4630</td>
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html#files_ifcwbg">155</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation.html">iati-organisation</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@default-currency.html">iati-organisation/@default-currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@default-currency.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html">iati-organisation/@last-updated-datetime</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@xml:lang.html">iati-organisation/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@xml:lang.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link.html">iati-organisation/document-link</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_@format.html">iati-organisation/document-link/@format</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_@format.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_@url.html">iati-organisation/document-link/@url</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_@url.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_category.html">iati-organisation/document-link/category</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_category.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_category_@code.html">iati-organisation/document-link/category/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_category_@code.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_language.html">iati-organisation/document-link/language</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_language.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_language_@code.html">iati-organisation/document-link/language/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_language_@code.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_title.html">iati-organisation/document-link/title</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_title.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_title_narrative.html">iati-organisation/document-link/title/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_title_narrative.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name.html">iati-organisation/name</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name_narrative.html">iati-organisation/name/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name_narrative.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_organisation-identifier.html">iati-organisation/organisation-identifier</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_organisation-identifier.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org.html">iati-organisation/reporting-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html">iati-organisation/reporting-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@secondary-reporter.html">iati-organisation/reporting-org/@secondary-reporter</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@secondary-reporter.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@type.html">iati-organisation/reporting-org/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@type.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_narrative.html">iati-organisation/reporting-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_narrative.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget.html">iati-organisation/total-budget</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_period-end.html">iati-organisation/total-budget/period-end</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_period-end.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_period-end_@iso-date.html">iati-organisation/total-budget/period-end/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_period-end_@iso-date.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_period-start.html">iati-organisation/total-budget/period-start</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_period-start.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_period-start_@iso-date.html">iati-organisation/total-budget/period-start/@iso-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_period-start_@iso-date.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_value.html">iati-organisation/total-budget/value</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_value.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_value_@currency.html">iati-organisation/total-budget/value/@currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_value_@currency.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_total-budget_value_@value-date.html">iati-organisation/total-budget/value/@value-date</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_total-budget_value_@value-date.html#files_ifcwbg">1</a></td>
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+
+<script>$(function() { $("table.table:not(.exploring-data)").tablesorter(); });</script>
+<script>$(function() { $("table.exploring-data").tablesorter({textExtraction:{3: function(node,table,cellIndex) { return $(node).attr('data-bytes'); }}}); });</script>
+
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+$('.popover-html').popover({
+  html: true
+})
+    </script>
+
+</body>
+</html>

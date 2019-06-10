@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>
+IATI Dashboard -  Publisher: Oxfam GB
+</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../headlines.html">Headlines</a></li>
+      
+          <li ><a href="../data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/oxfamgb/" style="float:right">(Publisher Stats JSON)</a>
+<h1>Publisher: Oxfam GB</h1>
+<p class="lead"></p>
+
+        </div>
+      
+
+      
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title" id="list_fail_validation">Table of Contents</h3></div>
+        <div class="panel-body">
+            <ul>
+                <li><a href="#h_headlines">Headlines</a>
+                <li><a href="#h_dataquality">Data Quality</a>
+                    <ul>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li><a href="#h_financial">Financial</a></li>
+                <li><a href="#h_exploringdata">Exploring Data</a>
+                    <ul>
+                        <li><a href="#p_files">Files</a>
+                        <li><a href="#p_codelists">Codelist values</a>
+                        <li><a href="#p_elements">Elements and Attributes published</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <h2 id="h_headlines">Headlines</h2>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>On the Registry</td>
+                <td><a href="http://iatiregistry.org/publisher/oxfamgb">oxfamgb</a></td>
+            </tr>
+            <tr>
+                <td>Reporting Org on Registry</td>
+                <td>
+                    <code>GB-CHC-202918</code>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Reporting Org(s) in Data</td>
+                <td>
+                
+                <code>GB-CHC-202918</code>
+                
+                </td>
+            </tr><tr>
+                <td>Activity Files</td>
+                <td>76</td>
+            </tr><tr>
+                <td>Organisation Files</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Total File Size</td>
+                <td>23.9 MB</td>
+            </tr><tr>
+                <td>Activities</td>
+                <td>3055</td>
+            </tr><tr>
+                <td>Unique Activities</td>
+                <td>3055</td>
+            </tr><tr>
+                <td>Organisations</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Versions</td>
+                <td>
+                
+                <code>2.02</code>
+                
+                </td>
+            </tr><tr>
+                <td>Hierarchies</td>
+                <td>
+                
+                <code>null</code>
+                
+                </td>
+            </tr><tr>
+                <td>Licenses</td>
+                <td>
+                
+                <code><a href="../license/cc-by.html">cc-by</a></code>
+                
+                </td>
+            </tr><tr>
+                <td>Files failing validation</td>
+                <td>
+                
+                    0
+                
+                </td>
+            </tr>
+        </body>
+    </table>
+    </div>
+    </div>
+    
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activities" class="title-number">3055</span>
+              <span class="title-text">Activities</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/activities.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_activities.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activity-files" class="title-number">76</span>
+              <span class="title-text">Activity Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/activity_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_activity_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="organisation-files" class="title-number">1</span>
+              <span class="title-text">Organisation Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/organisation_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_organisation_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-per-version" class="title-number"></span>
+              <span class="title-text">Files per version</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/versions.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_versions.png" width="100%" />
+            
+            <img src="../publisher_imgs/oxfamgb_versions_legend.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="total-file-size" class="title-number">23.9 MB</span>
+              <span class="title-text">Total File Size</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/file_size.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_file_size.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-failing-validation" class="title-number"></span>
+              <span class="title-text">Files failing validation</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/validation.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_validation.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-where-xml-is-not-well-formed" class="title-number">0</span>
+              <span class="title-text">Files where XML is not well-formed</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/oxfamgb/invalidxml.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/oxfamgb_invalidxml.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 id="h_dataquality">Data Quality</h2>
+
+    
+
+    <p>This section will be blank if no issues were found.</p>
+
+    <div class="row">
+    
+
+    
+
+    
+
+    </div><!-- .row -->
+
+    <h2 id="h_financial">Financial</h2>
+
+    
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Budgets</h3>
+    </div>
+    <div class="panel-body">
+        <p>The below figures are calculated based on the data contained within the <code>&lt;budget&gt;</code> element for each reported activity. Original and revised elements are based on the value declared in the <code><a href="http://iatistandard.org/201/activity-standard/iati-activities/iati-activity/budget/#iati-activities-iati-activity-budget-type">budget/@type</a></code> attribute. Where budgets fall across two calendar years, the month of the <code>&lt;period-end&gt;</code> date is used to determine annual groupings, with budgets for periods ending January-June added to the previous calendar year.</p>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Count (all)</th>
+                <th>Sum (all)</th>
+                <th>Count (Original)</th>
+                <th>Sum (Original)</th>
+                <th>Count (Revised)</th>
+                <th>Sum (Revised)</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td>Total</td>
+                <td>3051</td>
+                <td>
+    
+    
+    
+    1704862516 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>3051</td>
+                <td>
+    
+    
+    
+    1704862516 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2008</td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    187135 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    187135 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2009</td>
+                <td>20</td>
+                <td>
+    
+    
+    
+    11395555 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>20</td>
+                <td>
+    
+    
+    
+    11395555 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2010</td>
+                <td>160</td>
+                <td>
+    
+    
+    
+    50504452 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>160</td>
+                <td>
+    
+    
+    
+    50504452 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2011</td>
+                <td>171</td>
+                <td>
+    
+    
+    
+    36597747 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>171</td>
+                <td>
+    
+    
+    
+    36597747 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2012</td>
+                <td>141</td>
+                <td>
+    
+    
+    
+    47843511 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>141</td>
+                <td>
+    
+    
+    
+    47843511 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2013</td>
+                <td>111</td>
+                <td>
+    
+    
+    
+    11434150 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>111</td>
+                <td>
+    
+    
+    
+    11434150 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2014</td>
+                <td>80</td>
+                <td>
+    
+    
+    
+    19119089 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>80</td>
+                <td>
+    
+    
+    
+    19119089 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2015</td>
+                <td>89</td>
+                <td>
+    
+    
+    
+    18609238 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>89</td>
+                <td>
+    
+    
+    
+    18609238 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2016</td>
+                <td>77</td>
+                <td>
+    
+    
+    
+    23025711 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>77</td>
+                <td>
+    
+    
+    
+    23025711 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2017</td>
+                <td>77</td>
+                <td>
+    
+    
+    
+    23275504 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>77</td>
+                <td>
+    
+    
+    
+    23275504 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2018</td>
+                <td>67</td>
+                <td>
+    
+    
+    
+    22840694 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>67</td>
+                <td>
+    
+    
+    
+    22840694 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>null</td>
+                <td>2057</td>
+                <td>
+    
+    
+    
+    1440029730 GBP</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    </td>
+                <td>2057</td>
+                <td>
+    
+    
+    
+    1440029730 GBP</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+
+    <h2 id="h_exploringdata">Exploring Data</h2>
+
+    <div class="panel panel-default" id="p_files">
+    <div class="panel-heading">
+        <h3 class="panel-title">Files</h3>
+    </div>
+    <table class="table table-striped exploring-data">
+        <thead>
+            <tr>
+                <th>Package</th>
+                <th>Activities <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/oxfamgb/activities.json">(J)</a></th>
+                <th>Organisations <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/oxfamgb/organisations.json">(J)</a></th>
+                <th>File Size <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/oxfamgb/file_size.json">(J)</a></th>
+                <th>Version <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/oxfamgb/versions.json">(J)</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-289">oxfamgb-289</a></td>
+                <td>99</td>
+                <td>0</td>
+                <td data-bytes="707775">707.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-498">oxfamgb-498</a></td>
+                <td>64</td>
+                <td>0</td>
+                <td data-bytes="383566">383.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-589">oxfamgb-589</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td data-bytes="132286">132.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-679">oxfamgb-679</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="78373">78.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-789">oxfamgb-789</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="99287">99.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-798">oxfamgb-798</a></td>
+                <td>30</td>
+                <td>0</td>
+                <td data-bytes="356196">356.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-89">oxfamgb-89</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="4398">4.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-998">oxfamgb-998</a></td>
+                <td>357</td>
+                <td>0</td>
+                <td data-bytes="2658990">2.7 MB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-af">oxfamgb-af</a></td>
+                <td>40</td>
+                <td>0</td>
+                <td data-bytes="248325">248.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-al">oxfamgb-al</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td data-bytes="24725">24.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-am">oxfamgb-am</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="157101">157.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ao">oxfamgb-ao</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="18417">18.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-az">oxfamgb-az</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td data-bytes="55743">55.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-bd">oxfamgb-bd</a></td>
+                <td>96</td>
+                <td>0</td>
+                <td data-bytes="896140">896.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-bf">oxfamgb-bf</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="3551">3.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-bo">oxfamgb-bo</a></td>
+                <td>133</td>
+                <td>0</td>
+                <td data-bytes="622313">622.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-br">oxfamgb-br</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td data-bytes="79374">79.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-cd">oxfamgb-cd</a></td>
+                <td>74</td>
+                <td>0</td>
+                <td data-bytes="958665">958.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-cf">oxfamgb-cf</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="9627">9.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-cl">oxfamgb-cl</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="3027">3.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-co">oxfamgb-co</a></td>
+                <td>43</td>
+                <td>0</td>
+                <td data-bytes="302168">302.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-do">oxfamgb-do</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="3009">3.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ec">oxfamgb-ec</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="3501">3.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-eh">oxfamgb-eh</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8375">8.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-er">oxfamgb-er</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="21099">21.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-et">oxfamgb-et</a></td>
+                <td>81</td>
+                <td>0</td>
+                <td data-bytes="902003">902.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-gb">oxfamgb-gb</a></td>
+                <td>156</td>
+                <td>0</td>
+                <td data-bytes="874483">874.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ge">oxfamgb-ge</a></td>
+                <td>27</td>
+                <td>0</td>
+                <td data-bytes="199130">199.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-gh">oxfamgb-gh</a></td>
+                <td>39</td>
+                <td>0</td>
+                <td data-bytes="281732">281.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-gt">oxfamgb-gt</a></td>
+                <td>50</td>
+                <td>0</td>
+                <td data-bytes="281695">281.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-hn">oxfamgb-hn</a></td>
+                <td>51</td>
+                <td>0</td>
+                <td data-bytes="281115">281.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ht">oxfamgb-ht</a></td>
+                <td>95</td>
+                <td>0</td>
+                <td data-bytes="486788">486.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-id">oxfamgb-id</a></td>
+                <td>79</td>
+                <td>0</td>
+                <td data-bytes="793933">793.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-il">oxfamgb-il</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="9855">9.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-in">oxfamgb-in</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td data-bytes="65270">65.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-iq">oxfamgb-iq</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="130348">130.3 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-jo">oxfamgb-jo</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="125837">125.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ke">oxfamgb-ke</a></td>
+                <td>129</td>
+                <td>0</td>
+                <td data-bytes="827564">827.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-kh">oxfamgb-kh</a></td>
+                <td>62</td>
+                <td>0</td>
+                <td data-bytes="251561">251.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-lb">oxfamgb-lb</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="163639">163.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-lk">oxfamgb-lk</a></td>
+                <td>35</td>
+                <td>0</td>
+                <td data-bytes="167789">167.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-lr">oxfamgb-lr</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td data-bytes="310654">310.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ml">oxfamgb-ml</a></td>
+                <td>32</td>
+                <td>0</td>
+                <td data-bytes="326860">326.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-mm">oxfamgb-mm</a></td>
+                <td>52</td>
+                <td>0</td>
+                <td data-bytes="458424">458.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-mr">oxfamgb-mr</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="3698">3.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-mw">oxfamgb-mw</a></td>
+                <td>60</td>
+                <td>0</td>
+                <td data-bytes="581679">581.7 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-mx">oxfamgb-mx</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="19544">19.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-mz">oxfamgb-mz</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="16031">16.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ne">oxfamgb-ne</a></td>
+                <td>29</td>
+                <td>0</td>
+                <td data-bytes="325634">325.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ng">oxfamgb-ng</a></td>
+                <td>22</td>
+                <td>0</td>
+                <td data-bytes="194827">194.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ni">oxfamgb-ni</a></td>
+                <td>48</td>
+                <td>0</td>
+                <td data-bytes="197484">197.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-np">oxfamgb-np</a></td>
+                <td>82</td>
+                <td>0</td>
+                <td data-bytes="894572">894.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-orgfile">oxfamgb-orgfile</a></td>
+                <td>0</td>
+                <td>1</td>
+                <td data-bytes="513">513 Bytes</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-pe">oxfamgb-pe</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="3211">3.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ph">oxfamgb-ph</a></td>
+                <td>86</td>
+                <td>0</td>
+                <td data-bytes="907768">907.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-pk">oxfamgb-pk</a></td>
+                <td>102</td>
+                <td>0</td>
+                <td data-bytes="708091">708.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ps">oxfamgb-ps</a></td>
+                <td>54</td>
+                <td>0</td>
+                <td data-bytes="381954">382.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ru">oxfamgb-ru</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td data-bytes="35583">35.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-rw">oxfamgb-rw</a></td>
+                <td>34</td>
+                <td>0</td>
+                <td data-bytes="250907">250.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-sd">oxfamgb-sd</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="4611">4.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-sl">oxfamgb-sl</a></td>
+                <td>31</td>
+                <td>0</td>
+                <td data-bytes="350949">350.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-sn">oxfamgb-sn</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="13933">13.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-so">oxfamgb-so</a></td>
+                <td>24</td>
+                <td>0</td>
+                <td data-bytes="208611">208.6 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ss">oxfamgb-ss</a></td>
+                <td>43</td>
+                <td>0</td>
+                <td data-bytes="638168">638.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-sv">oxfamgb-sv</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="4453">4.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-sy">oxfamgb-sy</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td data-bytes="89040">89.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-td">oxfamgb-td</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td data-bytes="129133">129.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-th">oxfamgb-th</a></td>
+                <td>34</td>
+                <td>0</td>
+                <td data-bytes="276546">276.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-tj">oxfamgb-tj</a></td>
+                <td>36</td>
+                <td>0</td>
+                <td data-bytes="272499">272.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-tz">oxfamgb-tz</a></td>
+                <td>54</td>
+                <td>0</td>
+                <td data-bytes="550510">550.5 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ug">oxfamgb-ug</a></td>
+                <td>34</td>
+                <td>0</td>
+                <td data-bytes="198975">199.0 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-vn">oxfamgb-vn</a></td>
+                <td>41</td>
+                <td>0</td>
+                <td data-bytes="388934">388.9 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-vu">oxfamgb-vu</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td data-bytes="7762">7.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-ye">oxfamgb-ye</a></td>
+                <td>55</td>
+                <td>0</td>
+                <td data-bytes="674397">674.4 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-za">oxfamgb-za</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td data-bytes="75204">75.2 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-zm">oxfamgb-zm</a></td>
+                <td>39</td>
+                <td>0</td>
+                <td data-bytes="368778">368.8 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/oxfamgb-zw">oxfamgb-zw</a></td>
+                <td>54</td>
+                <td>0</td>
+                <td data-bytes="390080">390.1 kB</td>
+                <td>2.02</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+    
+    
+    <div class="panel panel-default" id="p_codelists">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/oxfamgb/codelist_values.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Codelist Values (version 2.xx)</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Codelist</th>
+                <th>Values on Codelist</th>
+                <th>Values not on Codelist</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/@default-currency.html">.//@default-currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//@default-currency" data-content="<code>GBP</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/@xml:lang.html">.//@xml:lang</a></td>
+                <td><a href="http://iatistandard.org/codelists/Language">Language</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//@xml:lang" data-content="<code>en</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-date_@type.html">.//activity-date/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityDateType">ActivityDateType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-date/@type" data-content="<code>2</code> <code>3</code> <code>4</code> ">3</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-status_@code.html">.//activity-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityStatus">ActivityStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-status/@code" data-content="<code>2</code> <code>3</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_@type.html">.//budget/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetType">BudgetType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/@type" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/contact-info_@type.html">.//contact-info/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ContactType">ContactType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//contact-info/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/description_@type.html">.//description/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/DescriptionType">DescriptionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//description/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@role.html">.//participating-org/@role</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationRole">OrganisationRole</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@role" data-content="<code>1</code> <code>3</code> <code>4</code> ">3</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@type.html">.//participating-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@type" data-content="<code>10</code> <code>21</code> <code>22</code> <code>40</code> <code>60</code> <code>70</code> ">6</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-country_@code.html">.//recipient-country/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Country">Country</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-country/@code" data-content="<code>AF</code> <code>AL</code> <code>AM</code> <code>AO</code> <code>AZ</code> <code>BD</code> <code>BF</code> <code>BO</code> <code>BR</code> <code>CD</code> <code>CF</code> <code>CL</code> <code>CO</code> <code>DO</code> <code>EC</code> <code>EH</code> <code>ER</code> <code>ET</code> <code>GB</code> <code>GE</code> <code>GH</code> <code>GT</code> <code>HN</code> <code>HT</code> <code>ID</code> <code>IL</code> <code>IN</code> <code>IQ</code> <code>JO</code> <code>KE</code> <code>KH</code> <code>LB</code> <code>LK</code> <code>LR</code> <code>ML</code> <code>MM</code> <code>MR</code> <code>MW</code> <code>MX</code> <code>MZ</code> <code>NE</code> <code>NG</code> <code>NI</code> <code>NP</code> <code>PE</code> <code>PH</code> <code>PK</code> <code>PS</code> <code>RU</code> <code>RW</code> <code>SD</code> <code>SL</code> <code>SN</code> <code>SO</code> <code>SS</code> <code>SV</code> <code>SY</code> <code>TD</code> <code>TH</code> <code>TJ</code> <code>TZ</code> <code>UG</code> <code>VN</code> <code>VU</code> <code>YE</code> <code>ZA</code> <code>ZM</code> <code>ZW</code> ">68</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//recipient-country/@code" data-content="<code></code> ">
+                            1
+                        </a>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-region_@code.html">.//recipient-region/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Region">Region</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-region/@code" data-content="<code>289</code> <code>498</code> <code>589</code> <code>679</code> <code>789</code> <code>798</code> <code>89</code> <code>998</code> ">8</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//recipient-region/@code" data-content="<code></code> ">
+                            1
+                        </a>
+                        
+                            <div class="alert alert-warning">Note: this attribute can be on multiple codelists (specified by the @vocabulary attribute) but the Dashboard only currently checks against the default codelist - see <a href="https://github.com/IATI/IATI-Dashboard/issues/174">issue #174</a>. Therefore some publishers may incorrectly show up as "Not On Codelist".</div>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/reporting-org_@type.html">.//reporting-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//reporting-org/@type" data-content="<code>21</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@code.html">.//sector/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorCategory">SectorCategory</a></td>
+                
+                <td>0
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//sector/@code" data-content="<code>1</code> <code>2</code> <code>3</code> <code>4</code> <code>5</code> ">
+                            5
+                        </a>
+                        
+                            <div class="alert alert-warning">Note: this attribute can be on multiple codelists (specified by the @vocabulary attribute) but the Dashboard only currently checks against the default codelist - see <a href="https://github.com/IATI/IATI-Dashboard/issues/174">issue #174</a>. Therefore some publishers may incorrectly show up as "Not On Codelist".</div>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@vocabulary.html">.//sector/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorVocabulary">SectorVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//sector/@vocabulary" data-content="<code>99</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//sector/@vocabulary" data-content="<code>NaN</code> ">
+                            1
+                        </a>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_transaction-type_@code.html">.//transaction/transaction-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TransactionType">TransactionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/transaction-type/@code" data-content="<code>1</code> <code>2</code> <code>3</code> <code>4</code> ">4</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+    
+    
+    
+    
+
+    <div class="panel panel-default" id="p_elements">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/oxfamgb/elements.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Elements and Attributes Published</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Activities/Organisations</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity.html">iati-activity</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@default-currency.html">iati-activity/@default-currency</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_@default-currency.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@last-updated-datetime.html">iati-activity/@last-updated-datetime</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_@last-updated-datetime.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@xml:lang.html">iati-activity/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_@xml:lang.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date.html">iati-activity/activity-date</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_activity-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html">iati-activity/activity-date/@iso-date</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@type.html">iati-activity/activity-date/@type</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_activity-date_@type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_narrative.html">iati-activity/activity-date/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_activity-date_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status.html">iati-activity/activity-status</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_activity-status.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status_@code.html">iati-activity/activity-status/@code</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_activity-status_@code.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget.html">iati-activity/budget</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_@type.html">iati-activity/budget/@type</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_@type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end.html">iati-activity/budget/period-end</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_period-end.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html">iati-activity/budget/period-end/@iso-date</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start.html">iati-activity/budget/period-start</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_period-start.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html">iati-activity/budget/period-start/@iso-date</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value.html">iati-activity/budget/value</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_value.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@value-date.html">iati-activity/budget/value/@value-date</a></td>
+                <td>3051</td>
+                <td><a href="../element/iati-activity_budget_value_@value-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info.html">iati-activity/contact-info</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_@type.html">iati-activity/contact-info/@type</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_@type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_department.html">iati-activity/contact-info/department</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_department.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_department_narrative.html">iati-activity/contact-info/department/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_department_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_email.html">iati-activity/contact-info/email</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_email.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_mailing-address.html">iati-activity/contact-info/mailing-address</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_mailing-address.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_mailing-address_narrative.html">iati-activity/contact-info/mailing-address/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_mailing-address_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation.html">iati-activity/contact-info/organisation</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_organisation.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html">iati-activity/contact-info/organisation/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_person-name.html">iati-activity/contact-info/person-name</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_person-name.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_person-name_narrative.html">iati-activity/contact-info/person-name/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_person-name_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_telephone.html">iati-activity/contact-info/telephone</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_telephone.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_website.html">iati-activity/contact-info/website</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_contact-info_website.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description.html">iati-activity/description</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_description.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_@type.html">iati-activity/description/@type</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_description_@type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_narrative.html">iati-activity/description/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_description_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_iati-identifier.html">iati-activity/iati-identifier</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_iati-identifier.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org.html">iati-activity/participating-org</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_participating-org.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@ref.html">iati-activity/participating-org/@ref</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_participating-org_@ref.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@role.html">iati-activity/participating-org/@role</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_participating-org_@role.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@type.html">iati-activity/participating-org/@type</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_participating-org_@type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_narrative.html">iati-activity/participating-org/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_participating-org_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country.html">iati-activity/recipient-country</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_recipient-country.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_@code.html">iati-activity/recipient-country/@code</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_recipient-country_@code.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_narrative.html">iati-activity/recipient-country/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_recipient-country_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region.html">iati-activity/recipient-region</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_recipient-region.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region_@code.html">iati-activity/recipient-region/@code</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_recipient-region_@code.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org.html">iati-activity/reporting-org</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_reporting-org.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@ref.html">iati-activity/reporting-org/@ref</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_reporting-org_@ref.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@type.html">iati-activity/reporting-org/@type</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_reporting-org_@type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_narrative.html">iati-activity/reporting-org/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_reporting-org_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector.html">iati-activity/sector</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_sector.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@code.html">iati-activity/sector/@code</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_sector_@code.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@percentage.html">iati-activity/sector/@percentage</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_sector_@percentage.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@vocabulary.html">iati-activity/sector/@vocabulary</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_sector_@vocabulary.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_narrative.html">iati-activity/sector/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_sector_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title.html">iati-activity/title</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_title.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title_narrative.html">iati-activity/title/narrative</a></td>
+                <td>3055</td>
+                <td><a href="../element/iati-activity_title_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction.html">iati-activity/transaction</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_description.html">iati-activity/transaction/description</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_description.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_description_narrative.html">iati-activity/transaction/description/narrative</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_description_narrative.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org.html">iati-activity/transaction/provider-org</a></td>
+                <td>2102</td>
+                <td><a href="../element/iati-activity_transaction_provider-org.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_@provider-activity-id.html">iati-activity/transaction/provider-org/@provider-activity-id</a></td>
+                <td>2101</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_@provider-activity-id.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_@ref.html">iati-activity/transaction/provider-org/@ref</a></td>
+                <td>2102</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_@ref.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_narrative.html">iati-activity/transaction/provider-org/narrative</a></td>
+                <td>2102</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_narrative.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org.html">iati-activity/transaction/receiver-org</a></td>
+                <td>2102</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_@ref.html">iati-activity/transaction/receiver-org/@ref</a></td>
+                <td>2102</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_@ref.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html">iati-activity/transaction/receiver-org/narrative</a></td>
+                <td>2102</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html#files_oxfamgb">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date.html">iati-activity/transaction/transaction-date</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html">iati-activity/transaction/transaction-date/@iso-date</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type.html">iati-activity/transaction/transaction-type</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html">iati-activity/transaction/transaction-type/@code</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value.html">iati-activity/transaction/value</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_value.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html">iati-activity/transaction/value/@value-date</a></td>
+                <td>3054</td>
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html#files_oxfamgb">76</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation.html">iati-organisation</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@default-currency.html">iati-organisation/@default-currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@default-currency.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html">iati-organisation/@last-updated-datetime</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@xml:lang.html">iati-organisation/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@xml:lang.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name.html">iati-organisation/name</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name_narrative.html">iati-organisation/name/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name_narrative.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name_narrative_@xml:lang.html">iati-organisation/name/narrative/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name_narrative_@xml:lang.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_organisation-identifier.html">iati-organisation/organisation-identifier</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_organisation-identifier.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org.html">iati-organisation/reporting-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html">iati-organisation/reporting-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@secondary-reporter.html">iati-organisation/reporting-org/@secondary-reporter</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@secondary-reporter.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@type.html">iati-organisation/reporting-org/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@type.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_narrative.html">iati-organisation/reporting-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_narrative.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_narrative_@xml:lang.html">iati-organisation/reporting-org/narrative/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_narrative_@xml:lang.html#files_oxfamgb">1</a></td>
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+
+<script>$(function() { $("table.table:not(.exploring-data)").tablesorter(); });</script>
+<script>$(function() { $("table.exploring-data").tablesorter({textExtraction:{3: function(node,table,cellIndex) { return $(node).attr('data-bytes'); }}}); });</script>
+
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+$('.popover-html').popover({
+  html: true
+})
+    </script>
+
+</body>
+</html>

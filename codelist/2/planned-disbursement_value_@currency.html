@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>
+IATI Dashboard - Codelists - Codelists
+</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../../headlines.html">Headlines</a></li>
+      
+          <li ><a href="../../data_quality.html">Data Quality</a></li>
+      
+          <li class="active"><a href="../../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li><a href="../../elements.html">Elements</a></li>
+      
+          <li class="active"><a href="../../codelists.html">Codelists</a></li>
+      
+          <li><a href="../../booleans.html">Booleans</a></li>
+      
+          <li><a href="../../dates.html">Dates</a></li>
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<h1>Codelist values used for <code>.//planned-disbursement/value/@currency</code></h1>
+<p class="lead">Who uses <code>Currency</code> in <code><a href="http://iatistandard.org/activity-standard/iati-activities/iati-activity/planned-disbursement/value/">.//planned-disbursement/value/@currency</a></code>?</p>
+<p class="lead">(for files published to version 2.xx of the standard)</p>
+
+<p style="float:right">(<a href="http://dashboard.iatistandard.org/stats/current/inverted-publisher/codelist_values.json">This page in JSON format</a>)</p>
+<p>Values should be on the <code><a href="http://iatistandard.org/codelists/Currency/">Currency</a></code> codelist.</p>
+
+        </div>
+      
+
+      
+
+    <p>
+    
+    
+    </p>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">On Codelist</h3>
+    </div>
+    <div class="panel-body">
+        <p>Codes that are on the <code>Currency</code> codelist.</p>
+    </div>
+    <table class="table table-striped">
+      <thead><tr><th>Value</th><th>Publishers</th></tr></thead>
+      <tbody>
+        
+            
+        
+            
+            <tr><td>USD</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>USD</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/bmgf.html#p_codelists'>bmgf</a><br/> <a href='../../publisher/bwh.html#p_codelists'>bwh</a><br/> <a href='../../publisher/caribank.html#p_codelists'>caribank</a><br/> <a href='../../publisher/civic_admin.html#p_codelists'>civic_admin</a><br/> <a href='../../publisher/crehpa.html#p_codelists'>crehpa</a><br/> <a href='../../publisher/dhsc.html#p_codelists'>dhsc</a><br/> <a href='../../publisher/fundacion-acceso.html#p_codelists'>fundacion-acceso</a><br/> <a href='../../publisher/gdi.html#p_codelists'>gdi</a><br/> <a href='../../publisher/hai.html#p_codelists'>hai</a><br/> <a href='../../publisher/instiglio.html#p_codelists'>instiglio</a><br/> <a href='../../publisher/millenniumchallenge.html#p_codelists'>millenniumchallenge</a><br/> <a href='../../publisher/npa.html#p_codelists'>npa</a><br/> <a href='../../publisher/opennorth.html#p_codelists'>opennorth</a><br/> <a href='../../publisher/transparency-international.html#p_codelists'>transparency-international</a><br/> <a href='../../publisher/unfpa.html#p_codelists'>unfpa</a><br/> <a href='../../publisher/unicef.html#p_codelists'>unicef</a><br/> <a href='../../publisher/wri.html#p_codelists'>wri</a><br/> ">17</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>AUD</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>AUD</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/iwda.html#p_codelists'>iwda</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>KRW</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>KRW</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/odakorea.html#p_codelists'>odakorea</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>XOF</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>XOF</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/alcrer-1.html#p_codelists'>alcrer-1</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>GBP</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>GBP</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/art19.html#p_codelists'>art19</a><br/> <a href='../../publisher/beis.html#p_codelists'>beis</a><br/> <a href='../../publisher/chai.html#p_codelists'>chai</a><br/> <a href='../../publisher/childhopeuk.html#p_codelists'>childhopeuk</a><br/> <a href='../../publisher/dapp.html#p_codelists'>dapp</a><br/> <a href='../../publisher/dhsc.html#p_codelists'>dhsc</a><br/> <a href='../../publisher/ieu.html#p_codelists'>ieu</a><br/> <a href='../../publisher/kpmgea.html#p_codelists'>kpmgea</a><br/> <a href='../../publisher/network4africa.html#p_codelists'>network4africa</a><br/> <a href='../../publisher/nrc.html#p_codelists'>nrc</a><br/> <a href='../../publisher/sfcg.html#p_codelists'>sfcg</a><br/> <a href='../../publisher/stromme_ug.html#p_codelists'>stromme_ug</a><br/> <a href='../../publisher/tfac.html#p_codelists'>tfac</a><br/> <a href='../../publisher/vso.html#p_codelists'>vso</a><br/> <a href='../../publisher/wellfound.html#p_codelists'>wellfound</a><br/> <a href='../../publisher/wusc.html#p_codelists'>wusc</a><br/> ">16</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>EUR</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>EUR</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/aidenvironment.html#p_codelists'>aidenvironment</a><br/> <a href='../../publisher/art19.html#p_codelists'>art19</a><br/> <a href='../../publisher/cocnl_publisher.html#p_codelists'>cocnl_publisher</a><br/> <a href='../../publisher/ec-devco.html#p_codelists'>ec-devco</a><br/> <a href='../../publisher/ec-near.html#p_codelists'>ec-near</a><br/> <a href='../../publisher/edukans_foundation.html#p_codelists'>edukans_foundation</a><br/> <a href='../../publisher/hai.html#p_codelists'>hai</a><br/> <a href='../../publisher/ieu.html#p_codelists'>ieu</a><br/> <a href='../../publisher/ifsi_isvi.html#p_codelists'>ifsi_isvi</a><br/> <a href='../../publisher/inpud_admin.html#p_codelists'>inpud_admin</a><br/> <a href='../../publisher/maec.html#p_codelists'>maec</a><br/> <a href='../../publisher/max-foundation.html#p_codelists'>max-foundation</a><br/> <a href='../../publisher/nswp.html#p_codelists'>nswp</a><br/> <a href='../../publisher/onl.html#p_codelists'>onl</a><br/> <a href='../../publisher/rainfoundation.html#p_codelists'>rainfoundation</a><br/> <a href='../../publisher/rutgers.html#p_codelists'>rutgers</a><br/> <a href='../../publisher/sfcg.html#p_codelists'>sfcg</a><br/> <a href='../../publisher/simavi.html#p_codelists'>simavi</a><br/> <a href='../../publisher/solarnowsofa.html#p_codelists'>solarnowsofa</a><br/> <a href='../../publisher/spark.html#p_codelists'>spark</a><br/> <a href='../../publisher/tdh_nl.html#p_codelists'>tdh_nl</a><br/> <a href='../../publisher/tear.html#p_codelists'>tear</a><br/> <a href='../../publisher/warchildholland.html#p_codelists'>warchildholland</a><br/> ">23</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>BAM</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>BAM</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/npa.html#p_codelists'>npa</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+            <tr><td>CAD</td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code>CAD</code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/finance_canada.html#p_codelists'>finance_canada</a><br/> ">1</a>
+            </td></tr>
+            
+        
+      </tbody>
+    </table>
+    </div>
+    </div>
+
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Not On Codelist</h3>
+    </div>
+    <div class="panel-body">
+        <p>Codes that are not on the <code>Currency</code> codelist.</p>
+    </div>
+    <table class="table table-striped">
+      <thead><tr><th>Value</th><th>Publishers</th></tr></thead>
+      <tbody>
+        
+            
+            <tr><td></td><td>
+                <a href="javascript: return false;" class="popover-html" title="Publishers using <code></code>" role="button" tabindex="0" data-trigger="focus" data-content="<a href='../../publisher/unicef.html#p_codelists'>unicef</a><br/> ">1</a>
+            </td></tr>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+      </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+$('.popover-html').popover({
+  html: true
+})
+    </script>
+
+</body>
+</html>

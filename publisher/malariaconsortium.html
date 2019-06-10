@@ -1,0 +1,3646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>
+IATI Dashboard -  Publisher: Malaria Consortium
+</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../headlines.html">Headlines</a></li>
+      
+          <li ><a href="../data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/malariaconsortium/" style="float:right">(Publisher Stats JSON)</a>
+<h1>Publisher: Malaria Consortium</h1>
+<p class="lead"></p>
+
+        </div>
+      
+
+      
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title" id="list_fail_validation">Table of Contents</h3></div>
+        <div class="panel-body">
+            <ul>
+                <li><a href="#h_headlines">Headlines</a>
+                <li><a href="#h_dataquality">Data Quality</a>
+                    <ul>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                <li><a href="#h_financial">Financial</a></li>
+                <li><a href="#h_exploringdata">Exploring Data</a>
+                    <ul>
+                        <li><a href="#p_files">Files</a>
+                        <li><a href="#p_codelists">Codelist values</a>
+                        <li><a href="#p_elements">Elements and Attributes published</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <h2 id="h_headlines">Headlines</h2>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="panel panel-default">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>On the Registry</td>
+                <td><a href="http://iatiregistry.org/publisher/malariaconsortium">malariaconsortium</a></td>
+            </tr>
+            <tr>
+                <td>Reporting Org on Registry</td>
+                <td>
+                    <code>GB-CHC-1099776</code>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Reporting Org(s) in Data</td>
+                <td>
+                
+                <code>GB-CHC-1099776</code>
+                
+                </td>
+            </tr><tr>
+                <td>Activity Files</td>
+                <td>98</td>
+            </tr><tr>
+                <td>Organisation Files</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Total File Size</td>
+                <td>1.6 MB</td>
+            </tr><tr>
+                <td>Activities</td>
+                <td>272</td>
+            </tr><tr>
+                <td>Unique Activities</td>
+                <td>272</td>
+            </tr><tr>
+                <td>Organisations</td>
+                <td>1</td>
+            </tr><tr>
+                <td>Versions</td>
+                <td>
+                
+                <code>2.03</code>
+                
+                </td>
+            </tr><tr>
+                <td>Hierarchies</td>
+                <td>
+                
+                <code>1</code>
+                
+                <code>2</code>
+                
+                </td>
+            </tr><tr>
+                <td>Licenses</td>
+                <td>
+                
+                <code><a href="../license/cc-by.html">cc-by</a></code>
+                
+                </td>
+            </tr><tr>
+                <td>Files failing validation</td>
+                <td>
+                
+                    0
+                
+                </td>
+            </tr>
+        </body>
+    </table>
+    </div>
+    </div>
+    
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activities" class="title-number">272</span>
+              <span class="title-text">Activities</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/activities.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_activities.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="activity-files" class="title-number">98</span>
+              <span class="title-text">Activity Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/activity_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_activity_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="organisation-files" class="title-number">1</span>
+              <span class="title-text">Organisation Files</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/organisation_files.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_organisation_files.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-per-version" class="title-number"></span>
+              <span class="title-text">Files per version</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/versions.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_versions.png" width="100%" />
+            
+            <img src="../publisher_imgs/malariaconsortium_versions_legend.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="total-file-size" class="title-number">1.6 MB</span>
+              <span class="title-text">Total File Size</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/file_size.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_file_size.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-failing-validation" class="title-number"></span>
+              <span class="title-text">Files failing validation</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/validation.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_validation.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              
+              <span id="files-where-xml-is-not-well-formed" class="title-number">0</span>
+              <span class="title-text">Files where XML is not well-formed</span>
+            </h3>
+            
+            <a href="http://dashboard.iatistandard.org/stats/gitaggregate-publisher-dated/malariaconsortium/invalidxml.json" style="float:right">(J)</a>
+            
+            <br clear="all"/>
+          </div>
+          <div class="panel-body">
+            <p></p>
+            <img src="../publisher_imgs/malariaconsortium_invalidxml.png" width="100%" />
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 id="h_dataquality">Data Quality</h2>
+
+    
+
+    <p>This section will be blank if no issues were found.</p>
+
+    <div class="row">
+    
+
+    
+
+    
+
+    </div><!-- .row -->
+
+    <h2 id="h_financial">Financial</h2>
+
+    
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Budgets</h3>
+    </div>
+    <div class="panel-body">
+        <p>The below figures are calculated based on the data contained within the <code>&lt;budget&gt;</code> element for each reported activity. Original and revised elements are based on the value declared in the <code><a href="http://iatistandard.org/201/activity-standard/iati-activities/iati-activity/budget/#iati-activities-iati-activity-budget-type">budget/@type</a></code> attribute. Where budgets fall across two calendar years, the month of the <code>&lt;period-end&gt;</code> date is used to determine annual groupings, with budgets for periods ending January-June added to the previous calendar year.</p>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Count (all)</th>
+                <th>Sum (all)</th>
+                <th>Count (Original)</th>
+                <th>Sum (Original)</th>
+                <th>Count (Revised)</th>
+                <th>Sum (Revised)</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td>Total</td>
+                <td>236</td>
+                <td>
+    
+    
+    
+    863901540 USD</br>
+    
+    
+    
+    391516557 NGN</br>
+    
+    
+    
+    6956000 ETB</br>
+    
+    
+    
+    7498924 NUL</br>
+    
+    
+    
+    71172688555 UGX</br>
+    
+    
+    
+    99934 CAD</br>
+    
+    
+    
+    171857929 GBP</br>
+    
+    
+    
+    981754 Eur</br>
+    
+    
+    
+    7498930 THB</br>
+    
+    
+    
+    249993 EUR</br>
+    
+    
+    
+    </td>
+                <td>99</td>
+                <td>
+    
+    
+    
+    280141493 USD</br>
+    
+    
+    
+    560744459 NGN</br>
+    
+    
+    
+    800000 ETB</br>
+    
+    
+    
+    36678717925 UGX</br>
+    
+    
+    
+    99934 CAD</br>
+    
+    
+    
+    112502888 GBP</br>
+    
+    
+    
+    981754 Eur</br>
+    
+    
+    
+    7498924 THB</br>
+    
+    
+    
+    350042 EUR</br>
+    
+    
+    
+    </td>
+                <td>137</td>
+                <td>
+    
+    
+    
+    863901540 USD</br>
+    
+    
+    
+    391516557 NGN</br>
+    
+    
+    
+    6956000 ETB</br>
+    
+    
+    
+    7498924 NUL</br>
+    
+    
+    
+    71172688555 UGX</br>
+    
+    
+    
+    171857929 GBP</br>
+    
+    
+    
+    7498930 THB</br>
+    
+    
+    
+    249993 EUR</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2012</td>
+                <td>3</td>
+                <td>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>3</td>
+                <td>
+    
+    
+    
+    1597096 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2013</td>
+                <td>6</td>
+                <td>
+    
+    
+    
+    599604 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>5</td>
+                <td>
+    
+    
+    
+    844663 USD</br>
+    
+    
+    
+    
+    
+    800000 ETB</br>
+    
+    
+    
+    24919098564 UGX</br>
+    
+    
+    
+    
+    
+    2301731 GBP</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>1</td>
+                <td>
+    
+    
+    
+    599604 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2014</td>
+                <td>7</td>
+                <td>
+    
+    
+    
+    2058250 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    497914 GBP</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>4</td>
+                <td>
+    
+    
+    
+    1907064 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    497914 GBP</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>3</td>
+                <td>
+    
+    
+    
+    2058250 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    497914 GBP</br>
+    
+    
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2015</td>
+                <td>2</td>
+                <td>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>2</td>
+                <td>
+    
+    
+    
+    1443548 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2016</td>
+                <td>17</td>
+                <td>
+    
+    
+    
+    4760587 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>11</td>
+                <td>
+    
+    
+    
+    2707681 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    2002702 GBP</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>6</td>
+                <td>
+    
+    
+    
+    4760587 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2017</td>
+                <td>7</td>
+                <td>
+    
+    
+    
+    150000 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    7498930 THB</br>
+    
+    
+    
+    
+    
+    </td>
+                <td>5</td>
+                <td>
+    
+    
+    
+    444839 USD</br>
+    
+    
+    
+    179647990 NGN</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    7498924 THB</br>
+    
+    
+    
+    
+    
+    </td>
+                <td>2</td>
+                <td>
+    
+    
+    
+    150000 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    7498930 THB</br>
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>2018</td>
+                <td>9</td>
+                <td>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+                <td>9</td>
+                <td>
+    
+    
+    
+    2158758 USD</br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    1946560 GBP</br>
+    
+    
+    
+    
+    
+    
+    
+    100049 EUR</br>
+    
+    
+    
+    </td>
+                <td></td>
+                <td>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </td>
+            </tr>
+        
+            <tr>
+                <td>null</td>
+                <td>185</td>
+                <td>
+    
+    
+    
+    856333099 USD</br>
+    
+    
+    
+    391516557 NGN</br>
+    
+    
+    
+    6956000 ETB</br>
+    
+    
+    
+    7498924 NUL</br>
+    
+    
+    
+    71172688555 UGX</br>
+    
+    
+    
+    99934 CAD</br>
+    
+    
+    
+    171360015 GBP</br>
+    
+    
+    
+    981754 Eur</br>
+    
+    
+    
+    
+    
+    249993 EUR</br>
+    
+    
+    
+    </td>
+                <td>60</td>
+                <td>
+    
+    
+    
+    269037844 USD</br>
+    
+    
+    
+    381096469 NGN</br>
+    
+    
+    
+    
+    
+    11759619361 UGX</br>
+    
+    
+    
+    99934 CAD</br>
+    
+    
+    
+    105753981 GBP</br>
+    
+    
+    
+    981754 Eur</br>
+    
+    
+    
+    
+    
+    249993 EUR</br>
+    
+    
+    
+    </td>
+                <td>125</td>
+                <td>
+    
+    
+    
+    856333099 USD</br>
+    
+    
+    
+    391516557 NGN</br>
+    
+    
+    
+    6956000 ETB</br>
+    
+    
+    
+    7498924 NUL</br>
+    
+    
+    
+    71172688555 UGX</br>
+    
+    
+    
+    171360015 GBP</br>
+    
+    
+    
+    
+    
+    249993 EUR</br>
+    
+    
+    
+    </td>
+            </tr>
+        
+        </tbody>
+    </table>
+    </div>
+
+
+    <h2 id="h_exploringdata">Exploring Data</h2>
+
+    <div class="panel panel-default" id="p_files">
+    <div class="panel-heading">
+        <h3 class="panel-title">Files</h3>
+    </div>
+    <table class="table table-striped exploring-data">
+        <thead>
+            <tr>
+                <th>Package</th>
+                <th>Activities <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/malariaconsortium/activities.json">(J)</a></th>
+                <th>Organisations <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/malariaconsortium/organisations.json">(J)</a></th>
+                <th>File Size <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/malariaconsortium/file_size.json">(J)</a></th>
+                <th>Version <a href="http://dashboard.iatistandard.org/stats/current/inverted-file-publisher/malariaconsortium/versions.json">(J)</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-b8">malariaconsortium-b8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="127738">127.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-c8">malariaconsortium-c8</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="15925">15.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-c9">malariaconsortium-c9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="24332">24.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-d3">malariaconsortium-d3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="12689">12.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-e1">malariaconsortium-e1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8542">8.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-e4">malariaconsortium-e4</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="9971">10.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-e6">malariaconsortium-e6</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="28163">28.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-f2">malariaconsortium-f2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5143">5.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-g8">malariaconsortium-g8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="22049">22.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-h1">malariaconsortium-h1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10321">10.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-h3">malariaconsortium-h3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="30772">30.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-h8">malariaconsortium-h8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="38738">38.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-j1">malariaconsortium-j1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="20050">20.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-j4">malariaconsortium-j4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8367">8.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-j7">malariaconsortium-j7</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td data-bytes="71797">71.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-j9">malariaconsortium-j9</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td data-bytes="39044">39.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-k1">malariaconsortium-k1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="17678">17.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-k2">malariaconsortium-k2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="11363">11.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-k6">malariaconsortium-k6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10310">10.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-k7">malariaconsortium-k7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6180">6.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-k8">malariaconsortium-k8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7865">7.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l1">malariaconsortium-l1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7402">7.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l2">malariaconsortium-l2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5152">5.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l3">malariaconsortium-l3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4886">4.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l4">malariaconsortium-l4</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="21686">21.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l5">malariaconsortium-l5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="13944">13.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l6">malariaconsortium-l6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="19739">19.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l7">malariaconsortium-l7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="9456">9.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l8">malariaconsortium-l8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10316">10.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-l9">malariaconsortium-l9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10359">10.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m1">malariaconsortium-m1</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="28683">28.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m2">malariaconsortium-m2</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="29760">29.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m3">malariaconsortium-m3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7201">7.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m4">malariaconsortium-m4</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="30602">30.6 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m5">malariaconsortium-m5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="16983">17.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m7">malariaconsortium-m7</a></td>
+                <td>11</td>
+                <td>0</td>
+                <td data-bytes="44594">44.6 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m8">malariaconsortium-m8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7191">7.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-m9">malariaconsortium-m9</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td data-bytes="89331">89.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n1">malariaconsortium-n1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="11366">11.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n2">malariaconsortium-n2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="11025">11.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n3">malariaconsortium-n3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="13130">13.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n4">malariaconsortium-n4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10245">10.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n5">malariaconsortium-n5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="16109">16.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n6">malariaconsortium-n6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8532">8.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n8">malariaconsortium-n8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="13085">13.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-n9">malariaconsortium-n9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10856">10.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-org">malariaconsortium-org</a></td>
+                <td>0</td>
+                <td>1</td>
+                <td data-bytes="790">790 Bytes</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q1">malariaconsortium-q1</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="22873">22.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q2">malariaconsortium-q2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8654">8.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q3">malariaconsortium-q3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8981">9.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q4">malariaconsortium-q4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10761">10.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q5">malariaconsortium-q5</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td data-bytes="28872">28.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q6">malariaconsortium-q6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="11984">12.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q7">malariaconsortium-q7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="11184">11.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q8">malariaconsortium-q8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="13859">13.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-q9">malariaconsortium-q9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6520">6.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r1">malariaconsortium-r1</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td data-bytes="41312">41.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r2">malariaconsortium-r2</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="22381">22.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r3">malariaconsortium-r3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7671">7.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r4">malariaconsortium-r4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="90524">90.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r5">malariaconsortium-r5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="13461">13.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r6">malariaconsortium-r6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5302">5.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r7">malariaconsortium-r7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="21692">21.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r8">malariaconsortium-r8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8803">8.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-r9">malariaconsortium-r9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5067">5.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s1">malariaconsortium-s1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4862">4.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s2">malariaconsortium-s2</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td data-bytes="16550">16.6 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s3">malariaconsortium-s3</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td data-bytes="28912">28.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s4">malariaconsortium-s4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6956">7.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s5">malariaconsortium-s5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="12199">12.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s6">malariaconsortium-s6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="11233">11.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s7">malariaconsortium-s7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6838">6.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s8">malariaconsortium-s8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="10853">10.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-s9">malariaconsortium-s9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7100">7.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t1">malariaconsortium-t1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="8401">8.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t2">malariaconsortium-t2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6366">6.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t3">malariaconsortium-t3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7859">7.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t4">malariaconsortium-t4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7266">7.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t5">malariaconsortium-t5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="12478">12.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t6">malariaconsortium-t6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4403">4.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t7">malariaconsortium-t7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6678">6.7 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t8">malariaconsortium-t8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="49890">49.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-t9">malariaconsortium-t9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6385">6.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u1">malariaconsortium-u1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="7004">7.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u2">malariaconsortium-u2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5538">5.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u3">malariaconsortium-u3</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td data-bytes="10506">10.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u4">malariaconsortium-u4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5780">5.8 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u5">malariaconsortium-u5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6228">6.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u6">malariaconsortium-u6</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="6902">6.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u7">malariaconsortium-u7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4955">5.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u8">malariaconsortium-u8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4217">4.2 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-u9">malariaconsortium-u9</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="3947">3.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v1">malariaconsortium-v1</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4397">4.4 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v2">malariaconsortium-v2</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5335">5.3 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v3">malariaconsortium-v3</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4015">4.0 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v4">malariaconsortium-v4</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="5466">5.5 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v5">malariaconsortium-v5</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="4103">4.1 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v7">malariaconsortium-v7</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="3933">3.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+            <tr>
+                <td class="break"><a href="http://iatiregistry.org/dataset/malariaconsortium-v8">malariaconsortium-v8</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td data-bytes="3850">3.9 kB</td>
+                <td>2.03</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+    
+    
+    <div class="panel panel-default" id="p_codelists">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/malariaconsortium/codelist_values.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Codelist Values (version 2.xx)</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Codelist</th>
+                <th>Values on Codelist</th>
+                <th>Values not on Codelist</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/@default-currency.html">.//@default-currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//@default-currency" data-content="<code>CAD</code> <code>ETB</code> <code>EUR</code> <code>GBP</code> <code>NGN</code> <code>THB</code> <code>UGX</code> <code>USD</code> ">8</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/@xml:lang.html">.//@xml:lang</a></td>
+                <td><a href="http://iatistandard.org/codelists/Language">Language</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//@xml:lang" data-content="<code>en</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-date_@type.html">.//activity-date/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityDateType">ActivityDateType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-date/@type" data-content="<code>2</code> <code>3</code> <code>4</code> ">3</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/activity-status_@code.html">.//activity-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/ActivityStatus">ActivityStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//activity-status/@code" data-content="<code>2</code> <code>4</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_@type.html">.//budget/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/BudgetType">BudgetType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/@type" data-content="<code>1</code> <code>2</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/budget_value_@currency.html">.//budget/value/@currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//budget/value/@currency" data-content="<code>CAD</code> <code>ETB</code> <code>EUR</code> <code>GBP</code> <code>NGN</code> <code>THB</code> <code>UGX</code> <code>USD</code> ">8</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//budget/value/@currency" data-content="<code>Eur</code> <code>NUL</code> ">
+                            2
+                        </a>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/contact-info_@type.html">.//contact-info/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/ContactType">ContactType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//contact-info/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-finance-type_@code.html">.//default-finance-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FinanceType">FinanceType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-finance-type/@code" data-content="<code>110</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-flow-type_@code.html">.//default-flow-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FlowType">FlowType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-flow-type/@code" data-content="<code>10</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/default-tied-status_@code.html">.//default-tied-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TiedStatus">TiedStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//default-tied-status/@code" data-content="<code>3</code> <code>5</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/description_@type.html">.//description/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/DescriptionType">DescriptionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//description/@type" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@role.html">.//participating-org/@role</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationRole">OrganisationRole</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@role" data-content="<code>1</code> <code>4</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/participating-org_@type.html">.//participating-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//participating-org/@type" data-content="<code>10</code> <code>15</code> <code>21</code> <code>22</code> <code>23</code> <code>40</code> <code>60</code> <code>70</code> <code>80</code> ">9</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-country_@code.html">.//recipient-country/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Country">Country</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-country/@code" data-content="<code>BF</code> <code>ET</code> <code>GB</code> <code>GH</code> <code>GM</code> <code>GN</code> <code>GW</code> <code>KH</code> <code>ML</code> <code>MM</code> <code>MW</code> <code>MZ</code> <code>NE</code> <code>NG</code> <code>NP</code> <code>SL</code> <code>SN</code> <code>SS</code> <code>TD</code> <code>TH</code> <code>TZ</code> <code>UG</code> <code>ZM</code> ">23</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/recipient-region_@code.html">.//recipient-region/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/Region">Region</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//recipient-region/@code" data-content="<code>298</code> <code>798</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/related-activity_@type.html">.//related-activity/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/RelatedActivityType">RelatedActivityType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//related-activity/@type" data-content="<code>1</code> <code>2</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/reporting-org_@type.html">.//reporting-org/@type</a></td>
+                <td><a href="http://iatistandard.org/codelists/OrganisationType">OrganisationType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//reporting-org/@type" data-content="<code>21</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@code.html">.//sector/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorCategory">SectorCategory</a></td>
+                
+                <td>0
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//sector/@code" data-content="<code>12220</code> <code>12230</code> <code>12240</code> <code>12250</code> <code>12262</code> <code>51010</code> ">
+                            6
+                        </a>
+                        
+                            <div class="alert alert-warning">Note: this attribute can be on multiple codelists (specified by the @vocabulary attribute) but the Dashboard only currently checks against the default codelist - see <a href="https://github.com/IATI/IATI-Dashboard/issues/174">issue #174</a>. Therefore some publishers may incorrectly show up as "Not On Codelist".</div>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/sector_@vocabulary.html">.//sector/@vocabulary</a></td>
+                <td><a href="http://iatistandard.org/codelists/SectorVocabulary">SectorVocabulary</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//sector/@vocabulary" data-content="<code>1</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_disbursement-channel_@code.html">.//transaction/disbursement-channel/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/DisbursementChannel">DisbursementChannel</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/disbursement-channel/@code" data-content="<code>2</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_finance-type_@code.html">.//transaction/finance-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FinanceType">FinanceType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/finance-type/@code" data-content="<code>110</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_flow-type_@code.html">.//transaction/flow-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/FlowType">FlowType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/flow-type/@code" data-content="<code>10</code> ">1</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_tied-status_@code.html">.//transaction/tied-status/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TiedStatus">TiedStatus</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/tied-status/@code" data-content="<code>3</code> <code>5</code> ">2</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_transaction-type_@code.html">.//transaction/transaction-type/@code</a></td>
+                <td><a href="http://iatistandard.org/codelists/TransactionType">TransactionType</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/transaction-type/@code" data-content="<code>1</code> <code>2</code> <code>3</code> <code>4</code> ">4</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        0
+                    
+                </td>
+                
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../codelist/2/transaction_value_@currency.html">.//transaction/value/@currency</a></td>
+                <td><a href="http://iatistandard.org/codelists/Currency">Currency</a></td>
+                
+                <td>
+                    <a href="javascript: return false;" class="popover-html" title="Values on codelist for .//transaction/value/@currency" data-content="<code>CAD</code> <code>ETB</code> <code>EUR</code> <code>GBP</code> <code>MMK</code> <code>MZN</code> <code>NGN</code> <code>SDG</code> <code>THB</code> <code>UGX</code> <code>USD</code> <code>XAF</code> <code>XOF</code> ">13</a>
+                    
+                </td>
+                
+                
+                <td>
+                    
+                        <a href="javascript: return false;" class="popover-html" title="Values not on codelist for .//transaction/value/@currency" data-content="<code>Eur</code> ">
+                            1
+                        </a>
+                        
+                    
+                </td>
+                
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+    
+    
+    
+    
+
+    <div class="panel panel-default" id="p_elements">
+    <table class="table table-striped">
+    <div class="panel-heading">
+        <a href="http://dashboard.iatistandard.org/stats/current/aggregated-publisher/malariaconsortium/elements.json" style="float:right">(J)</a>
+        <h3 class="panel-title">Elements and Attributes Published</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Element/Attribute</th>
+                <th>Activities/Organisations</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity.html">iati-activity</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@default-currency.html">iati-activity/@default-currency</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_@default-currency.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@hierarchy.html">iati-activity/@hierarchy</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_@hierarchy.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@last-updated-datetime.html">iati-activity/@last-updated-datetime</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_@last-updated-datetime.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_@xml:lang.html">iati-activity/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_@xml:lang.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date.html">iati-activity/activity-date</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_activity-date.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html">iati-activity/activity-date/@iso-date</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_activity-date_@iso-date.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-date_@type.html">iati-activity/activity-date/@type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_activity-date_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status.html">iati-activity/activity-status</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_activity-status.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_activity-status_@code.html">iati-activity/activity-status/@code</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_activity-status_@code.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget.html">iati-activity/budget</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_@type.html">iati-activity/budget/@type</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end.html">iati-activity/budget/period-end</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_period-end.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html">iati-activity/budget/period-end/@iso-date</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_period-end_@iso-date.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start.html">iati-activity/budget/period-start</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_period-start.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html">iati-activity/budget/period-start/@iso-date</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_period-start_@iso-date.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value.html">iati-activity/budget/value</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_value.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@currency.html">iati-activity/budget/value/@currency</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_value_@currency.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_budget_value_@value-date.html">iati-activity/budget/value/@value-date</a></td>
+                <td>98</td>
+                <td><a href="../element/iati-activity_budget_value_@value-date.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info.html">iati-activity/contact-info</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_@type.html">iati-activity/contact-info/@type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_email.html">iati-activity/contact-info/email</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_email.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_mailing-address.html">iati-activity/contact-info/mailing-address</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_mailing-address.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_mailing-address_narrative.html">iati-activity/contact-info/mailing-address/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_mailing-address_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation.html">iati-activity/contact-info/organisation</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_organisation.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html">iati-activity/contact-info/organisation/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_organisation_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_person-name.html">iati-activity/contact-info/person-name</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_person-name.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_contact-info_person-name_narrative.html">iati-activity/contact-info/person-name/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_contact-info_person-name_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-finance-type.html">iati-activity/default-finance-type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_default-finance-type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-finance-type_@code.html">iati-activity/default-finance-type/@code</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_default-finance-type_@code.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-flow-type.html">iati-activity/default-flow-type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_default-flow-type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-flow-type_@code.html">iati-activity/default-flow-type/@code</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_default-flow-type_@code.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-tied-status.html">iati-activity/default-tied-status</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_default-tied-status.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_default-tied-status_@code.html">iati-activity/default-tied-status/@code</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_default-tied-status_@code.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description.html">iati-activity/description</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_description.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_@type.html">iati-activity/description/@type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_description_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_@xml:lang.html">iati-activity/description/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_description_@xml:lang.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_description_narrative.html">iati-activity/description/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_description_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_iati-identifier.html">iati-activity/iati-identifier</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_iati-identifier.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org.html">iati-activity/participating-org</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_participating-org.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@ref.html">iati-activity/participating-org/@ref</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_participating-org_@ref.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@role.html">iati-activity/participating-org/@role</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_participating-org_@role.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@type.html">iati-activity/participating-org/@type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_participating-org_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_@xml:lang.html">iati-activity/participating-org/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_participating-org_@xml:lang.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_participating-org_narrative.html">iati-activity/participating-org/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_participating-org_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country.html">iati-activity/recipient-country</a></td>
+                <td>235</td>
+                <td><a href="../element/iati-activity_recipient-country.html#files_malariaconsortium">96</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_@code.html">iati-activity/recipient-country/@code</a></td>
+                <td>235</td>
+                <td><a href="../element/iati-activity_recipient-country_@code.html#files_malariaconsortium">96</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-country_@percentage.html">iati-activity/recipient-country/@percentage</a></td>
+                <td>235</td>
+                <td><a href="../element/iati-activity_recipient-country_@percentage.html#files_malariaconsortium">96</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region.html">iati-activity/recipient-region</a></td>
+                <td>29</td>
+                <td><a href="../element/iati-activity_recipient-region.html#files_malariaconsortium">14</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region_@code.html">iati-activity/recipient-region/@code</a></td>
+                <td>29</td>
+                <td><a href="../element/iati-activity_recipient-region_@code.html#files_malariaconsortium">14</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_recipient-region_@percentage.html">iati-activity/recipient-region/@percentage</a></td>
+                <td>29</td>
+                <td><a href="../element/iati-activity_recipient-region_@percentage.html#files_malariaconsortium">14</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_related-activity.html">iati-activity/related-activity</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_related-activity.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_related-activity_@ref.html">iati-activity/related-activity/@ref</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_related-activity_@ref.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_related-activity_@type.html">iati-activity/related-activity/@type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_related-activity_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org.html">iati-activity/reporting-org</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_reporting-org.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@ref.html">iati-activity/reporting-org/@ref</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_reporting-org_@ref.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@type.html">iati-activity/reporting-org/@type</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_reporting-org_@type.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_@xml:lang.html">iati-activity/reporting-org/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_reporting-org_@xml:lang.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_reporting-org_narrative.html">iati-activity/reporting-org/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_reporting-org_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector.html">iati-activity/sector</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_sector.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@code.html">iati-activity/sector/@code</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_sector_@code.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@percentage.html">iati-activity/sector/@percentage</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_sector_@percentage.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_@vocabulary.html">iati-activity/sector/@vocabulary</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_sector_@vocabulary.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_sector_narrative.html">iati-activity/sector/narrative</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_sector_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title.html">iati-activity/title</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_title.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title_@xml:lang.html">iati-activity/title/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_title_@xml:lang.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_title_narrative.html">iati-activity/title/narrative</a></td>
+                <td>272</td>
+                <td><a href="../element/iati-activity_title_narrative.html#files_malariaconsortium">98</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction.html">iati-activity/transaction</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_disbursement-channel.html">iati-activity/transaction/disbursement-channel</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_disbursement-channel.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_disbursement-channel_@code.html">iati-activity/transaction/disbursement-channel/@code</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_disbursement-channel_@code.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_finance-type.html">iati-activity/transaction/finance-type</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_finance-type.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_finance-type_@code.html">iati-activity/transaction/finance-type/@code</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_finance-type_@code.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_flow-type.html">iati-activity/transaction/flow-type</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_flow-type.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_flow-type_@code.html">iati-activity/transaction/flow-type/@code</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_flow-type_@code.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org.html">iati-activity/transaction/provider-org</a></td>
+                <td>96</td>
+                <td><a href="../element/iati-activity_transaction_provider-org.html#files_malariaconsortium">96</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_@provider-activity-id.html">iati-activity/transaction/provider-org/@provider-activity-id</a></td>
+                <td>9</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_@provider-activity-id.html#files_malariaconsortium">9</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_@ref.html">iati-activity/transaction/provider-org/@ref</a></td>
+                <td>71</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_@ref.html#files_malariaconsortium">71</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_provider-org_narrative.html">iati-activity/transaction/provider-org/narrative</a></td>
+                <td>96</td>
+                <td><a href="../element/iati-activity_transaction_provider-org_narrative.html#files_malariaconsortium">96</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org.html">iati-activity/transaction/receiver-org</a></td>
+                <td>26</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org.html#files_malariaconsortium">21</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_@ref.html">iati-activity/transaction/receiver-org/@ref</a></td>
+                <td>3</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_@ref.html#files_malariaconsortium">3</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html">iati-activity/transaction/receiver-org/narrative</a></td>
+                <td>26</td>
+                <td><a href="../element/iati-activity_transaction_receiver-org_narrative.html#files_malariaconsortium">21</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_tied-status.html">iati-activity/transaction/tied-status</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_tied-status.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_tied-status_@code.html">iati-activity/transaction/tied-status/@code</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_tied-status_@code.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date.html">iati-activity/transaction/transaction-date</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html">iati-activity/transaction/transaction-date/@iso-date</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_transaction-date_@iso-date.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type.html">iati-activity/transaction/transaction-type</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html">iati-activity/transaction/transaction-type/@code</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_transaction-type_@code.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value.html">iati-activity/transaction/value</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_value.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@currency.html">iati-activity/transaction/value/@currency</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_value_@currency.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html">iati-activity/transaction/value/@value-date</a></td>
+                <td>252</td>
+                <td><a href="../element/iati-activity_transaction_value_@value-date.html#files_malariaconsortium">97</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation.html">iati-organisation</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@default-currency.html">iati-organisation/@default-currency</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@default-currency.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html">iati-organisation/@last-updated-datetime</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@last-updated-datetime.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_@xml:lang.html">iati-organisation/@{http://www.w3.org/XML/1998/namespace}lang</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_@xml:lang.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link.html">iati-organisation/document-link</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_@format.html">iati-organisation/document-link/@format</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_@format.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_@url.html">iati-organisation/document-link/@url</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_@url.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_category.html">iati-organisation/document-link/category</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_category.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_category_@code.html">iati-organisation/document-link/category/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_category_@code.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_language.html">iati-organisation/document-link/language</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_language.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_language_@code.html">iati-organisation/document-link/language/@code</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_language_@code.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_title.html">iati-organisation/document-link/title</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_title.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_document-link_title_narrative.html">iati-organisation/document-link/title/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_document-link_title_narrative.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name.html">iati-organisation/name</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_name_narrative.html">iati-organisation/name/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_name_narrative.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_organisation-identifier.html">iati-organisation/organisation-identifier</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_organisation-identifier.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org.html">iati-organisation/reporting-org</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html">iati-organisation/reporting-org/@ref</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@ref.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_@type.html">iati-organisation/reporting-org/@type</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_@type.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+            <tr>
+            
+                <td><a href="../element/iati-organisation_reporting-org_narrative.html">iati-organisation/reporting-org/narrative</a></td>
+                <td>1</td>
+                <td><a href="../element/iati-organisation_reporting-org_narrative.html#files_malariaconsortium">1</a></td>
+            
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+
+<script>$(function() { $("table.table:not(.exploring-data)").tablesorter(); });</script>
+<script>$(function() { $("table.exploring-data").tablesorter({textExtraction:{3: function(node,table,cellIndex) { return $(node).attr('data-bytes'); }}}); });</script>
+
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+    <script>
+$('.popover-html').popover({
+  html: true
+})
+    </script>
+
+</body>
+</html>

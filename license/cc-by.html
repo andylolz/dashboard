@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>IATI Dashboard - Licenses listed on the Registry</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="../index.html">Dashboard Home</a></li>
+      
+          <li ><a href="../headlines.html">Headlines</a></li>
+      
+          <li class="active"><a href="../data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="../exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="../publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="../faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li><a href="../download.html">Download Errors</a></li>
+      
+          <li><a href="../xml.html">XML Errors</a></li>
+      
+          <li><a href="../validation.html">Validation</a></li>
+      
+          <li><a href="../versions.html">Versions</a></li>
+      
+          <li class="active"><a href="../licenses.html">Licenses</a></li>
+      
+          <li><a href="../organisation.html">Organisation XML</a></li>
+      
+          <li><a href="../identifiers.html">Duplicate Identifiers</a></li>
+      
+          <li><a href="../reporting_orgs.html">Reporting Orgs</a></li>
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+<h1>OKD Compliant::Creative Commons Attribution</h1>
+<p class="lead">License id: <code>cc-by</code></p>
+
+        </div>
+      
+
+      
+
+    <div class="panel panel-default">
+      <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Publisher</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="../publisher/omidyarnetwork.html">omidyarnetwork</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/icauk.html">icauk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cdc.html">cdc</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/hwa-zm.html">hwa-zm</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ia_nam.html">ia_nam</a></td>
+                <td>105</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/giro555.html">giro555</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/soneb-benin.html">soneb-benin</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/gdi.html">gdi</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/rains.html">rains</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/onetoonecf.html">onetoonecf</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/akvo.html">akvo</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/qrf.html">qrf</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/imf.html">imf</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/coda.html">coda</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/seefar.html">seefar</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-south-and-south-east-asia.html">solidaridad-south-and-south-east-asia</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/sense_international.html">sense_international</a></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/helpage_international.html">helpage_international</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/namati_inc.html">namati_inc</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/plan_uk.html">plan_uk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/psi.html">psi</a></td>
+                <td>10</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/spuk.html">spuk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/creausa-org.html">creausa-org</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/icrc.html">icrc</a></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/partos_nl.html">partos_nl</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/fao.html">fao</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/undp.html">undp</a></td>
+                <td>156</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad.html">solidaridad</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/redeenkind.html">redeenkind</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/12921047.html">12921047</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aet.html">aet</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/theglobalfund.html">theglobalfund</a></td>
+                <td>143</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/opennorth.html">opennorth</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mefbenin.html">mefbenin</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/simavi.html">simavi</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/rfpap.html">rfpap</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/amnesty.html">amnesty</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/bond.html">bond</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cabi.html">cabi</a></td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ffi_publisher.html">ffi_publisher</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wff.html">wff</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/odi.html">odi</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/instiglio.html">instiglio</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/apc.html">apc</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-ssea.html">solidaridad-ssea</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/worldwaternet.html">worldwaternet</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wccuk.html">wccuk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/tripleline_crownagents.html">tripleline_crownagents</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/malariaconsortium.html">malariaconsortium</a></td>
+                <td>99</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/gogla.html">gogla</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/agdevco.html">agdevco</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ddp.html">ddp</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aadk.html">aadk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/iww_publish.html">iww_publish</a></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-netherlands.html">solidaridad-netherlands</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/umn.html">umn</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/lepra.html">lepra</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ewb_canada.html">ewb_canada</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-east-and-central-africa.html">solidaridad-east-and-central-africa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/orbis_international.html">orbis_international</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/buildafrica.html">buildafrica</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dotw_uk.html">dotw_uk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/stichting_hivos.html">stichting_hivos</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wcuk.html">wcuk</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/oxfamgb.html">oxfamgb</a></td>
+                <td>77</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-south-america.html">solidaridad-south-america</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/interaction.html">interaction</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/acf.html">acf</a></td>
+                <td>26</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unicef.html">unicef</a></td>
+                <td>137</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ancb_benin.html">ancb_benin</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/act4africa.html">act4africa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ilo.html">ilo</a></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/stad.html">stad</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dai-e.html">dai-e</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unf.html">unf</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/sciaf.html">sciaf</a></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/sci.html">sci</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-southern-africa.html">solidaridad-southern-africa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/tlmew.html">tlmew</a></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/onl.html">onl</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ipe.html">ipe</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-north-america.html">solidaridad-north-america</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/motivation.html">motivation</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/tfacmalawi.html">tfacmalawi</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/phase-nepal.html">phase-nepal</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/plan_usa.html">plan_usa</a></td>
+                <td>18</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/colalife.html">colalife</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/asdb.html">asdb</a></td>
+                <td>41</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cu.html">cu</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unops.html">unops</a></td>
+                <td>141</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-china.html">solidaridad-china</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/globalgiving.html">globalgiving</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/oxsol.html">oxsol</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/orbis_uk.html">orbis_uk</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/b_a_t.html">b_a_t</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/the_mentor_initiative.html">the_mentor_initiative</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/foe_ewni.html">foe_ewni</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/self-help-africa.html">self-help-africa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/nri.html">nri</a></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/pumpaid.html">pumpaid</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/redbarnet.html">redbarnet</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/orbis_ethiopia.html">orbis_ethiopia</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/dipr.html">dipr</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/hi.html">hi</a></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/bmz.html">bmz</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/icnl_org.html">icnl_org</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/pact.html">pact</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-europe.html">solidaridad-europe</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/w-d.html">w-d</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aai.html">aai</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/hewlett-foundation.html">hewlett-foundation</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/landell-mills.html">landell-mills</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/sct.html">sct</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aauk.html">aauk</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/aar.html">aar</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wfp.html">wfp</a></td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/targettb.html">targettb</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/scuk.html">scuk</a></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unhcr.html">unhcr</a></td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cowi.html">cowi</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/starsfoundation.html">starsfoundation</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/alliance_of_religions_and_conservation.html">alliance_of_religions_and_conservation</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cepr.html">cepr</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/orbis_africa.html">orbis_africa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/plama.html">plama</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ifrcrcs.html">ifrcrcs</a></td>
+                <td>11</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ww-gvc.html">ww-gvc</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/vso.html">vso</a></td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/irc_uk.html">irc_uk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cafod.html">cafod</a></td>
+                <td>63</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/acet.html">acet</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/freeagirl.html">freeagirl</a></td>
+                <td>6</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/goal.html">goal</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/abaseen.html">abaseen</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/fairfood.html">fairfood</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/slovakaid.html">slovakaid</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wacc-uk.html">wacc-uk</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/pca-gire.html">pca-gire</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/wellfound.html">wellfound</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/missioneast.html">missioneast</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mifumi_uk.html">mifumi_uk</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/qrfed.html">qrfed</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-west-africa.html">solidaridad-west-africa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/who.html">who</a></td>
+                <td>353</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/mapaction.html">mapaction</a></td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/phe.html">phe</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/fa.html">fa</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/iom.html">iom</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/retrak.html">retrak</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/idinsight.html">idinsight</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/icipe.html">icipe</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/cr.html">cr</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/plannlno.html">plannlno</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-central-america.html">solidaridad-central-america</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ksrelief291.html">ksrelief291</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/foe-ghana.html">foe-ghana</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unido.html">unido</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/unaids.html">unaids</a></td>
+                <td>99</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/ablechildafrica.html">ablechildafrica</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/hfc.html">hfc</a></td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/transparency-international.html">transparency-international</a></td>
+                <td>58</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/solidaridad-waf.html">solidaridad-waf</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/street_child.html">street_child</a></td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td><a href="../publisher/gef.html">gef</a></td>
+                <td>1</td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+</body>
+</html>

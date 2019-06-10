@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://styles.iatistandard.org/assets/css/screen.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="?" />
+  <title>IATI Dashboard - Registration Agencies</title>
+  <style>
+    em {
+      font-style: italic;
+    }
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+      clear: both;
+    }
+    .break {
+      word-break:break-all;
+    }
+    .panel-body h4, .panel-body h5 {
+      margin-top: 24px;
+    }
+    .panel-body h4:first-of-type, .panel-body h5:first-of-type {
+      margin-top: 10px;
+    }
+
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+.tablesorter-headerRow {
+  background-color:white;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{background-color:#f5f5f5;margin-top: 30px}
+.container .text-muted{margin: 20px 0;}
+
+  .notify-banner {
+    background-color: #fbde6b;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-default {
+     margin-bottom: 0px;
+  }
+
+  #new-menu {
+    /* padding-top: 20px; */
+  }
+
+  #new-menu .container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: 2em;
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.15);
+  }
+  </style>
+
+  <!-- Start of IATI Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","iati.zendesk.com");
+  /*]]>*/</script>
+  <!-- End of IATI Zendesk Widget script -->
+
+  
+</head>
+<body>
+<div id="wrap">
+  <div id="new-menu">
+    <div class="container">
+
+    	<a href="/" class="branding"><span>IATI - International Aid Transparency Initiative</span></a>
+
+
+      <ul class="navigation-utility">
+
+        <li id="section-news" class="navigation-utility__item"><a href="http://iatistandard.org/en/news/">News</a></li>
+        <li id="section-events" class="navigation-utility__item"><a href="http://iatistandard.org/en/events/">Events</a></li>
+        <li id="section-contact" class="navigation-utility__item"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+      </ul>
+<nav class="navigation-primary" id="navigation-primary">
+
+  <ul id="navigation-primary__items">
+
+    <li id="section-about" class="navigation-primary__item"><a href="http://iatistandard.org/en/about/">About</a></li>
+    <li id="section-standard" class="navigation-primary__item"><a href="http://iatistandard.org/en/iati-standard">IATI Standard</a></li>
+    <li id="section-data" class="navigation-primary__item"><a href="http://iatistandard.org/en/using-data">Using Data</a></li>
+    <li id="section-support" class="navigation-primary__item"><a href="http://iatistandard.org/en/guidance/">Guidance &amp; Support</a></li>
+    <li id="section-community" class="navigation-primary__item"><a href="https://discuss.iatistandard.org/">Community</a></li>
+    <li id="section-news" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/news/">News</a></li>
+    <li id="section-events" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/events/">Events</a></li>
+    <li id="section-contact" class="navigation-primary__item navigation-primary__item--ss-only"><a href="http://iatistandard.org/en/contact/">Contact</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>
+</div>
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+          <li ><a href="index.html">Dashboard Home</a></li>
+      
+          <li ><a href="headlines.html">Headlines</a></li>
+      
+          <li ><a href="data_quality.html">Data Quality</a></li>
+      
+          <li ><a href="exploring_data.html">Exploring Data</a></li>
+      
+          <li ><a href="publishing_stats.html">Publishing Statistics</a></li>
+      
+          <li ><a href="faq.html">FAQ</a></li>
+      
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <!-- <div class="notify-banner">
+    <span>We are currently experiencing some technical issues with this tool. In the meantime, please ensure you are using <a href="http://dev.dashboard.iatistandard.org/">the Dev Dashboard</a>.</span>
+  </div> -->
+
+  <div class="container">
+    
+      
+        <div class="page-header">
+          
+          <h1>Registration Agencies</h1>
+          
+          
+          
+        </div>
+      
+
+      
+
+<p>Looking up reporting org identifiers against the registration agency codelist.</p>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h3 class="panel-title">
+    Registration Agencies in Data
+  </h3>
+</div>
+<table class="table table-striped">
+  <thead><tr>
+    <th>Registration Agency</th>
+    <th>Identifiers</th>
+    <th>Publishers</th>
+  </tr></thead>
+  <tbody>
+
+    <tr>
+        <td>AF-MOE</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>AU-ACNC</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>BD-NAB</td>
+        <td>6</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td>BE-BCE_KBO</td>
+        <td>88</td>
+        <td>88</td>
+    </tr>
+
+    <tr>
+        <td>BE-GTCF</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>BJ-IFU</td>
+        <td>25</td>
+        <td>26</td>
+    </tr>
+
+    <tr>
+        <td>BW-CIPA</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>CA-CRA_ACR</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td>CH-FDJP</td>
+        <td>7</td>
+        <td>7</td>
+    </tr>
+
+    <tr>
+        <td>CO-CCB</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>CO-RUE</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>CZ-ICO</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>DE-CR</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td>DK-CVR</td>
+        <td>23</td>
+        <td>23</td>
+    </tr>
+
+    <tr>
+        <td>ES-DIR3</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>ET-CSA</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td>ET-MFA</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>ET-MOT</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>FI-PRO</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>FR-INSEE</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>FR-RCS</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>GB-CHC</td>
+        <td>203</td>
+        <td>205</td>
+    </tr>
+
+    <tr>
+        <td>GB-COH</td>
+        <td>101</td>
+        <td>102</td>
+    </tr>
+
+    <tr>
+        <td>GB-EDU</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>GB-GOV</td>
+        <td>6</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td>GB-SC</td>
+        <td>7</td>
+        <td>7</td>
+    </tr>
+
+    <tr>
+        <td>GB-UKPRN</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>GH-DSW</td>
+        <td>6</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td>HK-CR</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>IE-CHY</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td>IM-CR</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>IN-MCA</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>IN-MHA</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>IT-RI</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>JE-FSC</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>JO-CCD</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>JO-MSD</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>KE-NCB</td>
+        <td>13</td>
+        <td>13</td>
+    </tr>
+
+    <tr>
+        <td>KE-RCO</td>
+        <td>7</td>
+        <td>7</td>
+    </tr>
+
+    <tr>
+        <td>KE-RSO</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>LB-MOI</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td>ML-NIF</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>MM-MHA</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>MW-CNM</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td>MW-MRA</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>MW-NBM</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>MW-RG</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>MZ-MOJ</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>MZ-NUIT</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td>NG-CAC</td>
+        <td>6</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td>NL-KVK</td>
+        <td>138</td>
+        <td>141</td>
+    </tr>
+
+    <tr>
+        <td>NO-BRC</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>NP-CRO</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>NP-SWC</td>
+        <td>7</td>
+        <td>7</td>
+    </tr>
+
+    <tr>
+        <td>PE-SUNARP</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>PH-SEC</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>PK-VSWA</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>PS-MOI</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>RS-APR</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>SE-ON</td>
+        <td>4</td>
+        <td>4</td>
+    </tr>
+
+    <tr>
+        <td>SK-ZRSR</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>SN-NINEA</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>TR-MOI</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>TZ-BRLA</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>TZ-TRA</td>
+        <td>6</td>
+        <td>6</td>
+    </tr>
+
+    <tr>
+        <td>UG-NGB</td>
+        <td>8</td>
+        <td>8</td>
+    </tr>
+
+    <tr>
+        <td>UG-RSB</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>US-DOS</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>US-EIN</td>
+        <td>79</td>
+        <td>80</td>
+    </tr>
+
+    <tr>
+        <td>US-USAGOV</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>XI-GRID</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>XI-IATI</td>
+        <td>31</td>
+        <td>31</td>
+    </tr>
+
+    <tr>
+        <td>XI-PB</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>XM-DAC</td>
+        <td>56</td>
+        <td>56</td>
+    </tr>
+
+    <tr>
+        <td>XM-OCHA</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td>ZA-CIP</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td>ZA-NPO</td>
+        <td>5</td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td>ZA-PBO</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td>ZW-PVO</td>
+        <td>3</td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td>ZW-ROD</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+  <tbody>
+</table>
+</div>
+
+<br/>
+<br/>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h3 class="panel-title">
+    Reporting Org Identifiers that don't match registration agencies
+  </h3>
+</div>
+<table class="table table-striped">
+  <thead><tr>
+    <th>Identifier</th>
+    <th>Publisher</th>
+    <th>Publisher Registry Id</th>
+    <th>Count</th>
+  </tr></thead>
+  <tbody>
+
+
+    <tr>
+        <td><code></code></td>
+        <td><a href="publisher/agriterra.html">agriterra</a></td>
+        <td><a href="publisher/agriterra.html">Stichting Agriterra</a></td>
+        <td>534</td>
+    </tr>
+
+    <tr>
+        <td><code></code></td>
+        <td><a href="publisher/openmindedly.html">openmindedly</a></td>
+        <td><a href="publisher/openmindedly.html">openmindedly</a></td>
+        <td>53</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>1301</code></td>
+        <td><a href="publisher/tib.html">tib</a></td>
+        <td><a href="publisher/tib.html">Transparency International Bangladesh</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21-PK-WWF</code></td>
+        <td><a href="publisher/wwfpakistan.html">wwfpakistan</a></td>
+        <td><a href="publisher/wwfpakistan.html">World Wide Fund for Nature - Pakistan</a></td>
+        <td>3</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21020</code></td>
+        <td><a href="publisher/aa.html">aa</a></td>
+        <td><a href="publisher/aa.html"></a></td>
+        <td>17</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21032</code></td>
+        <td><a href="publisher/psi.html">psi</a></td>
+        <td><a href="publisher/psi.html">Population Service International</a></td>
+        <td>421</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>3</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.0744</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.0792</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.0931-2</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.0931-3</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.0941</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.1053</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.2001</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>21033-1.2008</code></td>
+        <td><a href="publisher/transparency-international.html">transparency-international</a></td>
+        <td><a href="publisher/transparency-international.html">Transparency International Secretariat</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>30001</code></td>
+        <td><a href="publisher/gain.html">gain</a></td>
+        <td><a href="publisher/gain.html">The Global Alliance for Improved Nutrition</a></td>
+        <td>644</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>41108</code></td>
+        <td><a href="publisher/ifad.html">ifad</a></td>
+        <td><a href="publisher/ifad.html">International Fund for Agricultural Development (IFAD)</a></td>
+        <td>80</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>41111</code></td>
+        <td><a href="publisher/uncdf.html">uncdf</a></td>
+        <td><a href="publisher/uncdf.html">United Nations Capital Development Fund</a></td>
+        <td>181</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>411124</code></td>
+        <td><a href="publisher/unw.html">unw</a></td>
+        <td><a href="publisher/unw.html">UN Women</a></td>
+        <td>55</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>41119</code></td>
+        <td><a href="publisher/unfpa.html">unfpa</a></td>
+        <td><a href="publisher/unfpa.html">United Nations Population Fund</a></td>
+        <td>7429</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>41120</code></td>
+        <td><a href="publisher/unhabitat.html">unhabitat</a></td>
+        <td><a href="publisher/unhabitat.html">UN-Habitat</a></td>
+        <td>709</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>41127</code></td>
+        <td><a href="publisher/unocha.html">unocha</a></td>
+        <td><a href="publisher/unocha.html">United Nations Office for the Coordination of Humanitarian Affairs (OCHA)</a></td>
+        <td>59</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>41AAA</code></td>
+        <td><a href="publisher/unops.html">unops</a></td>
+        <td><a href="publisher/unops.html">United Nations Office for Project Services (UNOPS)</a></td>
+        <td>913</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>44000</code></td>
+        <td><a href="publisher/worldbank.html">worldbank</a></td>
+        <td><a href="publisher/worldbank.html">The World Bank</a></td>
+        <td>3104</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>46002</code></td>
+        <td><a href="publisher/afdb.html">afdb</a></td>
+        <td><a href="publisher/afdb.html">African Development Bank</a></td>
+        <td>4431</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>46004</code></td>
+        <td><a href="publisher/asdb.html">asdb</a></td>
+        <td><a href="publisher/asdb.html">Asian Development Bank</a></td>
+        <td>1603</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>47045</code></td>
+        <td><a href="publisher/theglobalfund.html">theglobalfund</a></td>
+        <td><a href="publisher/theglobalfund.html">The Global Fund to Fight AIDS, Tuberculosis and Malaria</a></td>
+        <td>1458</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>47111</code></td>
+        <td><a href="publisher/af.html">af</a></td>
+        <td><a href="publisher/af.html">Adaptation Fund</a></td>
+        <td>30</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>47122</code></td>
+        <td><a href="publisher/gavi.html">gavi</a></td>
+        <td><a href="publisher/gavi.html">GAVI Alliance</a></td>
+        <td>3249</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>47134</code></td>
+        <td><a href="publisher/cif.html">cif</a></td>
+        <td><a href="publisher/cif.html">Climate Investment Funds</a></td>
+        <td>106</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>47135</code></td>
+        <td><a href="publisher/cif.html">cif</a></td>
+        <td><a href="publisher/cif.html">Climate Investment Funds</a></td>
+        <td>155</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>AT-LPD-035026724</code></td>
+        <td><a href="publisher/hwa-zm.html">hwa-zm</a></td>
+        <td><a href="publisher/hwa-zm.html">Hilfswerk Austria Zimbabwe</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>AU-5</code></td>
+        <td><a href="publisher/ausgov.html">ausgov</a></td>
+        <td><a href="publisher/ausgov.html">Australia - Department of  Foreign Affairs and Trade</a></td>
+        <td>12467</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>Amnesty International Nederland</code></td>
+        <td><a href="publisher/amnesty.html">amnesty</a></td>
+        <td><a href="publisher/amnesty.html">Amnesty International The Netherlands</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>BE-10</code></td>
+        <td><a href="publisher/be-dgd.html">be-dgd</a></td>
+        <td><a href="publisher/be-dgd.html">Belgian Development Cooperation</a></td>
+        <td>2187</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>CA-3</code></td>
+        <td><a href="publisher/dfatd-maecd.html">dfatd-maecd</a></td>
+        <td><a href="publisher/dfatd-maecd.html"></a></td>
+        <td>3318</td>
+    </tr>
+
+    <tr>
+        <td><code>CA-3</code></td>
+        <td><a href="publisher/gac-amc.html">gac-amc</a></td>
+        <td><a href="publisher/gac-amc.html">Canada - Global Affairs Canada | Affaires mondiales Canada</a></td>
+        <td>4619</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>CA-4</code></td>
+        <td><a href="publisher/finance_canada.html">finance_canada</a></td>
+        <td><a href="publisher/finance_canada.html">Canada Department of Finance / Ministère des Finances Canada</a></td>
+        <td>48</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>CA-CRA-89980-1815-RR0001</code></td>
+        <td><a href="publisher/ewb_canada.html">ewb_canada</a></td>
+        <td><a href="publisher/ewb_canada.html">Engineers Without Borders Canada</a></td>
+        <td>7</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>CA-CRA_ARC-119304848</code></td>
+        <td><a href="publisher/wusc.html">wusc</a></td>
+        <td><a href="publisher/wusc.html">World University Service of Canada</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>CH-4</code></td>
+        <td><a href="publisher/sdc_ch.html">sdc_ch</a></td>
+        <td><a href="publisher/sdc_ch.html">Switzerland - Swiss Agency for Development and Cooperation (SDC)</a></td>
+        <td>19112</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>CR-RPJ-3-006-125548</code></td>
+        <td><a href="publisher/fundacion-acceso.html">fundacion-acceso</a></td>
+        <td><a href="publisher/fundacion-acceso.html">Fundacion Acceso</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>DAC-1601</code></td>
+        <td><a href="publisher/bmgf.html">bmgf</a></td>
+        <td><a href="publisher/bmgf.html">Bill &amp; Melinda Gates Foundation</a></td>
+        <td>8542</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>DE-1</code></td>
+        <td><a href="publisher/bmz.html">bmz</a></td>
+        <td><a href="publisher/bmz.html">Germany - Ministry for Economic Cooperation and Development</a></td>
+        <td>8827</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>DE-AG-VR7795</code></td>
+        <td><a href="publisher/fairtrade_international.html">fairtrade_international</a></td>
+        <td><a href="publisher/fairtrade_international.html">Fairtrade Labelling Organizations International e.V.</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>EC-ELARG</code></td>
+        <td><a href="publisher/ec-elarg.html">ec-elarg</a></td>
+        <td><a href="publisher/ec-elarg.html"></a></td>
+        <td>2190</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>EIGEN</code></td>
+        <td><a href="publisher/pax.html">pax</a></td>
+        <td><a href="publisher/pax.html">PAX</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>ES-CIF-G-8236803</code></td>
+        <td><a href="publisher/oxfamintermon.html">oxfamintermon</a></td>
+        <td><a href="publisher/oxfamintermon.html">Oxfam Intermón</a></td>
+        <td>103</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>ES-CIF-G81164105</code></td>
+        <td><a href="publisher/acfspain.html">acfspain</a></td>
+        <td><a href="publisher/acfspain.html">ACTION AGAINST HUNGER SPAIN</a></td>
+        <td>12</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>EU</code></td>
+        <td><a href="publisher/eu.html">eu</a></td>
+        <td><a href="publisher/eu.html"></a></td>
+        <td>12592</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FI-3</code></td>
+        <td><a href="publisher/finland_mfa.html">finland_mfa</a></td>
+        <td><a href="publisher/finland_mfa.html">Finland - Ministry of Foreign Affairs</a></td>
+        <td>17665</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FR-3</code></td>
+        <td><a href="publisher/afd.html">afd</a></td>
+        <td><a href="publisher/afd.html">Agence Française de Développement</a></td>
+        <td>887</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FR-6</code></td>
+        <td><a href="publisher/france.html">france</a></td>
+        <td><a href="publisher/france.html">France - Ministry for Europe and Foreign Affairs</a></td>
+        <td>1273</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FR-PDR-W691075333</code></td>
+        <td><a href="publisher/hifed.html">hifed</a></td>
+        <td><a href="publisher/hifed.html">Handicap International</a></td>
+        <td>8</td>
+    </tr>
+
+    <tr>
+        <td><code>FR-PDR-W691075333</code></td>
+        <td><a href="publisher/hiuk.html">hiuk</a></td>
+        <td><a href="publisher/hiuk.html">Handicap International UK</a></td>
+        <td>9</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FR-SIREN-110-006-012</code></td>
+        <td><a href="publisher/france.html">france</a></td>
+        <td><a href="publisher/france.html">France - Ministry for Europe and Foreign Affairs</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FR-SIRET-4028868160030</code></td>
+        <td><a href="publisher/acted.html">acted</a></td>
+        <td><a href="publisher/acted.html">ACTED</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>FR-SIRET-77566669600015</code></td>
+        <td><a href="publisher/sccf.html">sccf</a></td>
+        <td><a href="publisher/sccf.html">SECOURS CATHOLIQUE - CARITAS FRANCE</a></td>
+        <td>231</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-1-202615</code></td>
+        <td><a href="publisher/ciuk.html">ciuk</a></td>
+        <td><a href="publisher/ciuk.html">CARE International UK</a></td>
+        <td>71</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-10</code></td>
+        <td><a href="publisher/dhsc.html">dhsc</a></td>
+        <td><a href="publisher/dhsc.html">UK - Department of Health and Social Care (DHSC)</a></td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><code>GB-10</code></td>
+        <td><a href="publisher/doh.html">doh</a></td>
+        <td><a href="publisher/doh.html"></a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-3</code></td>
+        <td><a href="publisher/fco.html">fco</a></td>
+        <td><a href="publisher/fco.html">UK - Foreign &amp; Commonwealth Office</a></td>
+        <td>11398</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-4</code></td>
+        <td><a href="publisher/deccadmin.html">deccadmin</a></td>
+        <td><a href="publisher/deccadmin.html"></a></td>
+        <td>16</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-6</code></td>
+        <td><a href="publisher/hooda.html">hooda</a></td>
+        <td><a href="publisher/hooda.html"></a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-7</code></td>
+        <td><a href="publisher/defra_transparency.html">defra_transparency</a></td>
+        <td><a href="publisher/defra_transparency.html">UK - Department for Environment, Food and Rural Affairs</a></td>
+        <td>53</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-9</code></td>
+        <td><a href="publisher/dwp.html">dwp</a></td>
+        <td><a href="publisher/dwp.html">UK - Department for Work and Pensions</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-CC-1098893</code></td>
+        <td><a href="publisher/blueventures.html">blueventures</a></td>
+        <td><a href="publisher/blueventures.html">Blue Ventures Conservation</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-CC-220949</code></td>
+        <td><a href="publisher/gb-cc-220949.html">gb-cc-220949</a></td>
+        <td><a href="publisher/gb-cc-220949.html"></a></td>
+        <td>5</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-CH-4161656</code></td>
+        <td><a href="publisher/icf.html">icf</a></td>
+        <td><a href="publisher/icf.html">ICF Consulting Services Ltd</a></td>
+        <td>8</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>GB-OSCR-SC032327</code></td>
+        <td><a href="publisher/emms.html">emms</a></td>
+        <td><a href="publisher/emms.html">EMMS International</a></td>
+        <td>15</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>IADB</code></td>
+        <td><a href="publisher/iadb.html">iadb</a></td>
+        <td><a href="publisher/iadb.html">Inter-American Development Bank</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>IL-RA-580166452</code></td>
+        <td><a href="publisher/mmr_admin2.html">mmr_admin2</a></td>
+        <td><a href="publisher/mmr_admin2.html">Musalaha Ministry of Reconciliation</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>IN-AR-775</code></td>
+        <td><a href="publisher/pragya.html">pragya</a></td>
+        <td><a href="publisher/pragya.html">Pragya India</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>IN-ITA-1886</code></td>
+        <td><a href="publisher/mia_india.html">mia_india</a></td>
+        <td><a href="publisher/mia_india.html">Micro Insurance Academy</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>IQ-NGO-1Z2634</code></td>
+        <td><a href="publisher/reach-iraq.html">reach-iraq</a></td>
+        <td><a href="publisher/reach-iraq.html">Rehabilitation, Education and Community Health (REACH)</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KRA-P051097200R</code></td>
+        <td><a href="publisher/icipe.html">icipe</a></td>
+        <td><a href="publisher/icipe.html">International Centre of Insect Physiology and Ecology (icipe)</a></td>
+        <td>21</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KRA-P051119468K</code></td>
+        <td><a href="publisher/kmet.html">kmet</a></td>
+        <td><a href="publisher/kmet.html">Kisumu Medical and Education Trust</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KRA-P051311853T</code></td>
+        <td><a href="publisher/nrt-kenya.html">nrt-kenya</a></td>
+        <td><a href="publisher/nrt-kenya.html">Northern Rangelands Trust</a></td>
+        <td>4</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KRA-P051502549C</code></td>
+        <td><a href="publisher/nchrdk.html">nchrdk</a></td>
+        <td><a href="publisher/nchrdk.html">National Coalition of Human Rights Defenders - Kenya</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KRA-P051713416W</code></td>
+        <td><a href="publisher/afelt.html">afelt</a></td>
+        <td><a href="publisher/afelt.html">AFELT</a></td>
+        <td>3</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KRA-p051542095j</code></td>
+        <td><a href="publisher/liwa-admin.html">liwa-admin</a></td>
+        <td><a href="publisher/liwa-admin.html">LIWA programme trust</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-KROS-270901</code></td>
+        <td><a href="publisher/edt_kenya.html">edt_kenya</a></td>
+        <td><a href="publisher/edt_kenya.html">Education Development Trust</a></td>
+        <td>6</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-NGC-3372</code></td>
+        <td><a href="publisher/ke-ngc-3372.html">ke-ngc-3372</a></td>
+        <td><a href="publisher/ke-ngc-3372.html">I Choose Life Africa</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-NGC-663</code></td>
+        <td><a href="publisher/adrasom.html">adrasom</a></td>
+        <td><a href="publisher/adrasom.html">Adventist Development and Relief Agency (ADRA Somalia)</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-NGC-9381</code></td>
+        <td><a href="publisher/across.html">across</a></td>
+        <td><a href="publisher/across.html">Across</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KE-NGCB-149</code></td>
+        <td><a href="publisher/soscvkenya.html">soscvkenya</a></td>
+        <td><a href="publisher/soscvkenya.html">SOS Children&#39;s Villages Kenya</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>KR-GOV-021</code></td>
+        <td><a href="publisher/odakorea.html">odakorea</a></td>
+        <td><a href="publisher/odakorea.html">Republic of Korea</a></td>
+        <td>2253</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>LK-DRC-GA139</code></td>
+        <td><a href="publisher/wf-asia.html">wf-asia</a></td>
+        <td><a href="publisher/wf-asia.html">Women&#39;s Fund Asia</a></td>
+        <td>5</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>LR-MPEA-NGO-AC-0298</code></td>
+        <td><a href="publisher/libymca.html">libymca</a></td>
+        <td><a href="publisher/libymca.html">YMCA of Liberia</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NE-DGI-5355</code></td>
+        <td><a href="publisher/timidria.html">timidria</a></td>
+        <td><a href="publisher/timidria.html">Timidria</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NI-MIGOB-3602</code></td>
+        <td><a href="publisher/fcam.html">fcam</a></td>
+        <td><a href="publisher/fcam.html">Fondo Centroamericano de Mujeres</a></td>
+        <td>7</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NL-</code></td>
+        <td><a href="publisher/unoy_peacebuilders.html">unoy_peacebuilders</a></td>
+        <td><a href="publisher/unoy_peacebuilders.html"></a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NL-CCI-20081098</code></td>
+        <td><a href="publisher/bracintl.html">bracintl</a></td>
+        <td><a href="publisher/bracintl.html">BRAC International</a></td>
+        <td>9</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NL-KvK-54436222-27541</code></td>
+        <td><a href="publisher/nl-kvk-54436222-27541.html">nl-kvk-54436222-27541</a></td>
+        <td><a href="publisher/nl-kvk-54436222-27541.html">CNV Internationaal</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NP-DAO-27-127/062/063</code></td>
+        <td><a href="publisher/ff.html">ff</a></td>
+        <td><a href="publisher/ff.html">Freedom Forum</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NP-DAO-27-689/063/064</code></td>
+        <td><a href="publisher/nfn.html">nfn</a></td>
+        <td><a href="publisher/nfn.html">NGO Federation of Nepal</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NP-DAO-531/062/063</code></td>
+        <td><a href="publisher/phase-nepal.html">phase-nepal</a></td>
+        <td><a href="publisher/phase-nepal.html">PHASE Nepal</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>NP-DAO-DANG-18-046/47</code></td>
+        <td><a href="publisher/base_22.html">base_22</a></td>
+        <td><a href="publisher/base_22.html">Backward Society Education (BASE)</a></td>
+        <td>17</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>PK-MSW-633-1965</code></td>
+        <td><a href="publisher/rfpap.html">rfpap</a></td>
+        <td><a href="publisher/rfpap.html">Rahnuma-Family Planning Assocation of Pakistan</a></td>
+        <td>3</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>PK-SEC-0105957</code></td>
+        <td><a href="publisher/sehatkahanicih.html">sehatkahanicih</a></td>
+        <td><a href="publisher/sehatkahanicih.html">Sehat Kahani (Community Innovation Hub)</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>RW-RGB-002RGB17</code></td>
+        <td><a href="publisher/edt_rwanda.html">edt_rwanda</a></td>
+        <td><a href="publisher/edt_rwanda.html">EDUCATION DEVELOPMENT TRUST - RWANDA</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>RW-RGB-101-RGB-NGO-2014</code></td>
+        <td><a href="publisher/uwezo_youth_empowerment.html">uwezo_youth_empowerment</a></td>
+        <td><a href="publisher/uwezo_youth_empowerment.html">UWEZO Youth Empowerment</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>RW-RGB-61-RGB-NGO-2017</code></td>
+        <td><a href="publisher/aar.html">aar</a></td>
+        <td><a href="publisher/aar.html">ActionAid Rwanda</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>SE-0</code></td>
+        <td><a href="publisher/sida.html">sida</a></td>
+        <td><a href="publisher/sida.html">Sweden, through Swedish International Development Cooperation Agency (Sida)</a></td>
+        <td>84372</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>SL-NRA-1001562-8 </code></td>
+        <td><a href="publisher/mrc-sierra-leone.html">mrc-sierra-leone</a></td>
+        <td><a href="publisher/mrc-sierra-leone.html">Medical Research Centre (MRC), Sierra Leone</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>TN-TIN-102123727</code></td>
+        <td><a href="publisher/cuammtrustees.html">cuammtrustees</a></td>
+        <td><a href="publisher/cuammtrustees.html">CUAMM Trustees</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>TZ-BRE-63966</code></td>
+        <td><a href="publisher/twaweza.html">twaweza</a></td>
+        <td><a href="publisher/twaweza.html">Twaweza</a></td>
+        <td>21</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-18</code></td>
+        <td><a href="publisher/millenniumchallenge.html">millenniumchallenge</a></td>
+        <td><a href="publisher/millenniumchallenge.html">Millennium Challenge Corporation</a></td>
+        <td>3130</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-501c3-522318905</code></td>
+        <td><a href="publisher/aiddata.html">aiddata</a></td>
+        <td><a href="publisher/aiddata.html">AidData</a></td>
+        <td>879</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-AGO-941191246</code></td>
+        <td><a href="publisher/taf.html">taf</a></td>
+        <td><a href="publisher/taf.html">The Asia Foundation</a></td>
+        <td>5</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-GOV</code></td>
+        <td><a href="publisher/unitedstates.html">unitedstates</a></td>
+        <td><a href="publisher/unitedstates.html">United States</a></td>
+        <td>436672</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-GOV-1</code></td>
+        <td><a href="publisher/usaid.html">usaid</a></td>
+        <td><a href="publisher/usaid.html">United States Agency for International Development (USAID)</a></td>
+        <td>68445</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-IRS-13-5661832</code></td>
+        <td><a href="publisher/plan_usa.html">plan_usa</a></td>
+        <td><a href="publisher/plan_usa.html">Plan International USA</a></td>
+        <td>19</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>US-IRS-562339052</code></td>
+        <td><a href="publisher/cda.html">cda</a></td>
+        <td><a href="publisher/cda.html">CDA Collaborative Learning Projects</a></td>
+        <td>4</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>ZA-ROC-1999/05072/08</code></td>
+        <td><a href="publisher/dthfxx12.html">dthfxx12</a></td>
+        <td><a href="publisher/dthfxx12.html">Desmond Tutu HIV Foundation</a></td>
+        <td>12</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>bj-IFU-4201710182326</code></td>
+        <td><a href="publisher/anaepmr_benin.html">anaepmr_benin</a></td>
+        <td><a href="publisher/anaepmr_benin.html">Agence Nationale d&#39;Approvisionnement en Eau Potable en Milieu Rural du Benin</a></td>
+        <td>5</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>ciks</code></td>
+        <td><a href="publisher/ciks.html">ciks</a></td>
+        <td><a href="publisher/ciks.html">Centre for Indian Knowledge Systems</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>dm</code></td>
+        <td><a href="publisher/dapp.html">dapp</a></td>
+        <td><a href="publisher/dapp.html">Development Aid from People to People (DAPP) Malawi</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>execution</code></td>
+        <td><a href="publisher/agriterra.html">agriterra</a></td>
+        <td><a href="publisher/agriterra.html">Stichting Agriterra</a></td>
+        <td>131</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>finished</code></td>
+        <td><a href="publisher/agriterra.html">agriterra</a></td>
+        <td><a href="publisher/agriterra.html">Stichting Agriterra</a></td>
+        <td>20</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>gb-cc-220949</code></td>
+        <td><a href="publisher/gb-cc-220949.html">gb-cc-220949</a></td>
+        <td><a href="publisher/gb-cc-220949.html"></a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>mam_in</code></td>
+        <td><a href="publisher/mamta_himc.html">mamta_himc</a></td>
+        <td><a href="publisher/mamta_himc.html">MAMTA - Health Institute for Mother and Child</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>mz-moj-64vq1</code></td>
+        <td><a href="publisher/adpp.html">adpp</a></td>
+        <td><a href="publisher/adpp.html">Ajuda de Desenvolvimento de Povo para Povo (ADPP)</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/adjarra.html">adjarra</a></td>
+        <td><a href="publisher/adjarra.html">Commune de Adjarra - Bénin</a></td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/ai_1064413.html">ai_1064413</a></td>
+        <td><a href="publisher/ai_1064413.html">African Initiatives</a></td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/aqua4all.html">aqua4all</a></td>
+        <td><a href="publisher/aqua4all.html">Aqua for All</a></td>
+        <td>216</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/buildafrica.html">buildafrica</a></td>
+        <td><a href="publisher/buildafrica.html">Build Africa</a></td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/cr.html">cr</a></td>
+        <td><a href="publisher/cr.html">Conciliation Resources</a></td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/kad.html">kad</a></td>
+        <td><a href="publisher/kad.html">Kadaster International</a></td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/partos_nl.html">partos_nl</a></td>
+        <td><a href="publisher/partos_nl.html">partos</a></td>
+        <td>2</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/peas.html">peas</a></td>
+        <td><a href="publisher/peas.html">PEAS (Promoting Equality in African Schools)</a></td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/progressio.html">progressio</a></td>
+        <td><a href="publisher/progressio.html">Progressio</a></td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/sense_international.html">sense_international</a></td>
+        <td><a href="publisher/sense_international.html">Sense International</a></td>
+        <td>1</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/taf.html">taf</a></td>
+        <td><a href="publisher/taf.html">The Asia Foundation</a></td>
+        <td>3</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/wcuk.html">wcuk</a></td>
+        <td><a href="publisher/wcuk.html">War Child UK</a></td>
+        <td>5</td>
+    </tr>
+
+    <tr>
+        <td><code>null</code></td>
+        <td><a href="publisher/wvuk.html">wvuk</a></td>
+        <td><a href="publisher/wvuk.html">World Vision UK</a></td>
+        <td>14</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>oxfam_india</code></td>
+        <td><a href="publisher/oxfamindia.html">oxfamindia</a></td>
+        <td><a href="publisher/oxfamindia.html">Oxfam India</a></td>
+        <td>1</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>sacu</code></td>
+        <td><a href="publisher/sacu.html">sacu</a></td>
+        <td><a href="publisher/sacu.html">Send a Cow Uganda</a></td>
+        <td>2</td>
+    </tr>
+
+
+
+    <tr>
+        <td><code>﻿CH-4</code></td>
+        <td><a href="publisher/sdc_ch.html">sdc_ch</a></td>
+        <td><a href="publisher/sdc_ch.html">Switzerland - Swiss Agency for Development and Cooperation (SDC)</a></td>
+        <td>4</td>
+    </tr>
+
+
+  </tbody>
+</table>
+</div>
+
+
+
+    
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">
+          <a href="https://github.com/IATI/IATI-Dashboard/">Source Code</a>.
+
+          <a href="https://github.com/IATI/IATI-Dashboard/issues?state=open">Report bugs, and request features using Github issues</a>.<br/>
+
+          Generated on <em>2019-06-10 13:47:17 +0100</em> from data downloaded <em>2019-06-10 07:16:58 +0100</em>.<br/>
+
+          (NB This is the time the download task completed. Any changes made after this time will not be reflected).<br />
+
+          For details on how often these updates are applied, see <a href="http://dashboard.iatistandard.org/faq.html">IATI Dashboard update FAQ</a>.<br />
+
+          Favicon created from: Statistics designed by <a href="http://www.thenounproject.com/nateeul">Nate Eul</a> from the <a href="http://www.thenounproject.com">Noun Project </a><br/>
+
+          <a href="https://www.aidtransparency.net/privacy-policy">Privacy Policy</a></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script src="http://styles.iatistandard.org/assets/js/app.bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-3', 'dashboard.iatistandard.org');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+  
+</body>
+</html>
