@@ -1,0 +1,3 @@
+-r IATI-Dashboard/requirements.txt
+
+git+https://github.com/IATI/IATI-Rulesets.git#egg=iatirulesets

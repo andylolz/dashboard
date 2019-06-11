@@ -1,0 +1,6 @@
+[submodule "IATI-Dashboard"]
+	path = IATI-Dashboard
+	url = https://github.com/IATI/IATI-Dashboard.git
+[submodule "IATI-Stats"]
+	path = IATI-Stats
+	url = https://github.com/IATI/IATI-Stats.git
