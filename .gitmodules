@@ -1,3 +1,4 @@
 [submodule "IATI-Dashboard"]
 	path = IATI-Dashboard
-	url = https://github.com/IATI/IATI-Dashboard.git
+    branch = dashboard
+	url = https://github.com/andylolz/IATI-Dashboard.git
