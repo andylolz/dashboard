@@ -6,7 +6,7 @@ cd IATI-Dashboard
 rm -rf stats-calculated stats-blacklist
 
 # Fetch the necessary calculated stats
-./get_stats.sh
+./get_stats.sh &> /dev/null
 ./git.sh
 
 # setup the output directory
